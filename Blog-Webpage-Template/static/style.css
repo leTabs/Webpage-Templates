@@ -1,1 +1,61 @@
-
+html, html *{
+    padding:0 ;
+    margin: 0 ;
+    font-family: sans-serif;
+}
+.upper-nav{
+    background-color: rgb(14, 14, 14);
+    padding:0.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+.search{
+    font-size: 1.2rem;
+    margin-left: 5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid white 1px;
+    color: white;
+    width: 30%;
+    outline: none;
+}
+.social-icons{
+    margin-right: 5rem;
+    filter: invert(100%);
+}
+.icons{
+    width:1.5rem;
+    height:1.5rem;
+    margin-left: 1rem;
+}
+.lower-nav{
+    background-color: rgba(230, 175, 237, 0.769);
+    padding:1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.lower-nav h3{
+    display: inline-block;
+    font-size: 1.5rem;
+}
+.lower-nav span{
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+}
+.lower-nav span a{
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: rgb(52, 0, 111);
+    transition: 200ms;
+}
+.lower-nav span a:hover{
+    color: rgb(0, 115, 156)
+}
+.intro-wall img{
+    width:5rem;
+    height: 5rem;
+}
+.sample-posts img{
+    width:7rem;
+    height: 7rem;
+}
