@@ -1,7 +1,13 @@
 html, html *{
     padding:0 ;
     margin: 0 ;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+}
+nav{
+    position:fixed;
+    top:0%;
+    width: 100%;
+    box-shadow: 3px 3px 13px black ;
 }
 .upper-nav{
     background-color: rgb(14, 14, 14);
@@ -29,33 +35,76 @@ html, html *{
     margin-left: 1rem;
 }
 .lower-nav{
-    background-color: rgba(230, 175, 237, 0.769);
+    background-color: rgba(254, 250, 255, 0.769);
     padding:1.2rem;
     display: flex;
     justify-content: space-between;
 }
 .lower-nav h3{
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .lower-nav span{
-    font-size: 1.2rem;
-    margin-top: 0.2rem;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
 }
 .lower-nav span a{
     margin-left: 1.5rem;
     text-decoration: none;
-    color: rgb(52, 0, 111);
+    color: rgb(111, 0, 107);
     transition: 200ms;
 }
 .lower-nav span a:hover{
-    color: rgb(0, 115, 156)
+    color: rgb(77, 172, 207)
+}
+.intro-wall{
+    margin-top: 9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
 }
 .intro-wall img{
-    width:5rem;
-    height: 5rem;
+    width:92%;
+    height: 70vh;
+    margin:1rem;
+    object-fit: cover;
 }
-.sample-posts img{
-    width:7rem;
-    height: 7rem;
+.title{
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    bottom:5%;
+    left:33%;
+    background-color: white;
+    padding:1rem;
+    width:32vw
+
+}
+.sample-posts{
+    margin-top:8rem;
+    border: solid red 1px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.post{
+    border: solid gray 1px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: solid rgb(0, 217, 255) 1px;
+    margin:1rem;
+}
+.post img{
+    width:100%;
+    height: 20rem;
+    object-fit: cover;
+}
+.post p{
+    border: solid rgb(162, 109, 109) 1px;
+    font-size: 1.2rem;
+}
+.post span{
+    display: block;
+    color: yellow;
+
 }
