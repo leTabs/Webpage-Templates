@@ -9,6 +9,7 @@ nav{
     top:0%;
     width: 100%;
     box-shadow: 3px 3px 13px black ;
+    z-index: 3;
 }
 .upper-nav{
     background-color: rgb(14, 14, 14);
@@ -253,20 +254,32 @@ footer p{
 }
 
 /* about */
-.about-title{
-    
-    margin-top: 15rem;
-}
+
 .main-about-section{
-    border:solid red 1px;
-    margin: 2rem 5rem;
+    margin: 1rem 14rem 2rem 8rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 3rem;
+    padding: 4rem 5rem ;
+    background-color: rgba(13, 82, 116, 0.1);
+    z-index:2;
+    margin-top: 13rem;
+}
+.about-title{
+    font-weight: bold;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    /* margin-left: 13rem; */
+}
+.main-about-section p{
     font-size: 1.3rem;
+
 }
 .main-about-section img{
-    width: 5rem;
-    height: 5rem;
-    margin:5rem 
+    width:140%;
+    height: 60%;
+    margin:5rem;
+    /* object-fit: cover; */
+    position:static;
+    transform: translate(0%, 0%);
+    z-index:1
 }
