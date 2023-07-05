@@ -1,6 +1,7 @@
 html, html *{
     padding:0 ;
     margin: 0 ;
+    scroll-behavior:smooth;
     /* font-family: sans-serif; */
 }
 nav{
@@ -27,12 +28,12 @@ nav{
 }
 .social-icons{
     margin-right: 5rem;
-    filter: invert(100%);
 }
 .icons{
     width:1.5rem;
     height:1.5rem;
     margin-left: 1rem;
+    filter: invert(100%);
 }
 .lower-nav{
     background-color: rgba(254, 250, 255, 0.87);
@@ -142,23 +143,54 @@ nav{
     cursor: pointer;
 }
 form{
-    background-color: rgb(77, 172, 207);
+    background-color: rgba(77, 172, 207, 0.665);
     border-top: 1px solid rgba(0, 0, 0, 0);
+    padding: 2rem 10rem;
+    text-align: right;
 }
 form h3{
     text-align: center;
     font-size: 3rem;
-    margin: 3rem;
+    margin: 2rem 0 4rem 0;
 }
-form label{
+form label, form input{
+    margin-left: 4em;
+    margin-right: 4rem;
     font-size: 1.5rem;
+    text-align: left;
+
 }
 form input{
     border: none;
     border-bottom: 1px solid black;
     outline: none;
-    margin: 1rem;
+    /* margin: 1rem;1 */
      background-color: transparent;
+     transition: 300ms;
+}
+form input:hover{
+    border-color: rgb(0, 134, 183);
+}
+form span{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2;
+}
+form button{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    background-color: white;
+    width: 15%;
+    margin-top: 2rem;
+    margin-right: 4rem;
+    outline: none;
+    border: none;
+    transition: 300ms;
+}
+form button:hover{
+    color: white;
+    background-color: rgba(36, 0, 35, 0.938);
+    cursor: pointer;
 }
 footer{
     background-color: black;
