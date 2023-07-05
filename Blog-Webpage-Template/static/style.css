@@ -48,6 +48,7 @@ nav{
 .lower-nav span{
     font-size: 1.5rem;
     margin-top: 0.5rem;
+    margin-right: 4rem;
 }
 .lower-nav span a{
     margin-left: 1.5rem;
@@ -196,5 +197,21 @@ footer{
     background-color: black;
     color: white;
     padding: 2rem;
+    /* text-align: center; */
+}
+footer p{ 
+    display: inline-block;
+    margin-left: 3rem;
+}
+
+/* my bog */
+.title-h3{
+    margin-top: 10rem;
     text-align: center;
+    font-size: 2.5rem;
+    border-bottom: 1px black solid;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.5rem;
 }
