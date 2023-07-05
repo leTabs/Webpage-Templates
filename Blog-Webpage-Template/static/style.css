@@ -256,21 +256,26 @@ footer p{
 /* about */
 
 .main-about-section{
-    margin: 1rem 14rem 2rem 8rem;
+    border: solid red 1px;
+    margin: 13rem 14rem 2rem 8rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 4rem 5rem ;
     background-color: rgba(13, 82, 116, 0.1);
     z-index:2;
-    margin-top: 13rem;
+    /* letter-spacing: 1px; */
+    word-spacing: 2px;
+    height: 100vh;
 }
 .about-title{
     font-weight: bold;
     font-size: 2.8rem;
     margin-bottom: 1rem;
-    /* margin-left: 13rem; */
+    margin-top: 1rem;
+    border: solid red 1px;
 }
 .main-about-section p{
+    border: solid red 1px;
     font-size: 1.3rem;
 
 }
@@ -281,5 +286,6 @@ footer p{
     /* object-fit: cover; */
     position:static;
     transform: translate(0%, 0%);
-    z-index:1
+    z-index:1;
+    border: solid red 1px;
 }
