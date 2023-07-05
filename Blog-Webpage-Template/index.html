@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
     <nav>
-        <div>
-            <span class="fas fa-search">
-                <input type="search" placeholder="Search"/>
-            </span>
-            <span>
-                <img src="" alt="" class="" />
-                <img src="" alt="" class="" />
-                <img src="" alt="" class="" />
+
+        <div class="upper-nav">
+                <input type="search" placeholder="Search..." class="search"/> <!--class="fas fa-search"-->
+            <span class="social-icons">
+                <img src="icons/facebook.svg" alt="My Facebook" class="icons" />
+                <img src="icons/instagram.svg" alt="My Instagram" class="icons" />
+                <img src="icons/twitter.svg" alt="My Twitter" class="icons" />
+                <img src="icons/linkedin.svg" alt="My Instagram" class="icons" />
             </span>
         </div>
-        <div>
-            <h3>Some words</h3>
+        <!--  -->
+        <div class="lower-nav">
+            <h3>Up North</h3>
             <span>
                 <a href="#">Home</a>
                 <a href="#">My Blog</a>
@@ -28,36 +30,43 @@
             </span>
         </div>
     </nav>
-    <section>
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <p>Some words here</p>
+    <section class="intro-wall">
+        <!-- <img src="images/pexels-david-mcbee-2302017.jpg" alt="" />
+        <img src="images/pexels-eneida-nieves-803975.jpg" alt="" />
+        <img src="images/pexels-bino-gadoino-16622215.jpg" alt="" /> -->
     </section>
+    <!-- <p class="title">My Blog.<br /> The mountain side.</p> -->
+   <!-- <h3>Recent Posts</h3> -->
     <section class="sample-posts">
         <div class="post">
-            <img src="" alt="" />
-            <span>Jule 04</span>
-            <p>
-                a small description of the post
-            </p>
+            <img src="images/pexels-arthouse-studio-4311142.jpg" alt="" />
+            <div>
+                <span>Jule 04</span>
+                <h2>A title goes here (of the post_)</h2>
+                <p>
+                    a small description of the post
+                    a small description of the post
+                    a small description of the post
+                    a small description of the post
+                </p>
+            </div>
         </div>
         <div class="post">
-            <img src="" alt="" />
-            <span>Jule 04</span>
-            <p>
-                a small description of the post
-            </p>
-        </div>
-        <div class="post">
-            <img src="" alt="" />
-            <span>Jule 04</span>
-            <p>
-                a small description of the post
-            </p>
+            <img src="images/pexels-adam-lowly-2622290.jpg" alt="" />
+            <div>
+                <span>Jule 04</span>
+                <h2>A title goes here (of the post_)</h2>
+                <p>
+                    a small description of the post
+                    a small description of the post
+                    a small description of the post
+                    a small description of the post
+                </p>
+            </div>
         </div>
     </section>
     <button>All Posts</button>
+      <!--
     <span>
         <img src="" alt="" class="" />
         <img src="" alt="" class="" />
@@ -82,6 +91,6 @@
     </section>
     <footer>
         <span>Copyrights and stuff</span>
-    </footer>
+    </footer> -->
 </body>
 </html>
