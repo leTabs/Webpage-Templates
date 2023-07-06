@@ -292,7 +292,24 @@ footer p{
     margin-top: 15rem;
     border:solid red 1px;
     width: 50%;
+    margin-left: 12rem;
 }
+.date-elip{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+.blog-content-title{
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+.content{
+    font-size: 1.2rem;
+}
+
+
+/* article  */
 .article-section{
     display: inline-block;
     border:solid rgb(43, 255, 0) 1px;
