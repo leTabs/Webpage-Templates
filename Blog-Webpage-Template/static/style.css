@@ -407,6 +407,12 @@ footer p{
     padding: 0.7rem 1.2rem;
     font-size: 1.1rem;
     color: rgb(145, 2, 138);
+    transition: 300ms;
+}
+.read-more:hover{
+    cursor: pointer;
+    background-color: rgb(145, 2, 138);
+    color: rgb(255, 255, 255);
 }
 .article-section hr{
     margin: 1rem;
