@@ -256,7 +256,6 @@ footer p{
 /* about */
 
 .main-about-section{
-    border: solid red 1px;
     margin: 13rem 14rem 2rem 8rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -272,10 +271,8 @@ footer p{
     font-size: 2.8rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    border: solid red 1px;
 }
 .main-about-section p{
-    border: solid red 1px;
     font-size: 1.3rem;
 
 }
@@ -287,5 +284,17 @@ footer p{
     position:static;
     transform: translate(0%, 0%);
     z-index:1;
-    border: solid red 1px;
+}
+
+/* blog content */
+.main-blog-content{
+    display: inline-block;
+    margin-top: 15rem;
+    border:solid red 1px;
+    width: 50%;
+}
+.article-section{
+    display: inline-block;
+    border:solid rgb(43, 255, 0) 1px;
+    width: 30%;
 }
