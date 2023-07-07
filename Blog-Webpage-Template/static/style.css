@@ -12,7 +12,9 @@ html, html *{
 .icon, .lower-nav span a, .all-posts-btn, .post p, form input, #form-btn, .read-more{   
     transition: 300ms;
 }
-
+.search, .all-posts-btn, form input, #form-btn, .read-more{
+    outline: none;
+}
 /* nav bar */
 nav{
     position:fixed;
@@ -35,7 +37,6 @@ nav{
     border-bottom: solid white 1px;
     color: white;
     width: 30%;
-    outline: none;
 }
 .social-icons{
     margin-right: 5rem;
@@ -108,7 +109,6 @@ nav{
     margin: 1rem 0 5rem 4rem;
     background-color: black;
     color: white;
-    outline: none;
     font-size: 1.3rem;
     padding: 0.5rem;
     border: solid black 1px;
@@ -174,7 +174,6 @@ form label, form input{
 form input{
     border: none;
     border-bottom: 1px solid black;
-    outline: none;
      background-color: transparent;
 }
 form input:hover{
@@ -192,7 +191,6 @@ form span{
     width: 15%;
     margin-top: 2rem;
     margin-right: 4rem;
-    outline: none;
     border: none;
 }
 #form-btn:hover{
@@ -410,7 +408,6 @@ footer p{
 .read-more{
     margin: auto;
     display: block;
-    outline: none;
     border: none;
     margin-top: 1rem;
     padding: 0.7rem 1.2rem;
