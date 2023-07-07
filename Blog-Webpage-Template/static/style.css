@@ -34,6 +34,11 @@ nav{
     height:1.5rem;
     margin-left: 1rem;
     filter: invert(100%);
+    transition: 300ms;
+}
+.icon:hover{
+    cursor: pointer;
+    filter: invert(70%);
 }
 .lower-nav{
     background-color: rgba(254, 250, 255, 0.87);
@@ -146,7 +151,7 @@ form{
     padding: 2rem 10rem;
     text-align: right;
 }
-form h3{
+.form-title {
     text-align: center;
     font-size: 3rem;
     margin: 2rem 0 4rem 0;
@@ -174,7 +179,7 @@ form span{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2;
 }
-form button{
+.form-btn{
     font-size: 1.2rem;
     padding: 0.5rem;
     background-color: white;
