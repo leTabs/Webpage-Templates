@@ -3,6 +3,12 @@ html, html *{
     margin: 0 ;
     scroll-behavior:smooth;
 }
+/* crammed */
+.icon, .lower-nav span a, .all-posts-btn, .post p, form input, #form-btn, .read-more{   
+    transition: 300ms;
+}
+
+/* nav bar */
 nav{
     position:fixed;
     top:0%;
@@ -34,7 +40,6 @@ nav{
     height:1.5rem;
     margin-left: 1rem;
     filter: invert(100%);
-    transition: 300ms;
 }
 .icon:hover{
     cursor: pointer;
@@ -59,7 +64,6 @@ nav{
     margin-left: 1.5rem;
     text-decoration: none;
     color: rgb(111, 0, 107);
-    transition: 200ms;
 }
 .lower-nav span a:hover{
     color: rgb(77, 172, 207)
@@ -103,7 +107,6 @@ nav{
     font-size: 1.3rem;
     padding: 0.5rem;
     border: solid black 1px;
-    transition: 300ms;
 }
 .all-posts-btn:hover{
     background-color: rgb(77, 172, 207);
@@ -138,7 +141,6 @@ nav{
 .post p{
     letter-spacing: 1px;
     font-size: 1.1rem;
-    transition: 300ms;
 }
 .post p:hover{
     color: rgb(77, 172, 207);
@@ -168,9 +170,7 @@ form input{
     border: none;
     border-bottom: 1px solid black;
     outline: none;
-    /* margin: 1rem;1 */
      background-color: transparent;
-     transition: 300ms;
 }
 form input:hover{
     border-color: rgb(0, 134, 183);
@@ -189,7 +189,6 @@ form span{
     margin-right: 4rem;
     outline: none;
     border: none;
-    transition: 300ms;
 }
 #form-btn:hover{
     color: white;
@@ -412,7 +411,6 @@ footer p{
     padding: 0.7rem 1.2rem;
     font-size: 1.1rem;
     color: rgb(145, 2, 138);
-    transition: 300ms;
 }
 .read-more:hover{
     cursor: pointer;
