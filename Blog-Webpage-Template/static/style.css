@@ -2,7 +2,6 @@ html, html *{
     padding:0 ;
     margin: 0 ;
     scroll-behavior:smooth;
-    /* font-family: sans-serif; */
 }
 nav{
     position:fixed;
@@ -30,7 +29,7 @@ nav{
 .social-icons{
     margin-right: 5rem;
 }
-.icons{
+.icon{
     width:1.5rem;
     height:1.5rem;
     margin-left: 1rem;
@@ -42,7 +41,7 @@ nav{
     display: flex;
     justify-content: space-between;
 }
-.lower-nav h3{
+.nav-title{
     display: inline-block;
     font-size: 2rem;
 }
@@ -60,6 +59,7 @@ nav{
 .lower-nav span a:hover{
     color: rgb(77, 172, 207)
 }
+/* navigation bar end */
 .intro-wall{
     margin-top: 9rem;
     display: grid;
@@ -67,13 +67,12 @@ nav{
     text-align: center;
 }
 .wall-img{
-    /* margin-top: 9rem; */
     width:92%;
     height: 70vh;
     margin:1rem;
     object-fit: cover;
 }
-.middle-img{
+.wall-mid-img{
     height:50vh
 }
 .title{
@@ -82,11 +81,9 @@ nav{
     text-align: center;
     background-color: white; 
     padding:1rem;
-    /* width:32vw;
-    z-index: 3; */
 
 }
-.indicator{
+.recent{
     display: inline-block;
     margin: 5rem 0 0  4rem;
     padding: 1rem;
@@ -109,7 +106,6 @@ nav{
 }
 .sample-posts{
     margin:2rem 2rem 0 2rem;
-    /* border: solid red 1px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -126,7 +122,6 @@ nav{
     height: 20rem;
     object-fit: cover;
 }
-
 .post div{
     padding:2rem;
     height: 20rem;
@@ -144,6 +139,7 @@ nav{
     color: rgb(77, 172, 207);
     cursor: pointer;
 }
+/* index main content end */
 form{
     background-color: rgba(77, 172, 207, 0.665);
     border-top: 1px solid rgba(0, 0, 0, 0);
