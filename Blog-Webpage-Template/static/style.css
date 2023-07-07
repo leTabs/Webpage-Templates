@@ -229,8 +229,6 @@ footer p{
     grid-template-columns: 1fr 1fr 1fr;
 }
 .blog-thumb{
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
     height: 30rem;
     margin: 1rem 1rem;
 }
@@ -258,11 +256,12 @@ footer p{
     margin: 2rem 0 0.5rem 0;
     font-size: 1.8rem;
 }
+/* my blog end */
 
 /* about */
 
 .main-about-section{
-    margin: 13rem 14rem 2rem 8rem;
+    margin: 13rem 14rem 5rem 8rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 4rem 5rem ;
@@ -278,13 +277,13 @@ footer p{
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
-.main-about-section p{
+.about-text{
     font-size: 1.3rem;
 
 }
-.main-about-section img{
+.about-img{
     width:140%;
-    height: 60%;
+    height: 50%;
     margin:5rem;
     /* object-fit: cover; */
     position:static;
