@@ -24,6 +24,7 @@ html, html *{
 }
 .intro-wall, .sample-posts, .post, form span, .main-blog-section, .main-about-section, .blog-sample-wrapper{
     display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 /* nav bar */
 nav{
@@ -122,11 +123,9 @@ nav{
 }
 .sample-posts{
     margin:2rem 2rem 0 2rem;
-    grid-template-columns: 1fr 1fr;
 }
 .post{
     border: solid rgba(194, 194, 194, 0.896) 1px; 
-    grid-template-columns: 1fr 1fr;
     margin:1rem;
     height: 20rem;
     overflow: hidden;
@@ -180,7 +179,6 @@ form input:hover{
     border-color: rgb(0, 134, 183);
 }
 form span{
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: 2;
 }
 #form-btn{
@@ -225,7 +223,6 @@ footer p{
 }
 .main-blog-section{
     margin: 1rem 10rem 5rem 10rem;
-    grid-template-columns: 1fr 1fr 1fr;
 }
 .blog-thumb{
     height: 30rem;
@@ -257,7 +254,6 @@ footer p{
 
 .main-about-section{
     margin: 13rem 14rem 5rem 8rem;
-    grid-template-columns: 1fr 1fr;
     padding: 4rem 5rem ;
     background-color: rgba(13, 82, 116, 0.1);
     z-index:2;
@@ -334,9 +330,7 @@ footer p{
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
-.blog-sample-wrapper{
-    grid-template-columns: 1fr 1fr;
-}
+
 .blog-sample{
     border: 1px solid rgba(135, 135, 159, 0.452);
     margin-top:0;
