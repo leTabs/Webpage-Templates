@@ -52,8 +52,8 @@ nav{
     font-size: 1.2rem;
     margin-left: 5rem;
     background-color: transparent;
-    border-bottom: solid white 1px;
-    color: white;
+    border-bottom: solid var(--white) 1px;
+    color: var(--white);
     width: 30%;
 }
 .social-icons{
@@ -83,10 +83,10 @@ nav{
 .lower-nav span a{
     margin-left: 1.5rem;
     text-decoration: none;
-    color: rgb(111, 0, 107);
+    color: var(--purple);
 }
 .lower-nav span a:hover{
-    color: rgb(77, 172, 207);
+    color: var(--light-blue);
 }
 /* navigation bar end */
 .intro-wall{
@@ -106,7 +106,7 @@ nav{
     font-size: 2.2rem;
     font-weight: bold;
     text-align: center;
-    background-color: white; 
+    background-color: var(--white); 
     padding:1rem;
 
 }
@@ -118,14 +118,14 @@ nav{
 }
 .all-posts-btn{
     margin: 1rem 0 5rem 4rem;
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
     font-size: 1.3rem;
     padding: 0.5rem;
-    border: solid black 1px;
+    border: solid var(--black) 1px;
 }
 .all-posts-btn:hover{
-    background-color: rgb(77, 172, 207);
+    background-color: var(--light-blue);
 }
 .sample-posts{
     margin:2rem 2rem 0 2rem;
@@ -152,7 +152,7 @@ nav{
     font-size: 1.1rem;
 }
 .post p:hover{
-    color: rgb(77, 172, 207);
+    color: var(--light-blue);
 }
 /* index main content end */
 /* form  */
@@ -175,11 +175,11 @@ form label, form input{
 
 }
 form input{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--black);
      background-color: transparent;
 }
 form input:hover{
-    border-color: rgb(77, 172, 207);
+    border-color: var(--light-blue);
 }
 form span{
     grid-template-rows: 2;
@@ -187,21 +187,21 @@ form span{
 #form-btn{
     font-size: 1.2rem;
     padding: 0.5rem;
-    background-color: white;
+    background-color: var(--white);
     width: 15%;
     margin-top: 2rem;
     margin-right: 4rem;
 }
 #form-btn:hover{
-    color: white;
+    color: var(--white);
     background-color: rgba(36, 0, 35, 0.938);
 }
 /* form end  */
 
 /* footer */
 footer{
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
     padding: 2rem;
     /* text-align: center; */
 }
@@ -215,7 +215,7 @@ footer p{
 .title-h3{
     text-align: center;
     font-size: 2.5rem;
-    border-bottom: 1px black solid;
+    border-bottom: 1px var(--black) solid;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -310,7 +310,7 @@ footer p{
     margin: 2rem 0;
     font-size: 1.5rem;
     font-style: italic;
-    border-left: solid 2px rgb(77, 172, 207);;
+    border-left: solid 2px var(--light-blue);
 }
 .main-blog-content hr{
     margin-top: 2rem;
@@ -379,10 +379,10 @@ footer p{
     margin-top: 1rem;
     padding: 0.7rem 1.2rem;
     font-size: 1.1rem;
-    color: rgb(111, 0, 107);
+    color: var(--purple);
 } 
 .read-more:hover{
-    background-color: rgb(111, 0, 107);
+    background-color: var(--purple);
     color: rgb(255, 255, 255);
 }
 .article-section hr{
