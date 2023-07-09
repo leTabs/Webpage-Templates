@@ -32,6 +32,9 @@ html, html *{
 .search, form input, #form-btn, .read-more{
     border: none;
 }
+.icon:hover, .all-posts-btn:hover, .post p:hover, #form-btn:hover, .read-more:hover{
+    cursor: pointer;
+}
 /* nav bar */
 nav{
     position:fixed;
@@ -62,7 +65,6 @@ nav{
     filter: invert(100%);
 }
 .icon:hover{
-    cursor: pointer;
     filter: invert(70%);
 }
 .lower-nav{
@@ -123,7 +125,6 @@ nav{
 }
 .all-posts-btn:hover{
     background-color: rgb(77, 172, 207);
-    cursor: pointer;
 }
 .sample-posts{
     margin:2rem 2rem 0 2rem;
@@ -151,7 +152,6 @@ nav{
 }
 .post p:hover{
     color: rgb(77, 172, 207);
-    cursor: pointer;
 }
 /* index main content end */
 /* form  */
@@ -194,7 +194,6 @@ form span{
 #form-btn:hover{
     color: white;
     background-color: rgba(36, 0, 35, 0.938);
-    cursor: pointer;
 }
 /* form end  */
 
@@ -382,7 +381,6 @@ footer p{
     color: rgb(145, 2, 138);
 }
 .read-more:hover{
-    cursor: pointer;
     background-color: rgb(145, 2, 138);
     color: rgb(255, 255, 255);
 }
