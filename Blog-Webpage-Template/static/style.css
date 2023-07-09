@@ -17,6 +17,7 @@ html, html *{
 }
 .upper-nav, .lower-nav, .blog-thumb span  p, .date-elip, .pseudo-title{
     display: flex;
+    justify-content: space-between;
 }
 /* nav bar */
 nav{
@@ -29,7 +30,6 @@ nav{
 .upper-nav{
     background-color: rgb(14, 14, 14);
     padding:0.8rem;
-    justify-content: space-between;
 }
 .search{
     font-size: 1.2rem;
@@ -56,7 +56,6 @@ nav{
 .lower-nav{
     background-color: rgba(254, 250, 255, 0.87);
     padding:1.2rem;
-    justify-content: space-between;
 }
 .nav-title{
     display: inline-block;
@@ -242,9 +241,7 @@ footer p{
     padding: 1.5rem 3rem;
     padding-bottom: 1rem;
 }
-.blog-thumb span  p{
-    justify-content: space-between;
-}
+
 .vertical-elip{
     width: 1.2rem;
     height: 1.2rem;
@@ -302,7 +299,6 @@ footer p{
     margin-left: 12rem;
 }
 .date-elip{
-    justify-content: space-between;
     margin: 2rem 0;
     font-size: 1.2rem;
 }
@@ -343,7 +339,6 @@ footer p{
 }
 .pseudo-title{
     font-size: 1.2rem;
-    justify-content: space-between;
     margin-bottom: 2rem;
 }
 .blog-sample-wrapper{
