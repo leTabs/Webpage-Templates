@@ -26,6 +26,9 @@ html, html *{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.wall-img, .post img, .blog-thumb-img, .blog-content-img, .blog-sample img, .article-img{
+    object-fit: cover;
+}
 /* nav bar */
 nav{
     position:fixed;
@@ -90,7 +93,6 @@ nav{
     width:92%;
     height: 70vh;
     margin:1rem;
-    object-fit: cover;
 }
 .wall-mid-img{
     height:50vh
@@ -133,7 +135,6 @@ nav{
 .post img{
     width:100%;
     height: 20rem;
-    object-fit: cover;
 }
 .post div{
     padding:2rem;
@@ -242,7 +243,6 @@ footer p{
 .blog-thumb-img{
     width: 100%;
     height: 50%;
-    object-fit: cover;
 }
 .blog-thumb-title{
     margin: 2rem 0 0.5rem 0;
@@ -275,7 +275,6 @@ footer p{
     width:140%;
     height: 50%;
     margin:5rem;
-    /* object-fit: cover; */
     position:static;
     transform: translate(0%, 0%);
     z-index:1;
@@ -303,7 +302,6 @@ footer p{
     margin: 2.5rem 0;
     width: 100%;
     height:50%;
-    object-fit: cover;
 }
 .inner-title{
     margin: 1rem 0;
@@ -330,7 +328,6 @@ footer p{
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
-
 .blog-sample{
     border: 1px solid rgba(135, 135, 159, 0.452);
     margin-top:0;
@@ -345,7 +342,6 @@ footer p{
 .blog-sample img{
     width:100%;
     height: 60%;
-    object-fit: cover;
 }
 .blog-sample p{
     padding: 1rem;
@@ -366,7 +362,6 @@ footer p{
 .article-img{
     width: 70%;
     height: 35%;
-    object-fit: cover;
     margin:3rem 0 1rem 0;
 }
 .article-section p{
