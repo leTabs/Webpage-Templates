@@ -1,7 +1,8 @@
 :root{
     --white: white;
-    --purple: purple;
-    --dark: black;
+    --purple: rgb(111, 0, 107);
+    --black: black;
+    --light-blue: rgb(77, 172, 207);
 }
 html, html *{
     padding:0 ;
@@ -44,7 +45,7 @@ nav{
     z-index: 3;
 }
 .upper-nav{
-    background-color: rgb(14, 14, 14);
+    background-color: rgb(0, 0, 0);
     padding:0.8rem;
 }
 .search{
@@ -85,7 +86,7 @@ nav{
     color: rgb(111, 0, 107);
 }
 .lower-nav span a:hover{
-    color: rgb(77, 172, 207)
+    color: rgb(77, 172, 207);
 }
 /* navigation bar end */
 .intro-wall{
@@ -178,7 +179,7 @@ form input{
      background-color: transparent;
 }
 form input:hover{
-    border-color: rgb(0, 134, 183);
+    border-color: rgb(77, 172, 207);
 }
 form span{
     grid-template-rows: 2;
@@ -309,7 +310,7 @@ footer p{
     margin: 2rem 0;
     font-size: 1.5rem;
     font-style: italic;
-    border-left: solid 2px rgb(2, 146, 127);;
+    border-left: solid 2px rgb(77, 172, 207);;
 }
 .main-blog-content hr{
     margin-top: 2rem;
@@ -378,10 +379,10 @@ footer p{
     margin-top: 1rem;
     padding: 0.7rem 1.2rem;
     font-size: 1.1rem;
-    color: rgb(145, 2, 138);
-}
+    color: rgb(111, 0, 107);
+} 
 .read-more:hover{
-    background-color: rgb(145, 2, 138);
+    background-color: rgb(111, 0, 107);
     color: rgb(255, 255, 255);
 }
 .article-section hr{
