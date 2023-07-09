@@ -15,6 +15,9 @@ html, html *{
 .search, .all-posts-btn, form input, #form-btn, .read-more{
     outline: none;
 }
+.upper-nav, .lower-nav, .blog-thumb span  p, .date-elip, .pseudo-title{
+    display: flex;
+}
 /* nav bar */
 nav{
     position:fixed;
@@ -26,7 +29,6 @@ nav{
 .upper-nav{
     background-color: rgb(14, 14, 14);
     padding:0.8rem;
-    display: flex;
     justify-content: space-between;
 }
 .search{
@@ -54,7 +56,6 @@ nav{
 .lower-nav{
     background-color: rgba(254, 250, 255, 0.87);
     padding:1.2rem;
-    display: flex;
     justify-content: space-between;
 }
 .nav-title{
@@ -242,7 +243,6 @@ footer p{
     padding-bottom: 1rem;
 }
 .blog-thumb span  p{
-    display: flex;
     justify-content: space-between;
 }
 .vertical-elip{
@@ -302,7 +302,6 @@ footer p{
     margin-left: 12rem;
 }
 .date-elip{
-    display: flex;
     justify-content: space-between;
     margin: 2rem 0;
     font-size: 1.2rem;
@@ -344,7 +343,6 @@ footer p{
 }
 .pseudo-title{
     font-size: 1.2rem;
-    display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
 }
