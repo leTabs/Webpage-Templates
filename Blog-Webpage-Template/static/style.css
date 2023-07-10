@@ -177,6 +177,7 @@ form label, form input{
 }
 form label{
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 form input{
     border-bottom: 1px solid var(--black);
@@ -450,6 +451,7 @@ footer p{
     }
     .post div{
         padding:2rem;
+        padding-bottom: 5rem;
         height: 25rem;
     }
     .all-posts-btn{
@@ -460,6 +462,7 @@ footer p{
     /* form  */
 
     form{
+        margin-top: 2rem;
         padding: 1rem;
         text-align: left;
     }
