@@ -399,5 +399,11 @@ footer p{
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-
+    .wall-mid-img{
+        height:50vh;
+        width: 100%;
+    }
+    .middle-img-wrapper{
+        width: 85vw;
+    }
 }
