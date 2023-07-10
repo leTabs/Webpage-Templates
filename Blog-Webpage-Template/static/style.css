@@ -399,11 +399,30 @@ footer p{
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+    nav{
+        width: 100vw;
+    }
+    .intro-wall{
+        display: block;
+        margin-top: 9rem;
+        text-align: center;
+    }
+    .wall-img{
+        width:92%;
+        height: 70vh;
+        margin: 0;
+    }
+    .first-img, .third-img{
+        display: none;
+    }
     .wall-mid-img{
         height:50vh;
         width: 100%;
     }
     .middle-img-wrapper{
-        width: 85vw;
+        width: 100vw;
+    }
+    .recent{
+        display: none;
     }
 }
