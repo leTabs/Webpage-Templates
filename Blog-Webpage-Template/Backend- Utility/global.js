@@ -25,19 +25,24 @@ ${sociaMedia}
 `
 const formContent = `
 <h3 class="form-title">Talk to me freely</h3>
-<span class="form-dividor">
-    <label for="first-name">First Name</label>
-    <label for="last-name">Last Name</label>
-    <input type="text" id="first-name"/>
-    <input type="text" id="last-name"/> 
-</span>
-<br />
-<span>
-    <label for="mail">Email</label>
-    <label for="message">Message</label>
-    <input type="email" id="mail" />
-    <input type="textarea" id="message"/>
-</span>
+<div>
+    <span>
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name"/>
+    </span>
+    <span>
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name"/> 
+    </span>
+    <span>
+        <label for="mail">Email</label>
+        <input type="email" id="mail" />
+    </span>
+    <span>
+        <label for="message">Message</label>
+        <input type="textarea" id="message"/>
+    </span>
+</div>
 <button type="submit" id="form-btn">Submit</button>
 `
 
