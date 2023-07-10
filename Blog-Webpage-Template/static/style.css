@@ -23,7 +23,7 @@ html, html *{
 .nav-title, .recent, .post span, footer p, .blog-thumb span, .main-blog-content, .blog-content-img, .article-section{
     display: inline-block;
 }
-.intro-wall, .sample-posts, .post, form span, .main-blog-section, .main-about-section, .blog-sample-wrapper{
+.intro-wall, .sample-posts, .post, .main-blog-section,form div, .main-about-section, .blog-sample-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -170,33 +170,40 @@ form{
     margin: 2rem 0 4rem 0;
 }
 form label, form input{
-    margin-left: 4em;
-    margin-right: 4rem;
     font-size: 1.5rem;
     text-align: left;
-
+    display: block;
+    width: 100%;
+}
+form label{
+    margin-top: 1rem;
 }
 form input{
     border-bottom: 1px solid var(--black);
-     background-color: transparent;
+    background-color: transparent;
 }
 form input:hover{
     border-color: var(--light-blue);
 }
-form span{
-    grid-template-rows: 2;
-}
+
 #form-btn{
     font-size: 1.2rem;
     padding: 0.5rem;
     background-color: var(--white);
     width: 15%;
     margin-top: 2rem;
-    margin-right: 4rem;
+    margin-right: 5rem;
 }
 #form-btn:hover{
     color: var(--white);
     background-color: rgba(36, 0, 35, 0.938);
+}
+form div{
+    padding: 0 4rem;
+    margin:0;
+}
+form div span{
+    margin: 0 1rem
 }
 /* form end  */
 
@@ -451,38 +458,27 @@ footer p{
     /* index main end */
 
     /* form  */
+
     form{
-        background-color: rgba(77, 172, 207, 0.665);
-        border-top: 1px solid rgba(0, 0, 0, 0);
         padding: 1rem;
-        text-align: right;
+        text-align: left;
     }
     .form-title {
-        text-align: center;
         font-size: 2rem;
         margin: 2rem 0;
     }
     form label, form input{
-        margin-left: 4rem;
-        margin-right: 4rem;
-        font-size: 1.5rem;
-        text-align: left;
-    /* un hols after normal form conlusion  */
-    }
-    form span{
-        display: inline;
+        font-size: 1rem;
     }
     #form-btn{
-        font-size: 1.2rem;
-        padding: 0.5rem;
-        background-color: var(--white);
-        width: 15%;
-        margin-top: 2rem;
-        margin-right: 4rem;
+        font-size: 1rem;
+        width: 25%;
     }
-    #form-btn:hover{
-        color: var(--white);
-        background-color: rgba(36, 0, 35, 0.938);
+    form div{
+        padding:0;
+    }
+    form div span{
+        margin: 0 1rem
     }
     /* form end  */
     
