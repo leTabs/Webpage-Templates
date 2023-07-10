@@ -398,10 +398,11 @@ footer p{
     margin: 0 1rem
 }
 
-@media (min-width: 350px) and (max-width: 767px) {
+@media (min-width: 360px) and (max-width: 767px) {
     nav{
         width: 100vw;
     }
+    /* index main */
     .intro-wall{
         display: block;
         margin-top: 9rem;
@@ -437,7 +438,7 @@ footer p{
         display: block;
         height: 35rem;
         margin:2rem 0;
-        margin:1.5re 1rem;
+        margin:1.5rem 1rem;
     }
     .post img{
         width:100%;
@@ -446,5 +447,53 @@ footer p{
     .post div{
         padding:2rem;
         height: 25rem;
+    }
+    /* index main end */
+
+    /* form  */
+    form{
+        background-color: rgba(77, 172, 207, 0.665);
+        border-top: 1px solid rgba(0, 0, 0, 0);
+        padding: 1rem;
+        text-align: right;
+    }
+    .form-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+    form label, form input{
+        margin-left: 4rem;
+        margin-right: 4rem;
+        font-size: 1.5rem;
+        text-align: left;
+    /* un hols after normal form conlusion  */
+    }
+    form span{
+        display: inline;
+    }
+    #form-btn{
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        background-color: var(--white);
+        width: 15%;
+        margin-top: 2rem;
+        margin-right: 4rem;
+    }
+    #form-btn:hover{
+        color: var(--white);
+        background-color: rgba(36, 0, 35, 0.938);
+    }
+    /* form end  */
+    
+    /* footer */
+    footer{
+        background-color: var(--black);
+        color: var(--white);
+        padding: 2rem;
+        /* text-align: center; */
+    }
+    footer p{ 
+        margin-left: 3rem;
     }
 }
