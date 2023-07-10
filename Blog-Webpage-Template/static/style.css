@@ -433,8 +433,6 @@ footer p{
     .recent{
         display: none;
     }
-
-
     .sample-posts{
         margin:0;
         display: block;
@@ -444,8 +442,7 @@ footer p{
     .post{
         display: block;
         height: 35rem;
-        margin:2rem 0;
-        margin:1.5rem 1rem;
+        margin:1.5rem 3.5rem;
     }
     .post img{
         width:100%;
@@ -484,12 +481,9 @@ footer p{
     
     /* footer */
     footer{
-        background-color: var(--black);
-        color: var(--white);
-        padding: 2rem;
-        /* text-align: center; */
+        padding: 1rem 2rem;
     }
     footer p{ 
-        margin-left: 3rem;
+        margin-left: 0;
     }
 }
