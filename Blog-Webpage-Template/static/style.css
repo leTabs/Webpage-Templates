@@ -452,6 +452,9 @@ footer p{
         padding:2rem;
         height: 25rem;
     }
+    .all-posts-btn{
+        margin: 1rem 3.5rem 0 0 ;
+    }
     /* index main end */
 
     /* form  */
