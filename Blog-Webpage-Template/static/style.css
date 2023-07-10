@@ -89,6 +89,8 @@ nav{
     color: var(--light-blue);
 }
 /* navigation bar end */
+
+/* index main  */
 .intro-wall{
     margin-top: 9rem;
     grid-template-columns: 1fr 1fr 1fr;
@@ -97,7 +99,7 @@ nav{
 .wall-img{
     width:92%;
     height: 70vh;
-    margin:1rem;
+    margin: 1rem;
 }
 .wall-mid-img{
     height:50vh
@@ -107,7 +109,7 @@ nav{
     font-weight: bold;
     text-align: center;
     background-color: var(--white); 
-    padding:1rem;
+    padding: 1rem;
 
 }
 .recent{
@@ -132,7 +134,7 @@ nav{
 }
 .post{
     border: solid rgba(194, 194, 194, 0.896) 1px; 
-    margin:1rem;
+    margin: 1rem;
     height: 20rem;
     overflow: hidden;
 }
@@ -383,7 +385,7 @@ footer p{
 } 
 .read-more:hover{
     background-color: var(--purple);
-    color: rgb(255, 255, 255);
+    color: var(--white);
 }
 .article-section hr{
     margin: 1rem;
@@ -394,4 +396,8 @@ footer p{
 }
 .article-section .icons{
     margin: 0 1rem
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
 }
