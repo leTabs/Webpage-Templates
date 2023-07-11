@@ -551,17 +551,13 @@ footer p{
         font-size: 1.5rem;
     }
     /* about section */
-    
     .main-about-section{
         margin: 13rem 14rem 5rem 8rem;
         padding: 4rem 5rem ;
-        background-color: rgba(13, 82, 116, 0.1);
-        z-index:2;
         word-spacing: 2px;
         height: 100vh;
     }
     .about-title{
-        font-weight: bold;
         font-size: 2.8rem;
         margin-bottom: 1rem;
         margin-top: 1rem;
@@ -574,8 +570,5 @@ footer p{
         width:140%;
         height: 50%;
         margin:5rem;
-        position:static;
-        transform: translate(0%, 0%);
-        z-index:1;
     }
 }
