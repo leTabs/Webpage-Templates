@@ -553,19 +553,21 @@ footer p{
     /* about section */
 
     .main-about-section{
-        margin: 13rem 0 2.5rem 0;
-        padding: 4rem 1rem ;
+        margin: 11rem 0 12rem 0;
+        padding: 2rem 1rem ;
         z-index:0;
-        background-color: red;;
     }
     .main-about-section div{
         width: 90vw;
     }
     .about-title{
-        font-size: 2rem;
+        font-size: 2.3rem;
+        margin-bottom: 2.5rem;
     }
     .about-img{
-        display: none;
+        display: block;
+        transform: translate(-120% ,130%);
+        width: 90vw;
     }
     
 }
