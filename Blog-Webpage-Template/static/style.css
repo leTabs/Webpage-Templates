@@ -551,19 +551,21 @@ footer p{
         font-size: 1.5rem;
     }
     /* about section */
+
     .main-about-section{
-        margin: 13rem 0 5rem 0;
-        padding: 4rem 2rem ;
+        margin: 13rem 0 2.5rem 0;
+        padding: 4rem 1rem ;
+        z-index:0;
+        background-color: red;;
+    }
+    .main-about-section div{
+        width: 90vw;
     }
     .about-title{
         font-size: 2rem;
     }
-    .main-about-section div{
-        display: block;
-    }
     .about-img{
-        height: 50%;
-        margin:5rem;
-        display: block;
+        display: none;
     }
+    
 }
