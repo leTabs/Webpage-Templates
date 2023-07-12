@@ -1,5 +1,6 @@
 :root{
-    --bground: 90deg, rgb(42, 42, 42), rgb(42, 42, 171),  cyan;
+    --bground: 90deg, rgb(19, 41, 57), rgb(42, 42, 171),  rgb(20, 188, 188);
+    --text-color: purple;
 }
 html{
     font-family: sans-serif;
@@ -20,14 +21,16 @@ h2{
     /* text-align: center; */
     font-size: 2rem;
     text-decoration: underline;
+    color: black;
 }
 input:nth-of-type(1), input:nth-of-type(2){
     width: 100%;
     border: none;
-    border-bottom: solid black 1px;
+    border-bottom: solid rgb(8, 6, 146) 1px;
     outline: none;
     margin: 0.5rem 0;
     font-size: 1.2rem;
+    color: var(--text-color)
 }
 input:nth-of-type(1){
     margin-top: 1.5rem;
@@ -52,4 +55,5 @@ p{
     font-size: 0.8rem;
     display: inline-block;
     text-align: right;
+    color: var(--text-color);
 }
