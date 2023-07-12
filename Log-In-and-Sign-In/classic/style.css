@@ -2,5 +2,13 @@ html{
     font-family: sans-serif;
 }
 form{
-    border: solid red 1px
+    border: solid red 1px;
+    margin: 5rem auto;
+    width: 35%;
+}
+h2{
+    text-align: center;
+}
+label{
+    display: block;
 }
