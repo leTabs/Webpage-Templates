@@ -553,7 +553,7 @@ footer p{
     /* about section */
 
     .main-about-section{
-        margin: 11rem 0 12rem 0;
+        margin: 11rem 0 30rem 0;
         padding: 2rem 1rem ;
         z-index:0;
     }
@@ -566,7 +566,7 @@ footer p{
     }
     .about-img{
         display: block;
-        transform: translate(-130% ,160%);
+        transform: translate(-125% ,190%);
         width: 90vw;
     }
     
