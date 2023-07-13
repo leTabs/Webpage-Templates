@@ -1,7 +1,7 @@
 :root{
-    --bground: 90deg, rgb(157, 157, 157) 5%,rgb(202, 203, 203) 20%,  white;
+    --bg-color: 90deg, rgb(157, 157, 157) 5%,rgb(202, 203, 203) 20%,  white;
     --form-bg-color: white;
-    --hover-bgroung:rgb(239, 117, 255) ;
+    --hover-bg:rgb(239, 117, 255) ;
     --text-color: rgb(41, 41, 41);
     --button-bg-color: rgb(37, 164, 228);
 }
@@ -9,7 +9,7 @@ html{
     font-family: sans-serif;
 }
 body{
-    background: linear-gradient(var(--bground));
+    background: linear-gradient(var(--bg-color));
     height: 100vh;
     overflow-y: hidden ;
 }
@@ -71,7 +71,7 @@ p{
     transition: 300ms;
 }
 button:hover{
-    background-color: var(--hover-bgroung);
+    background-color: var(--hover-bg);
     
 }
 p:hover{
