@@ -1,0 +1,84 @@
+:root{
+    --bg-color: 120deg, rgb(1, 60, 118) 5%,rgb(7, 87, 134) 20%, rgb(8, 167, 167);
+    --form-bg-color: rgb(248, 153, 240);
+    --hover-bg:rgb(211, 255, 117) ;
+    --text-color: rgb(0, 0, 0);
+    --button-bg-color: rgba(33, 177, 255, 0.827);
+    --button-text-color: white;
+}
+html{
+    font-family: sans-serif;
+}
+body{
+    background: linear-gradient(var(--bg-color));
+    height: 100vh;
+    overflow-y: hidden ;
+}
+form{
+    margin: 10rem auto 3rem auto;
+    width: 25%;
+    padding: 1rem 2rem;
+    background-color: var(--form-bg-color);
+}
+h2{
+    font-size: 2rem;
+    color: var(--text-color);
+    text-decoration: underline;
+}
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 0 0.3rem 0.2rem;
+}
+input:nth-of-type(1){
+    margin-top: 1.5rem;
+}
+#stay-logged{
+    margin-top: 1.5rem;
+    display: inline;
+    width: initial;
+    outline: initial;
+    box-shadow: initial;
+
+}
+#stay-logged, button:hover, p:hover{
+    cursor: pointer;
+}
+label{
+    font-size: 1.1rem;
+}
+button{
+    display: block;
+    width: 100%;
+    margin-top: 3rem;
+    border: none;
+    padding:0.5rem;
+    font-size: 1.1rem;
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
+    transition: 300ms;
+}
+p{
+    font-size: 0.8rem;
+    display: inline-block;
+    text-align: right;
+    color: rgb(22, 22, 22);
+    transition: 300ms;
+}
+button:hover{
+    background-color: var(--hover-bg);
+    color: black;
+    
+}
+p:hover{
+    color: var(--button-bg-color);
+}
+form, input, button{
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px 3px black;
+}
