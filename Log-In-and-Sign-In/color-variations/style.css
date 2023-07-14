@@ -1,4 +1,4 @@
-:root{
+/*:root{
     --bg-color: 100deg, rgb(125, 4, 87), rgb(247, 18, 175), rgb(245, 97, 195);
     --form-bg-color: rgb(255, 255, 255);
     --hover-bg:transparent;
@@ -6,6 +6,79 @@
     --button-bg-color: rgb(247, 18, 175);
     --button-text-color: rgb(255, 255, 255);
     --border-color: rgb(247, 18, 175);
+}*/
+/* :root{
+    --bg-color: 100deg, rgb(4, 93, 125), rgb(18, 148, 247), rgb(97, 191, 245);
+    --form-bg-color: rgb(255, 255, 255);
+    --hover-bg:transparent;
+    --text-color: rgb(18, 148, 247);
+    --button-bg-color: rgb(18, 148, 247);
+    --button-text-color: rgb(255, 255, 255);
+    --border-color: rgb(18, 148, 247);
+}
+:root{
+    --bg-color: 100deg, rgb(73, 4, 125), rgb(186, 18, 247), rgb(201, 97, 245);
+    --form-bg-color: rgb(255, 255, 255);
+    --hover-bg:transparent;
+    --text-color: rgb(186, 18, 247);
+    --button-bg-color: rgb(186, 18, 247);
+    --button-text-color: rgb(255, 255, 255);
+    --border-color: rgb(186, 18, 247);
+}
+:root{
+    --bg-color: 100deg, rgb(4, 125, 52), rgb(18, 247, 140), rgb(97, 245, 137);
+    --form-bg-color: rgb(255, 255, 255);
+    --hover-bg:transparent;
+    --text-color: rgb(12, 184, 104);
+    --button-bg-color: rgb(12, 184, 104);
+    --button-text-color: rgb(255, 255, 255);
+    --border-color: rgb(12, 184, 104);
+}
+:root{
+    --bg-color: 100deg, rgb(0, 0, 0), rgb(35, 35, 35), rgb(54, 54, 54);
+    --form-bg-color: rgb(255, 255, 255);
+    --hover-bg:transparent;
+    --text-color: rgb(35, 35, 35);
+    --button-bg-color: rgb(35, 35, 35);
+    --button-text-color: rgb(255, 255, 255);
+    --border-color: rgb(35, 35, 35);
+}
+:root{
+    --bg-color: 100deg, rgb(97, 125, 4), rgb(186, 247, 18), rgb(201, 245, 97);
+    --form-bg-color: rgb(255, 255, 255);
+    --hover-bg:transparent;
+    --text-color: rgb(136, 185, 3);
+    --button-bg-color: rgb(136, 185, 3);
+    --button-text-color: rgb(255, 255, 255);
+    --border-color: rgb(136, 185, 3);
+}
+:root{
+    --bg-color: 100deg, rgb(4, 71, 125), rgb(182, 18, 247), rgb(245, 97, 211);
+    --form-bg-color: rgb(255, 255, 255);
+    --hover-bg:transparent;
+    --text-color: rgb(182, 18, 247);
+    --button-bg-color: rgb(182, 18, 247);
+    --button-text-color: rgb(255, 255, 255);
+    --border-color: rgb(182, 18, 247);
+}
+:root{
+    --bg-color: 100deg, rgb(125, 4, 87), rgb(2, 61, 112), rgb(97, 245, 188);
+    --form-bg-color: rgb(255, 255, 255);
+    --hover-bg:transparent;
+    --text-color: rgb(125, 4, 87);
+    --button-bg-color: rgb(125, 4, 87);
+    --button-text-color: rgb(255, 255, 255);
+    --border-color: rgb(125, 4, 87);
+}
+*/
+:root{
+    --bg-color: 100deg, rgb(10, 4, 125), rgb(18, 155, 247), rgb(97, 243, 245);
+    --form-bg-color: rgb(255, 255, 255);
+    --hover-bg:transparent;
+    --text-color: rgb(18, 155, 247);
+    --button-bg-color: rgb(18, 155, 247);
+    --button-text-color: rgb(255, 255, 255);
+    --border-color: rgb(18, 155, 247);
 }
 html{
     font-family: sans-serif;
@@ -80,7 +153,8 @@ p{
 }
 button:hover{
     background: var(--hover-bg);
-    color: var(--text-color)
+    color: var(--text-color);
+    /* box-shadow: 3px 3px 10px black; */
     
 }
 p:hover{
