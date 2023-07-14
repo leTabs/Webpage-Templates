@@ -27,6 +27,9 @@ h2{
     font-size: 2rem;
     text-align: center;
 }
+hr{
+    border-color:  rgb(117, 117, 117);
+}
 input{
     width: 100%;
     border: none;
@@ -45,24 +48,24 @@ button:hover, p:hover{
 }
 label{
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding:0.5rem; 
     margin: 0;
 }
-
+.checkbox-wrapper, .radio-wrapper{
+    padding-left: 3rem;
+}
 .check{
     display: inline-block;
     width: initial;
-    border: solid 1px rgb(8, 0, 255);
-    margin: 1rem 0;
+    /* border: solid 1px rgb(8, 0, 255); */
 }
 .option{
     display: inline-block;
     width: initial;
-    border: solid 1px rgb(60, 255, 0);
-    margin: 1rem 0;
+    /* border: solid 1px rgb(60, 255, 0); */
 }
-#choice0, #choice1, #choice2, #option0, #option1{
+#choice0, #choice1, #choice2, #option0, #option1, #option2{
     width: initial;
 }
 .checkbox-option-title, .radio-option-title{
