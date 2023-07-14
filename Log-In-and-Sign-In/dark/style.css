@@ -1,84 +1,106 @@
 :root{
-    --bg-color: 80deg, rgb(125, 202, 253), rgb(193, 224, 244), rgb(250, 250, 250);
+    --bg-color:80deg, rgb(53, 55, 56), rgb(100, 108, 113), rgb(144, 144, 144);
     --form-bg-color: 110deg, rgb(15, 15, 15), rgb(33, 33, 33), rgb(34, 34, 34);
-    --hover-bg:rgba(33, 177, 255, 0.827);
+    --hover-bg:rgba(33, 177, 255, 0.827) ;
     --text-color: rgb(255, 0, 195);
-    --button-bg-color:  rgb(255, 0, 195);
+    --button-bg-color: rgb(255, 0, 195);
     --button-text-color: white;
-    --border-color: rgb(255, 0, 195);
+    --border-color: gb(255, 0, 195);
 }
 html{
     font-family: sans-serif;
+    background: linear-gradient(var(--bg-color));
 }
 body{
-    background: linear-gradient(var(--bg-color));
     height: 100vh;
-    overflow-y: hidden ;
+    padding-bottom: 5rem;
+    overflow: auto;
 }
 form{
-    margin: 10rem auto 3rem auto;
-    width: 25%;
-    padding: 1rem 2rem;
+    border: solid var(--border-color) 1px;
+    margin: 1rem auto 5rem auto;
+    width: 50%;
+    padding: 4rem 6rem 3rem 6rem;
     background: linear-gradient(var(--form-bg-color));
     box-shadow: 10px 13px 5px 2px black;
+    color: var(--text-color)
 }
 h2{
-    font-size: 2rem;
-    color: var(--text-color);
+    font-size: 2.5rem;
     text-align: center;
+    color: var(--text-color);
+    margin-top: 5rem; 
+}
+hr{
+    border-color:  rgb(117, 117, 117);
 }
 input{
     width: 100%;
     border: none;
-    border-bottom: solid 1px var(--border-color);
+    border-bottom: solid var(--text-color) 1px;
     outline: none;
     margin: 0.5rem 0;
     font-size: 1.2rem;
-    color: var(--text-color);
-    padding: 0.5rem 0 0.3rem 0.2rem;
+    color: var(--button-text-color);
     background: transparent;
 }
-input:nth-of-type(1){
-    margin-top: 1.5rem;
+input:hover{
+    border-bottom-color:rgb(160, 160, 160) ;
 }
-#stay-logged{
-    margin-top: 1.5rem;
-    display: inline;
-    width: initial;
-    outline: initial;
-    box-shadow: initial;
 
-}
-#stay-logged, button:hover, p:hover{
+button:hover, p:hover{
     cursor: pointer;
 }
 label{
-    font-size: 1.1rem;
-    color: white;
+    display: block;
+    font-size: 1.3rem;
+    padding:0.5rem; 
+    margin: 0;
+}
+.checkbox-wrapper, .radio-wrapper{
+    padding-left: 3rem;
+}
+.check{
+    display: inline-block;
+    width: initial;
+    color: var(--button-text-color);
+    /* border: solid 1px rgb(8, 0, 255); */
+}
+.option{
+    display: inline-block;
+    width: initial;
+    color: var(--button-text-color);
+    /* border: solid 1px rgb(60, 255, 0); */
+}
+#choice0, #choice1, #choice2, #option0, #option1, #option2{
+    width: initial;
+}
+.checkbox-option-title, .radio-option-title{
+    display: inline-block;
 }
 button{
     display: block;
     width: 100%;
-    margin-top: 2rem;
-    border: none;
-    padding:0.5rem;
+    margin-top: 3rem;
+    border: solid 1px;
+    padding:0.5rem 0;
     font-size: 1.1rem;
     background: var(--button-bg-color);
-    color: var(--button-text-color);
     transition: 300ms;
+    border: none;
+    color: var(--button-text-color)
 }
 p{
     font-size: 0.8rem;
     display: inline-block;
-    color: rgb(255, 255, 255);
+    text-align: right;
+    color: rgb(22, 22, 22);
     transition: 300ms;
 }
 button:hover{
-    background: var(--hover-bg);
-    color: rgb(255, 255, 255);
+    background-color: var(--hover-bg);
     
 }
 p:hover{
-    color: var(--text-color);
+    color: var(--button-bg-color);
 }
-
