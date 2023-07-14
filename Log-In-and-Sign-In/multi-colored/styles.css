@@ -1,0 +1,88 @@
+:root{
+    --bg-color: 80deg, rgb(3, 77, 143), rgb(132, 232, 237), rgb(242, 242, 242);
+    --form-bg-color: 110deg, rgb(173, 18, 80),rgb(197, 0, 155), rgb(7, 159, 154), rgb(3, 104, 92);
+    --hover-bg:rgba(0, 0, 0, 0.995);
+    --text-color: rgb(255, 255, 255);
+    --button-bg-color:  rgb(169, 250, 155);
+    --button-text-color: rgb(16, 73, 158);
+    --border-color: rgb(255, 255, 255);
+}
+html{
+    font-family: sans-serif;
+}
+body{
+    background: linear-gradient(var(--bg-color));
+    height: 100vh;
+    overflow-y: hidden ;
+}
+form{
+    margin: 10rem auto 3rem auto;
+    width: 25%;
+    padding: 1rem 2rem;
+    background: linear-gradient(var(--form-bg-color));
+    box-shadow: 3px 3px 15px  black ;
+}
+h2{
+    font-size: 2rem;
+    color: var(--text-color);
+    /* text-align: center; */
+}
+hr{
+    display: none;
+}
+input{
+    width: 100%;
+    border: solid 1px var(--border-color);
+    outline: none;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: var(--button-text-color);
+    padding: 0.5rem 0 0.3rem 0.2rem;
+    background: white;
+}
+input:nth-of-type(1){
+    margin-top: 1.5rem;
+}
+#stay-logged{
+    margin-top: 1.5rem;
+    display: inline;
+    width: initial;
+    outline: initial;
+    box-shadow: initial;
+
+}
+#stay-logged, button:hover, p:hover{
+    cursor: pointer;
+}
+label{
+    font-size: 1.1rem;
+    color: white;
+}
+button{
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+    padding:0.5rem;
+    font-size: 1.1rem;
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
+    transition: 300ms;
+}
+p{
+    font-size: 0.8rem;
+    /* display: inline-block; */
+    color: rgb(0, 0, 0);
+    transition: 300ms;
+}
+button:hover{
+    background: var(--hover-bg);
+    color: rgb(255, 255, 255);
+    
+}
+p:hover{
+    color: var(--text-color);
+}
+form, input, button{
+    border-radius: 25px;
+}
