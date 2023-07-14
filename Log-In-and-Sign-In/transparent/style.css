@@ -1,9 +1,9 @@
 :root{
     --bg-color: 80deg, rgb(8, 63, 73), rgb(41, 41, 41), rgb(67, 67, 67);
-    --form-bg-color: 110deg, rgb(173, 18, 80),rgb(197, 0, 155), rgb(7, 159, 154), rgb(3, 104, 92);
+    --form-bg-color: transparent;
     --hover-bg:rgba(91, 91, 91, 0.716);
     --text-color: rgb(255, 255, 255);
-    --button-bg-color:  rgb(255, 255, 255);
+    --button-bg-color:  transparent;
     --button-text-color: rgb(53, 189, 219);
     --border-color: rgb(255, 255, 255);
 }
@@ -19,8 +19,7 @@ form{
     margin: 10rem auto 3rem auto;
     width: 25%;
     padding: 1rem 2rem;
-    /* background: linear-gradient(var(--form-bg-color)); */
-    background: transparent;
+    background: var(--form-bg-color);
     border: solid 1px var(--border-color);
     text-align: center;
 }
@@ -69,7 +68,7 @@ button{
     margin-top: 2rem;
     padding:0.5rem;
     font-size: 1.1rem;
-    background: transparent;
+    background: var(--button-bg-color);
     border: solid 1px var(--border-color);
     color: var(--button-text-color);
     transition: 300ms;
