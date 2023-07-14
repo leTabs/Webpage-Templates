@@ -1,7 +1,7 @@
 :root{
     --bg-color: 80deg, rgb(3, 77, 143), rgb(132, 232, 237), rgb(242, 242, 242);
     --form-bg-color: 110deg, rgb(173, 18, 80),rgb(197, 0, 155), rgb(7, 159, 154), rgb(3, 104, 92);
-    --hover-bg:rgba(0, 0, 0, 0.995);
+    --hover-bg:rgb(106, 241, 82);
     --text-color: rgb(255, 255, 255);
     --button-bg-color:  rgb(169, 250, 155);
     --button-text-color: rgb(16, 73, 158);
@@ -77,7 +77,6 @@ p{
 }
 button:hover{
     background: var(--hover-bg);
-    color: rgb(255, 255, 255);
     
 }
 p:hover{
