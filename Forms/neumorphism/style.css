@@ -38,7 +38,6 @@ hr:first-of-type{
 input{
     width: 100%;
     border: none;
-    border-bottom: solid var(--text-color) 1px;
     outline: none;
     margin: 0.5rem 0;
     font-size: 1.2rem;
