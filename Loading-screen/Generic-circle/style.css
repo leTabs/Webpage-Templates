@@ -1,0 +1,37 @@
+:root{
+  --bg-color: 120deg, rgb(119, 3, 82), rgb(171, 6, 144), rgb(236, 34, 229);
+  --circle-main-color: rgb(255, 202, 245);
+  --circle-portion-color: rgb(72, 4, 84);
+}
+html *{
+  padding:0 ;
+  margin: 0;
+}
+body{
+  overflow: hidden;
+}
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(var(--bg-color));
+}
+
+.loading-circle {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 3px solid var(--circle-main-color);
+  border-top-color: var(--circle-portion-color);
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
