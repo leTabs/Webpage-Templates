@@ -576,6 +576,7 @@ footer p{
     .main-blog-content{
         margin: 9rem 0 0 0 ;
         width: 100vw;
+        padding:0.5rem
     }
     .date-elip{
         margin: 2rem 0;
@@ -632,7 +633,7 @@ footer p{
     .blog-sample p{
         padding: 1rem;
         font-weight: bold;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     /* article  */
     .article-section{
