@@ -574,9 +574,10 @@ footer p{
     /* blog - content */
     
     .main-blog-content{
-        margin: 9rem 0 0 0 ;
-        width: 100vw;
-        padding:0.5rem
+        margin: 9rem 0 0 0;
+        /* width: calc(100vw - 2.5rem); */
+        width: 90vw;
+        padding: 1rem
     }
     .date-elip{
         margin: 2rem 0;
