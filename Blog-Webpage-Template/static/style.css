@@ -454,10 +454,10 @@ footer p{
     .mobile-nav{
         display: block;
         height: 100vh;
-        width: 50vw;
+        width: 75vw;
         background-color: rgb(146, 146, 146);
         position: fixed;
-        top: 19%;
+        top: 17%;
         right: 0%;
         text-align: center;
         padding-top: 4rem;
@@ -469,6 +469,10 @@ footer p{
         font-size: 1.5rem ;
         color:black;
         margin-bottom: 1rem;
+    }
+    .mobile-nav hr{
+        width: 90%;
+        margin: auto
     }
     /* index main */
     .intro-wall{
