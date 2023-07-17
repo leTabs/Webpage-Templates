@@ -15,6 +15,7 @@ ${sociaMedia}
         <!--  -->
         <div class="lower-nav">
             <h3 class="nav-title">Up North</h3>
+            <img src="icons/bars-solid.svg" alt="Mobile Navbar Button" class="nav-btn"/>
             <span>
                 <a href="#">Home</a>
                 <a href="blog-feed.html">My Blog</a>
@@ -22,6 +23,15 @@ ${sociaMedia}
                 <a href="#contact">Contact</a>
             </span>
         </div>
+`
+const mobileNavContent=`
+    <div>
+        <a href="#">Home</a>
+        <a href="blog-feed.html">My Blog</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+        <hr />
+    </div>
 `
 const formContent = `
 <h3 class="form-title">Talk to me freely</h3>
@@ -57,6 +67,9 @@ const footerContent = `
 `
 const navBar = document.querySelector('.navigation-bar')
 navBar.innerHTML = navContent
+
+const modileNavBar = document.querySelector('.mobile-nav')
+modileNavBar.innerHTML = mobileNavContent
 
 const form = document.querySelector('#contact')
 form.innerHTML = formContent
