@@ -1,4 +1,3 @@
-/* add comments */
 :root{
     --white: white;
     --purple: rgb(111, 0, 107);
@@ -89,6 +88,9 @@ nav{
 }
 .lower-nav span a:hover{
     color: var(--light-blue);
+}
+.nav-btn{
+    display: none;
 }
 /* navigation bar end */
 
@@ -440,6 +442,11 @@ footer p{
     }
     .lower-nav span{
         display: none;
+    }
+    .nav-btn{
+        display: inline;
+        width: 1.5rem;
+        height: 1.5rem;
     }
     /* index main */
     .intro-wall{
