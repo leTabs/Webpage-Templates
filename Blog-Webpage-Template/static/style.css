@@ -451,18 +451,7 @@ footer p{
         width: 1.5rem;
         height: 2rem;
     }
-    .mobile-nav{
-        display: block;
-        height: 100vh;
-        width: 75vw;
-        background-color: rgb(146, 146, 146);
-        position: fixed;
-        top: 17%;
-        right: 0%;
-        text-align: center;
-        padding-top: 4rem;
-        box-shadow: -3px 3px 10px black ;
-    }
+
     .mobile-nav a{
         display: block;
         text-decoration: none;
@@ -473,6 +462,27 @@ footer p{
     .mobile-nav hr{
         width: 90%;
         margin: auto
+    }
+    .mobile-nav{
+        display: block;
+        height: 100vh;
+        width: 75vw;
+        background-color: rgb(146, 146, 146);
+        position: fixed;
+        top: 17%;
+        text-align: center;
+        padding-top: 4rem;
+        box-shadow: -3px 3px 10px black ;
+        transform: translate(150%, 0%);
+        animation: slide 1s linear forwards;
+    }
+    @keyframes slide {
+        from{
+            transform: translate(150%, 0%);
+        }
+        to{
+            transform: translate(40%, 0%);
+        }        
     }
     /* index main */
     .intro-wall{
