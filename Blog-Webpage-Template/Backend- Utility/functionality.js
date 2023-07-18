@@ -21,16 +21,27 @@ frontImages(
 
 
 
-const navButton = document.querySelector('.nav-btn')
+const navButton = document.querySelector('.nav-btn');
+const mobileNav = document.querySelector('.mobile-nav');
 
-const mobileNav = document.querySelector('.mobile-nav')
+const opacityReduce = function(n) {
+  mobileNav.style.opacity = `${n / 10}`;
+};
 
-navButton.addEventListener('click', ()=>{
-    if (mobileNav.style.display !== 'block'){
-        mobileNav.style.display = 'block'
-    }
-    else{
-            mobileNav.style.display = 'none' 
-        }
-}
-)
+navButton.addEventListener('click', () => {
+  if (mobileNav.style.display !== 'block') {
+    mobileNav.style.display = 'block';
+  } else {
+    let i = 10;
+    const reduceOpacityInterval = setInterval(() => {
+      opacityReduce(i);
+      i--;
+      if (i <= 0) {
+        clearInterval(reduceOpacityInterval);
+        mobileNav.style.display = 'none';
+      }
+    }, 50);
+    
+    mobileNav.style.opacity = `1`;
+  }
+});
