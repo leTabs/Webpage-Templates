@@ -455,8 +455,8 @@ footer p{
     .mobile-nav a{
         display: block;
         text-decoration: none;
-        font-size: 1.5rem ;
-        color:black;
+        font-size: 1.7rem ;
+        color:rgb(0, 0, 0);
         margin-bottom: 1rem;
     }
     .mobile-nav hr{
@@ -465,10 +465,10 @@ footer p{
     }
     .mobile-nav{
         height: 100vh;
-        width: 50vw;
-        background-color: rgb(146, 146, 146);
+        width: 70vw;
+        background-color: rgb(255, 255, 255);
         position: fixed;
-        top: 18%;
+        top: 17%;
         text-align: center;
         padding-top: 4rem;
         box-shadow: -3px 3px 10px black ;
@@ -480,7 +480,7 @@ footer p{
             transform: translate(150%, 0%);
         }
         to{
-            transform: translate(95%, 0%);
+            transform: translate(42%, 0%);
         }        
     }
     /* index main */
