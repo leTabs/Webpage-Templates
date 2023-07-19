@@ -66,6 +66,15 @@
     document.querySelector('.all-posts-btn').addEventListener('click', ()=>{
         window.location='blog-feed.html'
     })
+
+    const navAnchors = `
+            <a href="#">Home</a>
+            <a href="blog-feed.html">My Blog</a>
+            <a href="about.html">About</a>
+            <a href="#contact">Contact</a>
+    `
+    document.querySelector('.anchors').innerHTML = navAnchors
+    document.querySelector('.mobile-nav').innerHTML = navAnchors
 </script>
 <!--  -->
 </html>
