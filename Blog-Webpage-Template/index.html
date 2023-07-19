@@ -9,7 +9,13 @@
 </head>
 <body>
     <nav class="navigation-bar">
-    </nav>
+      </nav>
+    <!-- Move it to js later  -->
+      <div class="mobile-nav">
+      </div>
+    <!--  -->
+
+    
     <!--  -->
     <section class="intro-wall">
     </section>
@@ -51,5 +57,15 @@
     <footer>        
     </footer> 
 </body>
+<script src="utility-js/global.js"></script>
 <script src="utility-js/functionality.js"></script>
+<script>
+    document.querySelector('.nav-title').addEventListener('click', ()=>{
+        window.location='blog-feed.html'
+    })
+    document.querySelector('.all-posts-btn').addEventListener('click', ()=>{
+        window.location='blog-feed.html'
+    })
+</script>
+<!--  -->
 </html>
