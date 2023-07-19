@@ -70,7 +70,7 @@ nav{
     filter: invert(70%);
 }
 .lower-nav{
-    background-color: rgba(254, 250, 255, 0.87);
+    background-color: rgb(255, 255, 255);
     padding:1.2rem;
 }
 .nav-title{
@@ -437,7 +437,6 @@ footer p{
         height:1rem;
     }
     .lower-nav{
-        background-color: rgba(254, 250, 255, 0.87);
         padding:1.2rem;
     }
     .nav-title{
@@ -473,7 +472,7 @@ footer p{
         padding-top: 4rem;
         box-shadow: -3px 3px 10px black ;
         transform: translate(150%, 0%);
-        animation: slide 0.5s linear forwards;
+        animation: slide 0.15s linear forwards;
     }
     @keyframes slide {
         from{
