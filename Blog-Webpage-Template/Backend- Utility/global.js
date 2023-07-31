@@ -1,9 +1,9 @@
 const sociaMedia = `
 <span class="social-icons">
-<img src="icons/facebook.svg" alt="My Facebook" class="icon" />
-<img src="icons/instagram.svg" alt="My Instagram" class="icon" />
-<img src="icons/twitter.svg" alt="My Twitter" class="icon" />
-<img src="icons/linkedin.svg" alt="My Instagram" class="icon" />
+<img src="icons/facebook.svg" alt="My Facebook" class="icon fb" />
+<img src="icons/instagram.svg" alt="My Instagram" class="icon insta" />
+<img src="icons/twitter.svg" alt="My Twitter" class="icon twitter" />
+<img src="icons/linkedin.svg" alt="My Instagram" class="icon in" />
 </span>
 `
 
@@ -16,22 +16,13 @@ ${sociaMedia}
         <div class="lower-nav">
             <h3 class="nav-title">Up North</h3>
             <img src="icons/bars-solid.svg" alt="Mobile Navbar Button" class="nav-btn"/>
-            <span>
-                <a href="#">Home</a>
-                <a href="blog-feed.html">My Blog</a>
-                <a href="about.html">About</a>
-                <a href="#contact">Contact</a>
+            <span class="anchors">
+
             </span>
         </div>
 `
 const mobileNavContent=`
-    <div>
-        <a href="#">Home</a>
-        <a href="blog-feed.html">My Blog</a>
-        <a href="about.html">About</a>
-        <a href="#contact">Contact</a>
-        <hr />
-    </div>
+// here was the content of the modile navigation
 `
 const formContent = `
 <h3 class="form-title">Talk to me freely</h3>
@@ -68,11 +59,47 @@ const footerContent = `
 const navBar = document.querySelector('.navigation-bar')
 navBar.innerHTML = navContent
 
-const modileNavBar = document.querySelector('.mobile-nav')
-modileNavBar.innerHTML = mobileNavContent
+// const modileNavBar = document.querySelector('.mobile-nav')
+// modileNavBar.innerHTML = mobileNavContent
 
 const form = document.querySelector('#contact')
 form.innerHTML = formContent
 
 const footer = document.querySelector('footer')
 footer.innerHTML = footerContent
+
+
+const navButton = document.querySelector('.nav-btn');
+const mobileNav = document.querySelector('.mobile-nav');
+
+const opacityReduce = function(n) {
+  mobileNav.style.opacity = `${n / 10}`;
+};
+
+navButton.addEventListener('click', () => {
+  if (mobileNav.style.display !== 'block') {
+    mobileNav.style.opacity = `1`;
+    mobileNav.style.display = 'block';
+  } else {
+    let i = 10;
+    const reduceOpacityInterval = setInterval(() => {
+      opacityReduce(i);
+      i--;
+      if (i <= 0) {
+        clearInterval(reduceOpacityInterval);
+        mobileNav.style.display = 'none';
+      }
+    }, 15);
+  }
+});
+
+
+// social media hyperlinks
+const mediaEndpoint = function(destination){
+  window.location = `${destination}`
+}
+document.querySelector('.fb').addEventListener('click', ()=>{mediaEndpoint('http://facebook.com')})
+document.querySelector('.insta').addEventListener('click', ()=>{mediaEndpoint('http://instagram.com')})
+document.querySelector('.twitter').addEventListener('click', ()=>{mediaEndpoint('http://twitter.com')})
+document.querySelector('.in').addEventListener('click', ()=>{mediaEndpoint('http://linkedin.com')})
+
