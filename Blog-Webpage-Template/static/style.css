@@ -9,6 +9,18 @@ html, html *{
     margin: 0 ;
     scroll-behavior:smooth;
 }
+main{
+    opacity: 0;
+    animation: apearing 1s linear forwards
+}
+@keyframes apearing {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 /* crammed */
 .icon, .lower-nav span a, .all-posts-btn, .post p, form input, #form-btn, .read-more{   
     transition: 300ms;
@@ -756,5 +768,16 @@ footer p{
     }
     .main-about-section div{
         width: 90vw;
+    }
+}
+@media (max-width: 995px){
+    .article-section{
+        display: none;
+    }
+    .main-blog-content{
+        display: block ;
+        width: 80vw;
+        margin: 9rem auto 1rem auto;
+        padding: 0 3rem;
     }
 }
