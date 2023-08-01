@@ -66,6 +66,7 @@ nav{
     margin-left: 1rem;
     filter: invert(100%);
 }
+
 .icon:hover{
     filter: invert(70%);
 }
@@ -101,7 +102,7 @@ nav{
 .intro-wall{
     margin-top: 9rem;
     grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
+    text-align: center;    
 }
 .wall-img{
     width:92%;
@@ -117,7 +118,6 @@ nav{
     text-align: center;
     background-color: var(--white); 
     padding: 1rem;
-
 }
 .recent{
     margin: 5rem 0 0  4rem;
@@ -138,6 +138,7 @@ nav{
 }
 .sample-posts{
     margin:2rem 2rem 0 2rem;
+
 }
 .post{
     border: solid rgba(194, 194, 194, 0.896) 1px; 
@@ -170,6 +171,7 @@ form{
     border-top: 1px solid rgba(0, 0, 0, 0);
     padding: 2rem 10rem;
     text-align: right;
+    animation: bg-color 4s linear forwards
 }
 .form-title {
     text-align: center;
@@ -213,6 +215,26 @@ form div{
 form div span{
     margin: 0 1rem
 }
+
+
+footer .social-icons img{
+    animation: scaleUp 1s linear infinite;
+}
+@keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    75% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
 /* form end  */
 
 /* footer */
@@ -257,6 +279,7 @@ footer p{
     width: 1.2rem;
     height: 1.2rem;
 }
+
 .blog-thumb-img{
     width: 100%;
     height: 50%;
@@ -265,6 +288,21 @@ footer p{
     margin: 2rem 0 0.5rem 0;
     font-size: 1.8rem;
 }
+
+.blog-description{
+    transition: 300ms;
+}
+.blog-description:hover{
+    cursor: pointer;
+    color:rgb(77, 172, 207)
+}
+.main-blog-section a{
+    text-decoration: none;
+}
+.main-blog-section a:visited{
+    color: black;
+}
+/* donut */
 /* my blog end */
 
 /* about */
@@ -292,8 +330,25 @@ footer p{
     height: 50%;
     margin:5rem;
     position:static;
-    transform: translate(0%, 0%);
+    transform: translate(10%, 5%);
     z-index:1;
+    animation: image-slide 1s linear forwards;
+    filter:saturate(0);
+}
+@keyframes image-slide {
+    0%{
+        transform: translate(10%, 5%);
+        filter:saturate(0);
+    }
+    85%{
+        /* transform: translate(-1%, -1%); */
+        filter:saturate(0)
+    }
+    100%{
+        transform: translate(0%, 0%);
+        filter:saturate(1);
+        
+    }
 }
 
 /* blog content */
@@ -602,7 +657,7 @@ footer p{
     /* about section */
 
     .main-about-section{
-        margin: 11rem 0 30rem 0;
+        margin: 11rem 0 3rem 0;
         padding: 2rem 1rem ;
         z-index:0;
     }
@@ -688,5 +743,18 @@ footer p{
     /* article  */
     .article-section{
         display: none;
+    }
+}
+@media (max-width: 1029px){
+    .about-img{
+        display: none;
+    }
+    .main-about-section{
+        padding:1rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .main-about-section div{
+        width: 90vw;
     }
 }
