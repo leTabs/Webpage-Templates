@@ -8,57 +8,42 @@
     <link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
-    <nav class="navigation-bar">
-      </nav>
-    <!-- Move it to js later  -->
-      <div class="mobile-nav">
-      </div>
-    <!--  -->
+    <!-- pc navigation  bar (wrapper container)-->
+    <nav class="navigation-bar"></nav>
 
-    
-    <!--  -->
-    <section class="intro-wall">
-    </section>
-    <!--  -->
+    <!-- mobile navigation (wrapper container)-->
+    <div class="mobile-nav"></div>
+
+    <!-- opening panel, top section (wrapper container)-->
+    <section class="intro-wall"></section>
+
+    <!-- Recent posts recommendation -->
    <h3 class="recent">Recent Posts</h3>
     <section class="sample-posts">
-        <div class="post">
-            <img src="images/pexels-arthouse-studio-4311142.jpg" alt="" />
-            <div>
-                <span>Jule 04</span>
-                <h2>A title goes here (of the post_)</h2>
-                <br />
-                <p>
-                    a small description of the post
-                    a small description of the post
-                    a small description of the post
-                    a small description of the pos
-                </p>
-            </div>
+        <!-- first recent post (wrapper container) -->
+        <div class="post recent-post-01">
         </div>
-        <div class="post">
-            <img src="images/pexels-adam-lowly-2622290.jpg" alt="" />
-            <div>
-                <span>Jule 04</span>
-                <h2>A title goes here (of the post_)</h2>
-                <br />
-                <p>
-                    a small description of the post
-                    a small description of the post
-                    a small description of the post
-                    a small description of the post
-                </p>
-            </div>
+
+        <!-- second recent post (wrapper container) -->
+        <div class="post recent-post-02">
         </div>
     </section>
+
     <button class="all-posts-btn">All Posts</button>
-    <form action="" method="post" id="contact">
-    </form>
-    <footer>        
-    </footer> 
+
+    <!-- contact form (wrapper container) -->
+    <form action="" method="post" id="contact"></form>
+
+    <!-- webapage footer (wrapper container) -->
+    <footer></footer> 
 </body>
-<script src="utility-js/global.js"></script>
-<script src="utility-js/functionality.js"></script>
+
+
+<!-- Javascript inclusion, webpage content and functionality -->
+<script src="utilities/global.js"></script>
+<script src="utilities/index.js"></script>
+
+<!-- navigation anchors (mobile)-->
 <script>
     document.querySelector('.nav-title').addEventListener('click', ()=>{
         window.location='blog-feed.html'
@@ -76,5 +61,4 @@
     document.querySelector('.anchors').innerHTML = navAnchors
     document.querySelector('.mobile-nav').innerHTML = navAnchors
 </script>
-<!--  -->
 </html>
