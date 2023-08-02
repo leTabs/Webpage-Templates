@@ -445,7 +445,9 @@ footer p{
     margin-left:3rem ;
     text-align: center;
     padding:0 ;
+    animation: apearing 2s linear forwards
 }
+
 .article-img{
     width: 70%;
     height: 35%;
@@ -783,5 +785,19 @@ footer p{
     }
     form div{
         padding: 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 1005px){
+    .blog-thumb span{
+        border: solid rgba(154, 154, 154, 0.589) 1px;
+        border-top: none;
+        padding: 1.5rem 3rem;
+        padding-bottom: 1rem;
+        /* background-color: he;
+         */
+        height: auto;
+    }
+    .main-blog-section{
+        margin: 1rem 3rem 5rem 3rem;
     }
 }
