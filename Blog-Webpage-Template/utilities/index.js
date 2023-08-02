@@ -57,7 +57,7 @@ postDescription02 = `
 postNumber02 = 2
 // web page content variables END 
 /*----------------------------------------------------------------------------------------------*/
-// FUNCTION DECLARATION
+// FUNCTION DEFINITION
 
 
 // getting the empty wrapper element (type: section, className: "intro-wall")
@@ -99,8 +99,8 @@ const recentPosts = function(container, imgName, imgAltText, date, postTitle, po
     `
 }
 
-// function declaration END
-/////////////////////////////////////////////////////////////////////////////////
+// function definition END
+/*-------------------------------------------------------------------------------------------------*/
 /* FUNCTION CALLS */
 
 
@@ -118,7 +118,8 @@ recentPosts(recentPost01, imgName01, imgAltText01, date01, postTitle01, postDesc
 // recent post (Second), function call
 recentPosts(recentPost02, imgName02, imgAltText02, date02, postTitle02, postDescription02, postNumber02)
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// function call END
+/*---------------------------------------------------------------------------------------------------------------*/
 /* EVENT LISTENERS */
 
 // Recent post (First), "click" for destination
