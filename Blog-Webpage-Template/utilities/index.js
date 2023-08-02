@@ -67,12 +67,12 @@ const introWall = document.querySelector('.intro-wall')
 element and asigns it's content from the filled variabels, as parameters */
 const openingPanel= function(firstImage, secondImage, thirdImage, blogName){
     introWall.innerHTML =`
-        <img src="images/${firstImage}" alt="" class="wall-img first-img"/>
+        <img src="static/images/${firstImage}" alt="" class="wall-img first-img"/>
         <div class="middle-img-wrapper">
-            <img src="images/${secondImage}" alt="" class="wall-img wall-mid-img"/>
+            <img src="static/images/${secondImage}" alt="" class="wall-img wall-mid-img"/>
             <p class="title">${blogName}</p>
         </div>
-        <img src="images/${thirdImage}" alt="" class="wall-img third-img"/>
+        <img src="static/images/${thirdImage}" alt="" class="wall-img third-img"/>
     `
 }
 
@@ -89,7 +89,7 @@ element and asigns it's content from the filled variabels, as parameters */
 const recentPosts = function(container, imgName, imgAltText, date, postTitle, postDescription, postNumber){
     container.innerHTML = 
     `
-        <img src="images/${imgName}" alt="${imgAltText}" />
+        <img src="static/images/${imgName}" alt="${imgAltText}" />
         <div>
             <span>${date}</span>
             <h2>${postTitle}</h2>
