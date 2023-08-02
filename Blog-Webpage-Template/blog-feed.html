@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="static/style.css" />
+
+</head>
+<body>
+    <!-- pc navigation bar (wrapper container) -->
+    <nav class="navigation-bar"></nav>
+    <!-- modile navigation (wrapper container) -->
+    <div class="mobile-nav"></div>
+
+    <h3 class="title-h3">Blog Feed</h3>
+
+    <!-- blog feed main section (wrapper container) -->
+    <main class="main-blog-section"></main> 
+
+    <!-- contact form (wrapper container) -->
+    <form action="" method="post" id="contact"></form>
+
+    <!-- webpage footer (wrapper container) -->
+    <footer></footer> 
+</body>
+
+<!-- Javascript inclusion, webpage content and functionality -->
+<script src="utility-js/global.js"></script>
+<script src="utility-js/BlogFeed.js"></script>
+
+<!-- navigation anchors (mobile)-->
+<script>
+    const navAnchors = `
+        <a href="index.html">Home</a>
+        <a href="#">My Blog</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+    `
+    document.querySelector('.anchors').innerHTML = navAnchors
+    document.querySelector('.mobile-nav').innerHTML = navAnchors
+</script>
+</html>
