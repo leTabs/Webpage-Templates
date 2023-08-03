@@ -147,3 +147,7 @@ document.querySelector('.see-all').addEventListener('click', ()=>{
 })
 
 
+const readMore = document.querySelector('.read-more')
+readMore.addEventListener('click', ()=>{
+    window.location = 'about.html'
+})
