@@ -542,6 +542,7 @@ footer p{
         box-shadow: -3px 3px 10px black ;
         transform: translate(150%, 0%);
         animation: slide 0.15s linear forwards;
+        z-index: 2;
     }
     @keyframes slide {
         from{
@@ -694,7 +695,7 @@ footer p{
     .main-blog-content{
         margin: 9rem 0 0 0;
         /* width: calc(100vw - 2.5rem); */
-        width: 90vw;
+        width:auto;
         padding: 1rem
     }
     .date-elip{
