@@ -13,10 +13,10 @@ linkedInAccount = 'http://linkedin.com'
 // social media html structure
 const sociaMedia = `
   <span class="social-icons">
-  <img src="static/icons/facebook.svg" alt="My Facebook" class="icon fb" />
+  <img src="static/icons/facebook.svg" alt="My Facebook" class="icon fb " />
   <img src="static/icons/instagram.svg" alt="My Instagram" class="icon insta" />
-  <img src="static/icons/twitter.svg" alt="My Twitter" class="icon twitter" />
-  <img src="static/icons/linkedin.svg" alt="My Instagram" class="icon in" />
+  <img src="static/icons/twitter.svg" alt="My Twitter" class="icon twitter ft" />
+  <img src="static/icons/linkedin.svg" alt="My Instagram" class="icon in ft" />
   </span>
 `
 
@@ -138,7 +138,22 @@ const navButton = document.querySelector('.nav-btn');
 navButton.addEventListener('click', () => {mobileNavBehaviour()});
 
 // they navigate to the social media respective accounts
-document.querySelector('.fb').addEventListener('click', ()=>{mediaEndpoint(facebookAccount)})
-document.querySelector('.insta').addEventListener('click', ()=>{mediaEndpoint(instagramAccount)})
-document.querySelector('.twitter').addEventListener('click', ()=>{mediaEndpoint(twitterAccount)})
-document.querySelector('.in').addEventListener('click', ()=>{mediaEndpoint(linkedInAccount)})
+
+
+
+const facebooks = document.querySelectorAll('.fb')
+const instagrams = document.querySelectorAll('.insta')
+const twitters = document.querySelectorAll('.twitter')
+const linkedins = document.querySelectorAll('.in')
+
+
+const includeDestination = function(icon, destination){
+  icon.addEventListener('click', ()=>{mediaEndpoint(destination)});
+}
+
+
+facebooks.forEach((item)=> includeDestination(item, facebookAccount));
+instagrams.forEach((item)=> includeDestination(item, instagramAccount));
+twitters.forEach((item)=> includeDestination(item, twitterAccount));
+linkedins.forEach((item)=> includeDestination(item, linkedInAccount));
+/*---------------------------------------------------------------------------------------------*/
