@@ -1,6 +1,6 @@
 /* variables  */
 :root{
-    --white: white;
+    --white: rgb(255, 255, 255);
     --purple: rgb(111, 0, 107);
     --black: black;
     --light-blue: rgb(77, 172, 207);
@@ -22,7 +22,7 @@ main{
         opacity: 1;
     }
 }
-/* crammed */
+/* multiple styling applications */
 .icon, .lower-nav span a, .all-posts-btn, .post p, form input, #form-btn, .read-more{   
     transition: 300ms;
 }
@@ -112,75 +112,6 @@ nav{
 }
 /* navigation bar END */
 /* --------------------------------------------------------------------------------- */
-/* index */
-
-.intro-wall{
-    margin-top: 9rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;    
-}
-.wall-img{
-    width:92%;
-    height: 70vh;
-    margin: 1rem;
-}
-.wall-mid-img{
-    height:50vh
-}
-.title{
-    font-size: 2.2rem;
-    font-weight: bold;
-    text-align: center;
-    background-color: var(--white); 
-    padding: 1rem;
-}
-.recent{
-    margin: 5rem 0 0  4rem;
-    padding: 1rem;
-    font-size: 2rem;
-    border-bottom: solid gray 1px;
-}
-.all-posts-btn{
-    margin: 1rem 0 5rem 4rem;
-    background-color: var(--black);
-    color: var(--white);
-    font-size: 1.3rem;
-    padding: 0.5rem;
-    border: solid var(--black) 1px;
-}
-.all-posts-btn:hover{
-    background-color: var(--light-blue);
-}
-.sample-posts{
-    margin:2rem 2rem 0 2rem;
-
-}
-.post{
-    border: solid rgba(194, 194, 194, 0.896) 1px; 
-    margin: 1rem;
-    height: 20rem;
-    overflow: hidden;
-}
-.post img{
-    width:100%;
-    height: 20rem;
-}
-.post div{
-    padding:2rem;
-    height: 20rem;
-}
-.post span{
-    margin-bottom: 1.5rem;
-}
-.post p{
-    letter-spacing: 1px;
-    font-size: 1.1rem;
-}
-.post p:hover{
-    color: var(--light-blue);
-}
-/* index END */
-/* --------------------------------------------------------------------------------- */
 /* form  */
 
 form{
@@ -265,6 +196,75 @@ footer p{
 }
 /* footer END */
 /* --------------------------------------------------------------------------------- */
+/* index */
+
+.intro-wall{
+    margin-top: 9rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;    
+}
+.wall-img{
+    width:92%;
+    height: 70vh;
+    margin: 1rem;
+}
+.wall-mid-img{
+    height:50vh
+}
+.title{
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--white); 
+    padding: 1rem;
+}
+.recent{
+    margin: 5rem 0 0  4rem;
+    padding: 1rem;
+    font-size: 2rem;
+    border-bottom: solid gray 1px;
+}
+.all-posts-btn{
+    margin: 1rem 0 5rem 4rem;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border: solid var(--black) 1px;
+}
+.all-posts-btn:hover{
+    background-color: var(--light-blue);
+}
+.sample-posts{
+    margin:2rem 2rem 0 2rem;
+
+}
+.post{
+    border: solid rgba(194, 194, 194, 0.896) 1px; 
+    margin: 1rem;
+    height: 20rem;
+    overflow: hidden;
+}
+.post img{
+    width:100%;
+    height: 20rem;
+}
+.post div{
+    padding:2rem;
+    height: 20rem;
+}
+.post span{
+    margin-bottom: 1.5rem;
+}
+.post p{
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+.post p:hover{
+    color: var(--light-blue);
+}
+/* index END */
+/* --------------------------------------------------------------------------------- */
 /* blog feed */
 
 .title-h3{
@@ -317,6 +317,9 @@ footer p{
 }
 .main-blog-section a:visited{
     color: black;
+}
+.blog-description-wrapper{
+    color: black
 }
 
 /* blog feed END */
@@ -566,7 +569,48 @@ footer p{
     }
     /* nav bar END */
     /* --------------------------------------------------------------------------------- */
-    /* index */
+    /* form  */
+
+    form{
+        margin-top: 2rem;
+        padding: 1rem;
+        text-align: left;
+    }
+    .form-title {
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+    form label, form input{
+        font-size: 1rem;
+    }
+    #form-btn{
+        font-size: 1rem;
+        width: 25%;
+        margin-left: 1rem;
+    }
+    form div{
+        padding:0;
+    }
+    form div span{
+        margin: 0 1rem
+    }
+    /* form END  */
+    /* --------------------------------------------------------------------------------- */
+    /* footer */
+
+    footer{
+        padding: 1rem 2rem;
+    }
+    footer .social-icons{
+        margin-right: 0.5rem;
+    }
+    footer p{ 
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+    /* footer END */
+    /* --------------------------------------------------------------------------------- */
+        /* index */
     
     .intro-wall{
         display: block;
@@ -616,46 +660,55 @@ footer p{
     }
     /* index END */
     /* --------------------------------------------------------------------------------- */
-    /* form  */
-
-    form{
-        margin-top: 2rem;
-        padding: 1rem;
-        text-align: left;
+    /* index */
+    
+    .intro-wall{
+        display: block;
+        margin-top: 9rem;
+        text-align: center;
     }
-    .form-title {
-        font-size: 2rem;
-        margin: 2rem 0;
+    .wall-img{
+        width:92%;
+        height: 70vh;
+        margin: 0;
     }
-    form label, form input{
-        font-size: 1rem;
+    .first-img, .third-img{
+        display: none;
     }
-    #form-btn{
-        font-size: 1rem;
-        width: 25%;
-        margin-left: 1rem;
+    .wall-mid-img{
+        height:50vh;
+        width: 100%;
     }
-    form div{
-        padding:0;
+    .middle-img-wrapper{
+        width: 100vw;
     }
-    form div span{
-        margin: 0 1rem
+    .recent{
+        display: none;
     }
-    /* form END  */
-    /* --------------------------------------------------------------------------------- */
-    /* footer */
-
-    footer{
-        padding: 1rem 2rem;
+    .sample-posts{
+        margin:0;
+        display: block;
+        width: 100vw;
+        border: solid red 1px;
     }
-    footer .social-icons{
-        margin-right: 0.5rem;
+    .post{
+        display: block;
+        height: 35rem;
+        margin:1.5rem 3.5rem;
     }
-    footer p{ 
-        margin-left: 0;
-        font-size: 0.8rem;
+    .post img{
+        width:100%;
+        height: 50%;
     }
-    /* footer END */
+    .post div{
+        padding:2rem;
+        padding-bottom: 5rem;
+        height: 25rem;
+    }
+    .all-posts-btn{
+        margin: 1rem  0 0 3.5rem ;
+    }
+    /* index END */
     /* --------------------------------------------------------------------------------- */
     /* blog feed */
     
@@ -780,7 +833,6 @@ footer p{
     /* blog content END */
 }
 
-
 /* --------------------------------------------------------------------------------- */
 @media (max-width: 1029px){
     .about-img{
@@ -812,7 +864,7 @@ footer p{
     }
 }
 /* --------------------------------------------------------------------------------- */
-@media (min-width: 768px) and (max-width: 1005px){
+@media (min-width: 768px) and (max-width: 1035px){
     .blog-thumb span{
         border: solid rgba(154, 154, 154, 0.589) 1px;
         border-top: none;
