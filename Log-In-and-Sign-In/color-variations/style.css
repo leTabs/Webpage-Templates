@@ -71,14 +71,16 @@
     --border-color: rgb(125, 4, 87);
 }
 */
+
+/* variables */
 :root{
-    --bg-color: 100deg, rgb(10, 4, 125), rgb(18, 155, 247), rgb(97, 243, 245);
+    --bg-color: 100deg, rgb(125, 4, 87), rgb(247, 18, 175), rgb(245, 97, 195);
     --form-bg-color: rgb(255, 255, 255);
     --hover-bg:transparent;
-    --text-color: rgb(18, 155, 247);
-    --button-bg-color: rgb(18, 155, 247);
+    --text-color: rgb(247, 18, 175);
+    --button-bg-color: rgb(247, 18, 175);
     --button-text-color: rgb(255, 255, 255);
-    --border-color: rgb(18, 155, 247);
+    --border-color: rgb(247, 18, 175);
 }
 html{
     font-family: sans-serif;
@@ -88,6 +90,7 @@ body{
     height: 100vh;
     overflow-y: hidden ;
 }
+/* form styling */
 form{
     margin: 10rem auto 3rem auto;
     width: 25%;
@@ -98,13 +101,12 @@ form{
 h2{
     font-size: 2rem;
     color: var(--text-color);
-    /* text-align: center; */
 }
 hr{
-    /* width: 40%;
-    box-shadow: 3px 3px 10px black; */
     display: none;
 }
+
+/* input styling */
 input{
     width: 100%;
     outline: none;
@@ -134,6 +136,7 @@ label{
     font-size: 1.1rem;
     color: rgb(0, 0, 0);
 }
+/* submit button styling */
 button{
     display: block;
     width: 100%;
@@ -145,18 +148,26 @@ button{
     color: var(--button-text-color);
     transition: 300ms;
 }
+/* forgot password styling */
 p{
     font-size: 0.8rem;
-    /* display: inline-block; */
     color: rgb(40, 108, 125);
     transition: 300ms;
 }
 button:hover{
     background: var(--hover-bg);
     color: var(--text-color);
-    /* box-shadow: 3px 3px 10px black; */
     
 }
 p:hover{
     color: var(--text-color);
+}
+
+
+/* phone sized */
+@media (max-width: 836px){
+    form{
+        width: 60%;
+        margin:25% auto;
+    }
 }
