@@ -1,13 +1,17 @@
-// ANCHOR VARIABLE VALUES (required)
+// VARIABLE VALUES (required)
 
+// anchor destinations
 facebookAccount = 'http://facebook.com'
 instagramAccount = 'http://instagram.com'
 twitterAccount = 'http://twitter.com'
 linkedInAccount = 'http://linkedin.com'
 
+// navigation bar text
+const navText = "Appropriate text"
+// footer copyrights/remarks
+const remarks = 'leTabs'
 
-// anchor variable values required END
-/*---------------------------------------------------------------------------------------------*/
+///////////////////////////////////////////
 // WEB PAGE CONTENT VARIABLES (not required)
 
 // social media html structure
@@ -27,7 +31,7 @@ const navContent = `
     ${sociaMedia}
   </div>
   <div class="lower-nav">
-    <h3 class="nav-title">Up North</h3>
+    <h3 class="nav-title">${navText}</h3>
     <img src="static/icons/bars-solid.svg" alt="Mobile Navbar Button" class="nav-btn"/>
     <span class="anchors"></span>
   </div>
@@ -65,21 +69,24 @@ const formContent = `
 // footer content
 const footerContent = `
 ${sociaMedia}
-<p> &copy <span class="copyright">2023 by leTabs</span></p>
+<p> &copy <span class="copyright">2023 by ${remarks}</span></p>
 `
-// web page content variables END
+/////////////////////////////////////////////////////
+
+// getting the empty wrapper elements
+
+const navBar = document.querySelector('.navigation-bar')
+
+const form = document.querySelector('#contact')
+
+const footer = document.querySelector('footer')
+
+const mobileNav = document.querySelector('.mobile-nav');
 /*----------------------------------------------------------------------------------------*/
 // FUNCTION DEFINITION
 
 
-// getting the empty wrapper element (type: nav, className: "navigation-bar")
-const navBar = document.querySelector('.navigation-bar')
 
-// getting the empty wrapper element (type: form, id: "contact")
-const form = document.querySelector('#contact')
-
-// getting the empty wrapper element (type: footer)
-const footer = document.querySelector('footer')
 
 
 // the function assigns content from the content variables to each respectible wrapper element
@@ -96,8 +103,6 @@ const mediaEndpoint = function(destination){
 }
 
 
-// getting the empty wrapper element (type: div, className: "mobile-nav")
-const mobileNav = document.querySelector('.mobile-nav');
 
 // the function defines the opacity of the navigation (mobile version)
 const opacityReduce = function(n) {
@@ -121,26 +126,23 @@ const mobileNavBehaviour = function(){
     }, 15);
   }
 }
-// function definition END
+
 /*------------------------------------------------------------------------------------------*/
 // FUNCTION CALL
 
 globalContentAssignment()
 
-// function call END
 /*------------------------------------------------------------------------------------------*/
 // EVENT LISTENERS 
 
-// getting the appropriate element (type: button, className: "nav-btn")
+// getting the appropriate element 
+//(type: button, className: "nav-btn")
 const navButton = document.querySelector('.nav-btn');
 
 // handles the mobile navigation
 navButton.addEventListener('click', () => {mobileNavBehaviour()});
 
 // they navigate to the social media respective accounts
-
-
-
 const facebooks = document.querySelectorAll('.fb')
 const instagrams = document.querySelectorAll('.insta')
 const twitters = document.querySelectorAll('.twitter')
