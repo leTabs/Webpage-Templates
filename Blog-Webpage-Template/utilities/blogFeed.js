@@ -62,7 +62,7 @@ newBlog(
     "Month 00",
     "Post title", 
     `A small description of the post. 
-     A small description of the post.<br />
+     A small description of the post.
      A small description of the post. 
      A small description of the post.  `
 )
@@ -74,7 +74,7 @@ newBlog(
     "Month 00",
     "Post title", 
     `A small description of the post. 
-     A small description of the post.<br />
+     A small description of the post.
      A small description of the post. 
      A small description of the post.  `
 )
@@ -85,7 +85,7 @@ newBlog(
     "Month 00",
     "Post title", 
     `A small description of the post. 
-     A small description of the post.<br />
+     A small description of the post.
      A small description of the post. 
      A small description of the post.  `
 )
@@ -96,7 +96,7 @@ newBlog(
     "Month 00",
     "Post title", 
     `A small description of the post. 
-     A small description of the post.<br />
+     A small description of the post.
      A small description of the post. 
      A small description of the post.  `
 )
