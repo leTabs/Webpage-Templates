@@ -1,24 +1,25 @@
-// ANCHOR VARIABLE VALUES (required)
+// DESTINATION VARIABLES VALUES (required)
 
 
 // sidebar-article:
-articleImageName = "pexels-david-mcbee-2302017.jpg"
-articleImageAltText = "this is an image"
-articleTitle = "This is the title"
-articleText = "A fe good words a few gwords a few gwords a few gwords a few gwords a few gwords a few good words"
+articleImageName = "proxy02.jpg"
+articleImageAltText = "proxy image could not load"
+articleTitle = "Title"
+articleText = "Text content that describes valuable information about the author, ownser or manager of the website. "
 
 
 // blog sudgestions:
-img01 = 'pexels-arthouse-studio-4311142.jpg'
-imgText01 = 'First image'
-title01 = 'title 01'
+img01 = 'proxy01.jpg'
+imgText01 = 'proxy image could not load'
+title01 = 'Blog title'
 
-img02 = 'pexels-eneida-nieves-803975.jpg'
-imgText02 = 'Second image'
-title02 = 'title 02'
+img02 = 'proxy01.jpg'
+imgText02 = 'proxy image could not load'
+title02 = 'Blog title'
 
 
-// WEB PAGE CONTENT VARIABLES (not required)
+///////////////////////////////////////////////
+// STANDARD VARIABLES (not required)
 
 const socialIcons = `
 <span class="social-icons">
@@ -29,8 +30,18 @@ const socialIcons = `
 </span>
 `
 
-const articleWrapper = document.querySelector('.article-section')
-// web page content variables END
+// getting the empty wrapper element 
+// (type: article, className: "article-section")
+const articleWrapper = document.querySelector('.article-section');
+
+// (type: main, className: "main-blog-content")
+const blogContent= document.querySelector('.main-blog-content');
+
+
+// getting URL required information
+const urlParams = new URLSearchParams(window.location.search);
+const blogId = urlParams.get('blogId');
+
 /*------------------------------------------------------------------------------------*/
 // FUNCTION DEFINITION
 
@@ -68,28 +79,30 @@ const blogSudgestion = function(firstImg, firstImgAlText,sudgestionTitle01,
 const blogContentParser  = function(
     date, 
     title, 
-    textContent, 
+    textContent01, 
     imageName, 
     imgAltText,
-    innerTitle,
+    textContent02 = "",
+    quoteTitle,
     quoteText = "",
+    textContent03 = ""
 ){
 return(`
     <p class="date-elip">${date}</p>
     <h1 class="blog-content-title">${title}</h1>
-    <p class="content">${textContent}</p>
+    <p class="content">${textContent01}</p>
     <img src="static/images/${imageName}" alt="${imgAltText}" class="blog-content-img">
-    <p class="content">${textContent}</p>
-    <h2 class="inner-title">${innerTitle}</h2>
+    <p class="content">${textContent02}</p>
+    <h2 class="inner-title">${quoteTitle}</h2>
     <blockquote class="content-quote">${quoteText}</blockquote>
-    <p class="content">${textContent}</p>
+    <p class="content">${textContent03}</p>
     <hr />
     ${socialIcons}
     ${sudgestions}
 `)
 }
 
-//function definition END
+
 /*------------------------------------------------------------------------------------------------------*/
 // FUNCTION CALL
 
@@ -102,27 +115,27 @@ const sudgestions = blogSudgestion(
     title02
 )
 
-// getting URL required information
-const urlParams = new URLSearchParams(window.location.search);
-const blogId = urlParams.get('blogId');
-
 // calling the function as an item of the blogData array
 const blogData = {
   1:blogContentParser(
-    'June 22',
-    'Here is the title',
+    'Month 00',
+    'Blog Title',
     'Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.',
-    'pexels-bino-gadoino-16622215.jpg', 'Image alterntive text here',
+    'proxy01.jpg', 'Image alterntive text here',
+    'Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.',
     'Quote title',
-    'Give a man a fish he eat for a day, learn a man to fsh he ll eat for the rest of his life'
+    'It\'s like driving a car at night. You never see further than your headlights, but you can make the whole trip that way. ',
+    'Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.'
 ),
   2:blogContentParser(
-    'March 05',
+    'Month 00',
     'Here is the title',
     'Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.',
-    'pexels-bino-gadoino-16622215.jpg', 'Image alterntive text here',
+    'proxy01.jpg', 'Image alterntive text here',
+    '',
     'Quote title',
-    'Give a man a fish he eat for a day, learn a man to fsh he ll eat for the rest of his life'
+    'Give a man a fish he eat for a day, learn a man to fsh he ll eat for the rest of his life',
+    ''
 ),
 };
 
@@ -133,21 +146,20 @@ articleContent(articleImageName, articleImageAltText, articleTitle, articleText)
 /*-----------------------------------------------------------------------------------------*/
 // EVENT LISTENERS & CONTROL FLOW
 
-// getting the empty wrapper element (type: main, className: "main-blog-content")
-const blogContent= document.querySelector('.main-blog-content');
+
 // establising the contitions for the content of each blog
 if(blogData[blogId]){
     blogContent.innerHTML = blogData[blogId];
 }else(blogContent.innerHTML = '<h1>The blog is missing...</h1>')
-
 
 // creating a destination for the "SEE ALL" button
 document.querySelector('.see-all').addEventListener('click', ()=>{
     window.location = 'blog-feed.html'
 })
 
+// getting the "Read More" button element
+const readMore = document.querySelector('.read-more');
 
-const readMore = document.querySelector('.read-more')
 readMore.addEventListener('click', ()=>{
     window.location = 'about.html'
 })
