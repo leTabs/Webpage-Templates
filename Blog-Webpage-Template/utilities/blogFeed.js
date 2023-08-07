@@ -1,7 +1,12 @@
-// FUNCTION DEFINITION
+// VARIABLES (not required)
+//getting the empty wrapper element
+//(type: main, className: "main-blog-section")
 
-//getting the empty wrapper element (type: main, className: "main-blog-section")
 const blogThumb = document.querySelector('.main-blog-section')
+
+
+/*----------------------------------------------------------------------------------------------*/
+// FUNCTION DEFINITION
 
 
 /* the function defines the structure of the blog's thumbnail and specifies the content,
@@ -13,7 +18,7 @@ const newBlog = function(blogIdNumber,imageThumb, imageAltText, date, blogTitle,
             <span>
                 <p>${date}</p>
                 <h3 class="blog-thumb-title">${blogTitle}</h3>
-                <a href="blog-content.html?blogId=${blogIdNumber}">
+                <a href="blog-content.html?blogId=${blogIdNumber}" class="blog-description-wrapper">
                     <p class="blog-description">${blogDescription}</p>
                 </a>
             </span>
@@ -21,7 +26,7 @@ const newBlog = function(blogIdNumber,imageThumb, imageAltText, date, blogTitle,
     `
 }
 
-//function definition END
+
 /*--------------------------------------------------------------------------------------------------*/
 // FUNCTION CALL
 
@@ -39,7 +44,7 @@ EXAMPLE:
 newBlog(
     1,
     "carImage.jpg",
-    "and image of a car",
+    "an image of a car",
     "June 07",
     "Going on vacation", 
     `Stepping into vacation mode! Time to unwind, explore, and recharge.
@@ -52,22 +57,46 @@ newBlog(
 
 newBlog(
     1,
-    "pexels-adam-lowly-2622290.jpg",
-    "and image of a car",
-    "June 07",
-    "Going on vacation", 
-    `Stepping into vacation mode! Time to unwind, explore, and recharge.
-    Disconnecting from work temporarily for a rejuvenating break.
-    Exciting stories and experiences await upon my return!`
+    "proxy01.jpg",
+    "proxy image could not load",
+    "Month 00",
+    "Post title", 
+    `A small description of the post. 
+     A small description of the post.<br />
+     A small description of the post. 
+     A small description of the post.  `
 )
 
 newBlog(
-    1,
-    "pexels-adam-lowly-2622290.jpg",
-    "and image of a car",
-    "June 07",
-    "Going on vacation", 
-    `Stepping into vacation mode! Time to unwind, explore, and recharge.
-    Disconnecting from work temporarily for a rejuvenating break.
-    Exciting stories and experiences await upon my return!`
+    2,
+    "proxy01.jpg",
+    "proxy image could not load",
+    "Month 00",
+    "Post title", 
+    `A small description of the post. 
+     A small description of the post.<br />
+     A small description of the post. 
+     A small description of the post.  `
+)
+newBlog(
+    3,
+    "proxy01.jpg",
+    "proxy image could not load",
+    "Month 00",
+    "Post title", 
+    `A small description of the post. 
+     A small description of the post.<br />
+     A small description of the post. 
+     A small description of the post.  `
+)
+newBlog(
+    4,
+    "proxy01.jpg",
+    "proxy image could not load",
+    "Month 00",
+    "Post title", 
+    `A small description of the post. 
+     A small description of the post.<br />
+     A small description of the post. 
+     A small description of the post.  `
 )
