@@ -1,67 +1,66 @@
 // WEB PAGE CONTENT VARIABLES (required)
 
-
 // opening panel variables
 
 // image name 01
-firstImageName = 'pexels-eneida-nieves-803975.jpg'
+firstImageName = 'proxy01.jpg'
 // image name 02
-secondImageName = 'pexels-david-mcbee-2302017.jpg'
+secondImageName = 'proxy01.jpg'
 // image name 03
-thirdImageName = 'pexels-bino-gadoino-16622215.jpg'
+thirdImageName = 'proxy01.jpg'
 // blog name/title
-blogTitleName =  `My Blog.<br /> The mountain side.`
+blogTitleName =  `Blog Title <br /> Continuing`
 
 
 
 // recent post 01 variables
 
 // post image name 
-imgName01 = 'pexels-arthouse-studio-4311142.jpg'
+imgName01 = 'proxy02.jpg'
 // image alternative text
-imgAltText01 = 'this is an image'
+imgAltText01 = 'proxy image could not load'
 // post's date
-date01 = 'June 02'
+date01 = 'Month 00'
 // post's title 
-postTitle01 = 'Title goes here'
+postTitle01 = 'Post title'
 // a small post description
 postDescription01 = `
-    a small description of the post
-    a small description of the post
-    a small description of the post
-    a small description of the pos
+    A small description of the post.
+    A small description of the post.
+    A small description of the post.
 `
 // post number
 postNumber01= 1
 
 
-
 // recent post 02 variables
 
 // post image name 
-imgName02 = 'pexels-adam-lowly-2622290.jpg'
+imgName02 = 'proxy02.jpg'
 // image alternative text
-imgAltText02 = 'this is an image'
+imgAltText02 = 'proxy image could not load'
 // post's date
-date02 = 'June 22'
+date02 = 'Month 00'
 // post's title
-postTitle02 = 'Title popin here'
+postTitle02 = 'Post title'
 // a small post description
 postDescription02 = `
-    a small description of the post
-    a small description of the post
-    a small description of the post
-    a small description of the pos
+A small description of the post.
+A small description of the post.
+A small description of the post.
 `
 // post number
 postNumber02 = 2
-// web page content variables END 
+
+/////////////////////////////////////////////////
+// getting the empty wrapper elements
+
+const introWall = document.querySelector('.intro-wall')
+
+const recentPost01 = document.querySelector('.recent-post-01')
+const recentPost02 = document.querySelector('.recent-post-02')
 /*----------------------------------------------------------------------------------------------*/
 // FUNCTION DEFINITION
-
-
-// getting the empty wrapper element (type: section, className: "intro-wall")
-const introWall = document.querySelector('.intro-wall')
 
 /* the function defines the structure of opening panel wrapper 
 element and asigns it's content from the filled variabels, as parameters */
@@ -76,13 +75,6 @@ const openingPanel= function(firstImage, secondImage, thirdImage, blogName){
     `
 }
 
-
-
-// getting the recent posts empty wrapper elements
-// (type: div, className: "recent-post-01")
-// (type: div, className: "recent-post-02")
-const recentPost01 = document.querySelector('.recent-post-01')
-const recentPost02 = document.querySelector('.recent-post-02')
 
 /* the function defines the structure of recent post wrapper 
 element and asigns it's content from the filled variabels, as parameters */
@@ -99,10 +91,9 @@ const recentPosts = function(container, imgName, imgAltText, date, postTitle, po
     `
 }
 
-// function definition END
-/*-------------------------------------------------------------------------------------------------*/
-/* FUNCTION CALLS */
 
+/*-------------------------------------------------------------------------------------------------*/
+/* FUNCTION CALL */
 
 // opening panel,  function call.
 openingPanel(
@@ -118,7 +109,7 @@ recentPosts(recentPost01, imgName01, imgAltText01, date01, postTitle01, postDesc
 // recent post (Second), function call
 recentPosts(recentPost02, imgName02, imgAltText02, date02, postTitle02, postDescription02, postNumber02)
 
-// function call END
+
 /*---------------------------------------------------------------------------------------------------------------*/
 /* EVENT LISTENERS */
 
