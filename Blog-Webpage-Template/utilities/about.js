@@ -1,4 +1,4 @@
-// ANCHOR VARIABLE VALUES (required)
+// WEB PAGE CONTENT VARIABLES (required)
 
 // title
 const aboutTitle = 'About Section Title'
