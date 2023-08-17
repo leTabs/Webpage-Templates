@@ -129,13 +129,13 @@ const blogData = {
 ),
   2:blogContentParser(
     'Month 00',
-    'Here is the title',
+    'Blog Title',
     'Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.',
     'proxy01.jpg', 'Image alterntive text here',
-    '',
+    'Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.',
     'Quote title',
-    'Give a man a fish he eat for a day, learn a man to fsh he ll eat for the rest of his life',
-    ''
+    'It\'s like driving a car at night. You never see further than your headlights, but you can make the whole trip that way. ',
+    'Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.'
 ),
 };
 
