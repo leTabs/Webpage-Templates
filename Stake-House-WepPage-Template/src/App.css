@@ -9,7 +9,7 @@ html, body{
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 10px;
-  background-color: rgba(0, 255, 255, 0.471);
+  background-color: rgba(0, 255, 255, 0);
 }
 .NavBar{
   padding: 0 5rem 0 8rem;
@@ -71,9 +71,279 @@ html, body{
   z-index: -1;
   transform: translateZ(-10px) scale(2.1);
 }
-.pop{
-  background-color: red;
+.About{
+  height: 75%;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
   z-index: 2;
   position: relative;
+  /* top: 65%; */
   transform: translateZ(0px) scale(1);
+  border-bottom: solid 1px rgba(255, 0, 0, 0);
+  display: block;
+  text-align: center;
+  box-shadow:  -5px -15px 15px black, 
+  inset 3px 3px 10px black;
+  background: linear-gradient(123deg, rgb(215, 212, 212), white, rgb(255, 244, 244), rgb(223, 212, 212));
+  /* NOTE: bg & bg-color cause a glich, fix it later plaese, COULD BE THE HEIGHT THOUGH.
+    take it with a grain of sult
+  */
+}
+.About h2{
+  /* margin-top: 3.5rem; */
+  font-size: 2.8rem;
+  letter-spacing: 0.3rem;
+  color: white;
+  /* background-color: rgba(0, 0, 0, 0.906); */
+  border: solid black 1px;
+  background: linear-gradient(90deg, black 0%, rgb(0, 0, 0) 81%,  white 80%, white 100%);
+  width: fit-content;
+  margin: 2.5rem auto 2rem auto;
+  padding: 0.35rem 0.75rem 0.35rem 1rem;
+  /* text-align: center; */
+}
+.About h2 span{
+  color: black
+}
+.About img{
+  height: 45vh;
+  width: 70%;
+  object-fit: cover;
+}
+.About p{
+  width: 65%;
+  font-size: 1.2rem;
+  margin: 1rem auto auto auto;
+  /* border-bottom: solid 1px gray; */
+}
+.About hr{
+  width: 40%;
+  /* margin-top: 1.5rem; */
+}
+
+
+.Menu{  
+  position: relative;
+  height: 110%;
+  width: 100vw;
+  top:-45%;
+  box-shadow: 5px -5px 15px black;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0);
+  /* transform: rotate(360deg); */
+  display: flex;
+  color: white;
+  text-shadow: 5px 5px 15px black, 5px 5px 15px white;
+  transform: translateZ(5px) scale(0.5);
+  /* transform-style: preserve-3d; */
+}
+
+.Menu img{
+  width: 100vw;
+  height: 175%;
+  object-fit: cover;
+  /* transform: translateZ(10px) scale(0); */
+  
+}
+.Menu div{
+  background-color: rgba(0, 0, 0, 0.367);
+  position: absolute;
+  width: 60%;
+  font-size: 1.8rem;
+  text-align: center;
+  box-shadow: inset 5px 5px 50px rgba(0, 0, 0, 0.617);
+  transition: 200ms;
+}
+.Menu div:hover{
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.Menu-div-01{
+  top: 20%;
+  border: solid white 4px;
+  border-left: none;
+}
+.Menu-div-02{
+  bottom: 20%;
+  right: 0%;
+  border: solid white 4px;
+  border-right: none;
+}
+.Menu div p, h3{
+  margin: 0;
+  padding: 0;
+}
+.Menu div h3{
+  margin: 2rem auto 1rem auto;
+}
+.Menu div p{
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.pip{
+  background-color: yellow;
+}
+
+.Reservations{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  height: 110%;
+  width: 100vw;
+  top:-50%;
+  box-shadow: 5px -5px 15px rgb(31, 31, 31);
+  z-index: 4;
+  background-color: white;
+  padding-top: 0.2rem;
+}
+.Reservations h2{
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 5rem;
+  word-spacing: 1rem;
+  letter-spacing: 0.1.5rem;
+  /* border-bottom: solid 1px; */
+}
+.Reservations-form{
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2;
+  padding: 3rem 2rem 2rem 2rem;
+  color: white;
+  background: linear-gradient(123deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.841), black);
+}
+.Reservations-form label{
+  font-size: 1.1rem;
+  margin-left: 2rem;
+}
+.Reservations-form select,
+.Reservations-form input{
+  margin: 1rem 2rem 1rem 2rem;
+  padding: 0.3rem 1rem;
+  font-size: 1.4rem;
+}
+.Reservations-form option{
+  border: solid red 
+}
+.Reservations-form button{
+  width: 50%;
+  position: relative;
+  left: 125%;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1.5rem;
+  border: solid 2px white;
+  color: white;
+  background-color: black;
+  transition: 300ms;
+}
+.Reservations-form button:hover{
+  filter: invert(100%);
+  cursor: pointer;
+}
+.Reservations-text-content{
+  text-align: center;
+  display: block;
+  /* font-size: 1.3rem; */
+  border: solid gray 1px;
+  margin: 1rem auto;
+  width: 50%;
+  padding: 1rem 3rem 0.5rem 3rem;
+  box-shadow: 5px 5px 30px rgb(255, 254, 254), 3px 5px 30px rgba(0, 0, 0, 0.339);
+}
+.Reservations-text-content h3{
+  font-size: 1.5rem;
+}
+.Reservations-text-content p{
+  font-size: 1.1rem;
+}
+.RestaurantInfo{
+  border: solid 1px blue;
+  /* padding-bottom: 4rem; */
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgb(0, 0, 0, 0.075), rgb(0, 0, 0, 0.1));
+  /* Perhaps remove some of the height later */
+}
+.RestaurantInfo-main-wrapper{
+  /* padding: 0 5rem; */
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(123deg, 
+    rgb(0, 0, 0), 
+    rgba(0, 0, 0, 0.841), 
+    black);
+  padding: 4rem 5rem;
+}
+.RestaurantInfo-info{
+  background-color: white;
+}
+.RestaurantInfo h2{
+  font-size: 3rem;
+  text-align: center;
+  word-spacing: 1rem;
+  letter-spacing: 0.1.5rem;
+}
+.RestaurantInfo-info,
+.RestaurantInfo-schedule{
+  border: solid rgb(56, 133, 141) 1px;
+  margin: 0 2rem;
+}
+.RestaurantInfo-info{
+  padding: 0.5rem 2rem;
+}
+.RestaurantInfo-info p{
+  font-weight: bold;
+  padding: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  border-bottom: solid rgba(0, 0, 0, 0.548) 1px;
+}
+.RestaurantInfo-info p:first-of-type{
+  margin-top: 1rem;
+}
+.RestaurantInfo-info p span{
+  font-weight: normal;
+  font-size: 1.05rem;
+}
+.RestaurantInfo-info-address{
+  display: block;
+  margin-left: 1.2rem;
+}
+.RestaurantInfo-socials-wrapper{
+  border-bottom: solid black 1px;
+  /* display: block; */
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+.RestaurantInfo-socials-wrapper img{
+  width: 2rem;
+  height: 2rem;
+  transition: 300ms;
+  border: solid 2px rgba(0, 0, 0, 0);
+  padding:0.1rem;
+  margin: 0 0.5rem;
+  border-radius: 10px;
+}
+.RestaurantInfo-socials-wrapper img:hover{
+  /* border-color: black; */
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.RestaurantInfo-schedule h3{
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  background-color: transparent;
+}
+.RestaurantInfo-schedule-inner-wrapper{
+  display: block;
+  background: white;
 }
