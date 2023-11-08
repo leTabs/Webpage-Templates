@@ -187,13 +187,13 @@ html, body{
 }
 
 .Reservations{
-  height: 100%;
+  height: 110%;
   width: 100%;
   position: relative;
   height: 110%;
   width: 100vw;
   top:-50%;
-  box-shadow: 5px -5px 15px rgb(31, 31, 31);
+  box-shadow: 5px 10px 30px rgb(31, 31, 31);
   z-index: 4;
   background-color: white;
   padding-top: 0.2rem;
@@ -201,7 +201,7 @@ html, body{
 .Reservations h2{
   text-align: center;
   font-size: 3rem;
-  margin-top: 5rem;
+  margin-top: 6rem;
   word-spacing: 1rem;
   letter-spacing: 0.1.5rem;
   /* border-bottom: solid 1px; */
@@ -262,11 +262,16 @@ html, body{
   font-size: 1.1rem;
 }
 .RestaurantInfo{
-  border: solid 1px blue;
+  /* border: solid 1px blue; */
   /* padding-bottom: 4rem; */
-  height: 100%;
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgb(0, 0, 0, 0.075), rgb(0, 0, 0, 0.1));
   /* Perhaps remove some of the height later */
+  position: relative;
+  top: -40%;
+  transform: translateZ(-9.9px) scale(2);
+  height: 160%;
+  border-bottom: solid black 2px;
+  padding-top: 4rem;
 }
 .RestaurantInfo-main-wrapper{
   /* padding: 0 5rem; */
@@ -291,8 +296,9 @@ html, body{
 }
 .RestaurantInfo-info,
 .RestaurantInfo-schedule{
-  border: solid rgb(56, 133, 141) 1px;
+  /* border: solid rgb(56, 133, 141) 1px; */
   margin: 0 2rem;
+  height: 100%;
 }
 .RestaurantInfo-info{
   padding: 0.5rem 2rem;
@@ -340,10 +346,57 @@ html, body{
 .RestaurantInfo-schedule h3{
   text-align: center;
   color: white;
-  font-size: 1.3rem;
+  margin: 0.5rem auto 1rem auto;
+  font-size: 1.6rem;
   background-color: transparent;
 }
 .RestaurantInfo-schedule-inner-wrapper{
   display: block;
+  padding: 2rem 3rem;
   background: white;
+  /* height: 52% */
+}
+.RestaurantInfo-schedule-inner-wrapper span{
+  display: block;
+  padding-bottom: 1rem;
+  /* margin-bottom: 0.5rem; */
+}
+.RestaurantInfo-schedule-inner-wrapper span p{
+  display: inline;
+  font-size: 1.15rem;
+}
+.RestaurantInfo-schedule-inner-wrapper span p:first-of-type{
+  margin-right: 0.5rem;
+  font-weight: 500;
+  border-left: solid black 1px;
+  padding-left: 0.5rem;
+}
+.RestaurantInfo-up-sign{
+  height: 5rem;
+  display: block;
+  margin: 2rem auto;
+  transition: 300ms;
+  border-bottom: solid 2px rgba(0, 0, 0, 0);
+  /* width: rem; */
+}
+.RestaurantInfo-up-sign:hover{
+  border-bottom-color: black;
+  filter: invert(20%);
+  cursor: pointer;
+}
+.Footer{
+  background-color: black;
+  color: white;
+  margin: 0;
+  position: relative;
+  bottom: 0%;
+  text-align: center;
+  padding: 0.75rem 0;
+}
+.Footer p{
+  display: inline-block;
+  margin: 0;
+}
+.Footer p:first-of-type{
+  margin-right: 1rem;
 }
