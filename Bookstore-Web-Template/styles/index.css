@@ -209,10 +209,16 @@ nav span p:hover{
     padding: 0.5rem 1rem;
     text-align: center;
     height: fit-content;
+    width: 100%;
+}
+.item:hover h3{
+    border-bottom-color: black;
 }
 .item h3{
     font-size: 1.8rem;
     margin: 0.5rem 0;
+    transition: 250ms;
+    border-bottom: solid rgba(255, 255, 255, 0) 1px;
 }
 .item img{
     width: 100%;
@@ -344,9 +350,9 @@ nav span p:hover{
 }
 .contact-left-div img{
     width: 90%;
-    height: 80%;
+    height: 20rem;
     object-fit: cover;
-    border: solid 5px white
+    border: solid 5px white;
 }
 .contact-right-div{
     background: linear-gradient(90deg, black 0% , black 15%, rgb(12, 12, 12),rgb(20, 20, 20), black);
@@ -440,7 +446,7 @@ footer p{
     opacity: 0;
 }
 .item-jumpers{
-    animation: item-jumper 0.5s ease-out forwards; 
+    animation: item-jumper 0.75s ease-out forwards; 
     /* opacity: 0; */
 }
 .item-02{
@@ -466,6 +472,10 @@ footer p{
 .p-03{
     animation-delay: 0.2s;
 }
+/* probably remove that and the class from the html (text-info-p) */
+.text-info-p{
+    opacity: 0;
+}
 .text-info-animator{
     animation: info-slider 1s ease-in-out forwards;
 }
@@ -480,5 +490,26 @@ footer p{
         transform: translate(0%, 0%);
         opacity: 1;
         /* color: white; */
+    }
+}
+.contact-img{
+    transform: scale(15%);
+    opacity: 0;
+
+}
+.contact-img-animation{
+    animation: scaler 1s ease-in-out forwards;
+}
+
+@keyframes scaler{
+    0%{
+        transform: scale(15%);
+    }
+    80%{
+        transform: scale(108%);
+    }
+    100%{
+        transform: scale(100%);
+        opacity: 1;
     }
 }
