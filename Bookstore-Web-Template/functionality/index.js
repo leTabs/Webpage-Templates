@@ -66,3 +66,5 @@ const z2 = document.querySelector('.p-03')
 animationScrollTrigger(x2, 'text-info-animator')
 animationScrollTrigger(y2, 'text-info-animator')
 animationScrollTrigger(z2, 'text-info-animator')
+
+animationScrollTrigger(document.querySelector('.contact-img'), 'contact-img-animation')
