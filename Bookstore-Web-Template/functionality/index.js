@@ -118,3 +118,20 @@ nextBtn.addEventListener('click', ()=>{nextItem(itemCounter)})
 
 const aboutLeftDiv = document.querySelector('.about-left-div')
 animationScrollTrigger(aboutLeftDiv, 'about-left-div-appearing')
+
+
+
+// view products
+
+const viewProductsArray = document.querySelectorAll('.view-all-btn')
+
+for(let i = 0; i < viewProductsArray.length; i++){
+  viewProductsArray[i].addEventListener('click', ()=>{alert(i)})
+}
+
+
+const productWindowCloseBtn = document.querySelector('.product-window-close-btn')
+
+productWindowCloseBtn.addEventListener('click', ()=>{
+  document.querySelector('.products-window').style.display = 'none'
+})
