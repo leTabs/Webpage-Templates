@@ -127,6 +127,11 @@ nav span p:hover{
     background: linear-gradient(90deg, rgb(241, 241, 241), rgb(255, 255, 255), rgb(245, 245, 245) 50%, rgb(0, 0, 0)50%, black 100%);
     box-shadow: inset 5px 5px 20px gray;
     margin: 0;
+    overflow: auto;
+}
+.about-left-div{
+    opacity: 0;
+    text-shadow: 3px 3px 25px black;
 }
 .about-left-div h2, .about-left-div p{
     padding: 0 2rem ;
@@ -160,17 +165,17 @@ nav span p:hover{
 }
 .about-right-div{
     padding-top: 1rem;
-    background: linear-gradient(135deg,rgb(37, 37, 37)  0%, rgb(37, 37, 37) 10%,rgb(32, 32, 32) 50%,  black 50%, black 100%);
+    background: linear-gradient(135deg,rgb(37, 37, 37)  0%, rgb(37, 37, 37) 10%,rgb(20, 20, 20) 20%,  black 100%);
     box-shadow: -5px -5px 10px rgba(27, 27, 27, 0.699);
 }
 .about-right-div img{
     width: 90%;
-    height: 90%;
+    height: 80%;
     object-fit: cover;
     display: block;
     position: relative;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 52%;
     left: 50%;
     /* animation: animate 2s linear forwards; */
 }
@@ -210,6 +215,7 @@ nav span p:hover{
     text-align: center;
     height: fit-content;
     width: 100%;
+    transition: 250ms;
 }
 .item:hover h3{
     border-bottom-color: black;
@@ -267,6 +273,7 @@ nav span p:hover{
     border: solid 2px rgb(0, 0, 0);
     border-radius: 50%;
     margin: 0 0.25rem;
+    transition: 500ms
 }
 .dot:nth-of-type(1),
 .dot:nth-of-type(2),
@@ -305,14 +312,18 @@ nav span p:hover{
     background-color: white;
     color: black;
     border: none;
+    border-left: solid 10px rgba(0, 0, 0, 0);
+    border-right: solid 10px rgba(0, 0, 0, 0);
     font-size: 1rem;
 }
 
 .full-inventory-div-wrapper button:hover{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     width: 80%;
     box-shadow: none;
+    border-left: solid 10px black;
+    border-right: solid 10px black;
 }
 /* contact section */
 .contact-section{
@@ -444,6 +455,8 @@ footer p{
 
 .item{
     opacity: 0;
+    /* display: none; */
+    /* transition: 250ms; */
 }
 .item-jumpers{
     animation: item-jumper 0.75s ease-out forwards; 
@@ -464,6 +477,11 @@ footer p{
         transform: translate(0%, 0%);
         opacity: 1;
     }
+}
+
+.item-04, .item-05, .item-06, .item-07{
+    display: none;
+    animation: item-jumper 0.75s ease-out forwards; 
 }
 
 .p-02{
@@ -513,3 +531,18 @@ footer p{
         opacity: 1;
     }
 }
+
+
+.about-left-div-appearing{
+    animation: div-slider 0.75s ease-in-out forwards;
+}
+
+@keyframes div-slider {
+    100%{
+        opacity: 1;
+        text-shadow: none;
+    }
+}
+
+
+/* NO MEMDIA QUERIES FOR OVER 1100 / 650 */
