@@ -6,13 +6,13 @@ html{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-html::-webkit-scrollbar{
+html::-webkit-scrollbar, html * ::-webkit-scrollbar{
     background-color: rgb(61, 61, 61);
 }
-html::-webkit-scrollbar-button{
+html::-webkit-scrollbar-button , html * ::-webkit-scrollbar-button{
     background-color: rgb(43, 43, 43);
 }
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb, html * ::-webkit-scrollbar-thumb{
     background: linear-gradient(rgb(63, 63, 63), gray , rgb(66, 66, 66));
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.6),  0px 5px 10px rgba(0, 0, 0, 0.6);
 }
@@ -543,6 +543,55 @@ footer p{
         text-shadow: none;
     }
 }
+/* product window styles */
+.products-window{
+    border: solid 3px black;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    width: 70%;
+    height: 90%;
+    z-index: 20;
+    overflow-y: auto;
+    padding: 0 2rem
+}
+.products-window h3{
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem auto 1.5rem auto;
+    border-bottom: solid 2px black;
+    padding: 0;
+    width: 50%;
+}
+.product-item-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2;
+}
+.product-item{
+    border: solid 1px rgb(0, 0, 0);
+    margin: 0.5rem 0.7rem;
+    box-shadow: 5px 5px 0px black;
 
+}
+.product-item h4{
+    font-size: 1.1rem;
+    margin: 0.2rem 0 0 0.5rem;
+    border-bottom: solid 1px black;
+}
+.product-item p{
+    font-size: 1.1rem;
+}
+.products-window img{
+    width: 85%;
+    margin: 0.5rem auto;
+    display: block;
+    border: solid 1px black;
+    height: 17rem;
+    object-fit: cover;
+    border-bottom: solid 1px rgb(0, 0, 0);
+}
 
 /* NO MEMDIA QUERIES FOR OVER 1100 / 650 */
