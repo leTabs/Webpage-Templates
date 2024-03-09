@@ -124,14 +124,28 @@ animationScrollTrigger(aboutLeftDiv, 'about-left-div-appearing')
 // view products
 
 const viewProductsArray = document.querySelectorAll('.view-all-btn')
+const productsWindow = document.querySelector('.products-window')
 
 for(let i = 0; i < viewProductsArray.length; i++){
-  viewProductsArray[i].addEventListener('click', ()=>{alert(i)})
+  viewProductsArray[i].addEventListener('click', ()=>{productsWindow.style.display = 'block'})
 }
 
 
 const productWindowCloseBtn = document.querySelector('.product-window-close-btn')
 
 productWindowCloseBtn.addEventListener('click', ()=>{
-  document.querySelector('.products-window').style.display = 'none'
+  productsWindow.style.display = 'none'
+})
+
+// 
+const viewScheduleBtn = document.querySelector('.view-schedule-btn')
+const workingHours = document.querySelector('.working-hours')
+const closeScheduleBtn = document.querySelector('.close-schedule-btn')
+viewScheduleBtn.addEventListener('click', ()=>{
+  workingHours.style.top = '50%'
+  workingHours.style.display = 'block'
+})
+closeScheduleBtn.addEventListener('click', ()=>{
+  workingHours.style.top = '-100%'
+  // workingHours.style.display = 'none'
 })
