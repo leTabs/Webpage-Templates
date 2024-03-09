@@ -14,7 +14,8 @@ html::-webkit-scrollbar-button , html * ::-webkit-scrollbar-button{
 }
 html::-webkit-scrollbar-thumb, html * ::-webkit-scrollbar-thumb{
     background: linear-gradient(rgb(63, 63, 63), gray , rgb(66, 66, 66));
-    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.6),  0px 5px 10px rgba(0, 0, 0, 0.6);
+    border: solid 1px white;
+    /* box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.6),  0px 5px 10px rgba(0, 0, 0, 0.6); */
 }
 /*  */
 
@@ -373,6 +374,7 @@ nav span p:hover{
     border-right: solid white 1px;
     margin-top: 3rem;
     margin-right: 5%;
+    height: auto;
 }
 .text-info h3{
     font-size: 1.7rem;
@@ -397,12 +399,36 @@ nav span p:hover{
     padding: 0;
     font-size: 1.3rem;
 }
+.contact-right-div-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+.contact-button-wrapper{
+    /* border: solid 1px yellow; */
+}
+.contact-button-wrapper button{
+    font-size: 1rem;
+    padding: 0.4rem 2rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: solid 2px rgb(255, 255, 255);
+    transform: translate(0%, 50%);
+    transition: 500ms;
+    cursor: pointer;
+}
+.contact-button-wrapper button:hover{
+    /* background-color: white; */
+    /* color: black; */
+    /* border-color: black; */
+    transform: translate(0%, 25%);
+}
 .social-media-div{
     width: fit-content;
-    margin: 0.5rem  5% 0 auto;
+    /* margin: 0rem  5% 0 auto; */
     text-align: right;
+    /* border: solid rgb(255, 0, 0) 1px; */
     border-bottom: solid rgb(255, 255, 255) 1px;
-    /* border-top: solid rgb(255, 255, 255) 1px; */
 }
 .social-media-div img{
     width: 1.8rem;
@@ -425,6 +451,63 @@ nav span p:hover{
     width: 60%;
     box-shadow: 5px 0px 5px black;
 }
+.working-hours{
+    border: solid 2px black;
+    position: fixed;
+    transform: translate(-50%, 0%);
+    top: 50%;
+    left: 50%;
+    background: white;
+    color: black;
+    box-shadow: inset 3px 3px 30px rgba(0, 0, 0, 0.405);
+    display: none;
+    animation: work-hours-animation 0.3s ease-in-out forwards;
+    opacity: 0;
+    transition: 250ms;
+}
+@keyframes work-hours-animation {
+    /* 0%{
+
+    } */
+    100%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+.working-hours p{
+    margin: 1.5rem 3rem 0.5rem 3rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    /* margin: 0; */
+}
+.working-hours table{
+    font-size: 1.3rem;
+    /* border: solid 1px black; */
+    width: 80%;
+    margin: 0.5rem auto;
+    /* text-align: center; */
+}
+.working-hours table td{
+    padding: 0.4rem 0 0.2rem 0;
+}
+.working-hours table td:first-of-type{
+    border-bottom: solid 1px;
+}
+.working-hours table td:nth-of-type(2){
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.working-hours button{
+    display: block;
+    margin: 0.5rem auto 0.75rem auto;
+    background-color: white;
+    padding: 0.3rem 0;
+    width: 50%;
+    font-size: 1rem;
+    outline: none;
+    border: solid 2px black;
+}
+/*  */
 .back-to-the-top-btn{
     font-size: 1rem;
     background-color: white;
@@ -547,15 +630,52 @@ footer p{
 .products-window{
     border: solid 3px black;
     position: fixed;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     top: 50%;
     left: 50%;
     background-color: white;
     width: 70%;
     height: 90%;
     z-index: 20;
-    overflow-y: auto;
-    padding: 0 2rem
+    /* overflow-y: auto; */
+    padding: 0 2rem;
+    box-shadow: inset 5px 5px 35px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: product-appearence 0.5s ease-in-out forwards;
+    display: none;
+}
+@keyframes product-appearence {
+    80%{
+    transform: translate(-50%, -50%) scale(110%);
+    }
+    100%{
+    transform: translate(-50%, -50%) scale(100%);
+    opacity: 1
+    }
+}
+.buttons-container{
+    border-bottom: solid 1px rgb(0, 0, 0);
+    padding: 0 2rem 0.5rem 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+}
+.buttons-container button{
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: solid 2px black;
+    /* outline: none; */
+    margin: 0 0.1rem;
+    font-size: 1rem;
+    transition: 250ms;
+    cursor: pointer;
+    padding-top: 0.4rem;
+    padding-bottom: 0.2rem;
+}
+.buttons-container button:hover{
+    /* box-shadow: 2px 2px 0px rgba(0, 0, 0, 1); */
+    transform: translate(0%, -25%);
 }
 .products-window h3{
     text-align: center;
@@ -569,29 +689,77 @@ footer p{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2;
+    height: 65%;
+    overflow-y: auto;
 }
 .product-item{
     border: solid 1px rgb(0, 0, 0);
     margin: 0.5rem 0.7rem;
     box-shadow: 5px 5px 0px black;
-
+    text-align: center;
+    background-color: rgb(245, 245, 245);
 }
-.product-item h4{
+.product-item h4:first-of-type{
+    /* color: red; */
+    margin: 0;
+    font-size: 1.5rem;
+    margin: 0.6rem 0 0 0
+}
+.product-item h4:nth-of-type(2){
     font-size: 1.1rem;
-    margin: 0.2rem 0 0 0.5rem;
-    border-bottom: solid 1px black;
+    margin: 0.5rem auto 0 auto;
+    font-weight: normal;
+    /* border-bottom: solid 1px black; */
+    /* width: 75%; */
 }
 .product-item p{
     font-size: 1.1rem;
+    margin: 0.7em 0
+}
+.product-item p span{
+    font-weight: bolder;
 }
 .products-window img{
     width: 85%;
     margin: 0.5rem auto;
     display: block;
     border: solid 1px black;
-    height: 17rem;
+    height: 10rem;
     object-fit: cover;
-    border-bottom: solid 1px rgb(0, 0, 0);
+    /* border-bottom: solid 1px rgb(0, 0, 0); */
 }
-
+.product-item hr:first-of-type{
+    width: 90%;
+    border: solid 1px black;
+    margin: 0 auto;
+}
+.product-item hr:nth-of-type(2){
+    width: 50%;
+    border: solid 1px rgba(0, 0, 0, 0.63);
+    margin: 0.5rem auto 0 auto;
+}
+.product-item-hr{
+    margin:0;
+    border: solid 1px black;
+}
+.bottom-btn-wrapper-div{
+    /* border: solid 1px red; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    /* padding: 0 5rem; */
+}
+.bottom-btn-wrapper-div button{
+    background-color: white;
+    color: black;
+    border: solid 2px black;
+    width: 15%;
+    font-size: 1rem;
+    padding: 0.2rem 0;
+    transition: 250ms;
+    cursor: pointer;
+}
+.bottom-btn-wrapper-div button:hover{
+    box-shadow: 3px 3px 0px black;
+}
 /* NO MEMDIA QUERIES FOR OVER 1100 / 650 */
