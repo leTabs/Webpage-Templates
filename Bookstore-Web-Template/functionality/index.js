@@ -1,6 +1,3 @@
-
-
-
 const navDestinationsArray = document.querySelectorAll('.nav-destination')
 
 const sectionOpening = document.querySelector('.opening-section')
