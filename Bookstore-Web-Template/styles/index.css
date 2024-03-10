@@ -15,14 +15,102 @@ html::-webkit-scrollbar-button , html * ::-webkit-scrollbar-button{
 html::-webkit-scrollbar-thumb, html * ::-webkit-scrollbar-thumb{
     background: linear-gradient(rgb(63, 63, 63), gray , rgb(66, 66, 66));
     border: solid 1px white;
-    /* box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.6),  0px 5px 10px rgba(0, 0, 0, 0.6); */
 }
 /*  */
-
-html, body, main, section{
-    padding: 0;
-    margin: 0;
+/* Compact */
+/*  */
+nav span p,
+.about-left-div button,
+.item,
+.item h3,
+.item button,
+.social-media-div img,
+.working-hours,
+.back-to-the-top-btn,
+.buttons-container button,
+.bottom-btn-wrapper-div button,
+.working-hours button{
+    transition: 250ms
 }
+
+.dot,
+.items-view-control-div button,
+.contact-button-wrapper button{
+    transition: 500ms
+}
+
+.opening-texts-wrapper,
+.products-and-services hr,
+.items-container,
+.item img,
+.full-inventory-div-wrapper button,
+.contact-section hr,
+.product-item hr:first-of-type{
+    margin: 0 auto;
+}
+
+html, 
+body, 
+main, 
+section,
+.contact-section,
+.text-info h3,
+.text-info p{
+    margin: 0;
+    padding: 0;
+}
+
+.about-left-div hr,
+.products-and-services,
+.products-and-services hr,
+.item, 
+.item img, 
+.full-inventory-div-wrapper div,
+.contact-section,
+.contact-section hr, 
+footer,
+.product-item,
+.products-window img,
+.product-item hr:first-of-type,
+.product-item-hr{
+    border: solid 1px black;
+}
+.about-left-div button,
+.item button, 
+.dot,
+.items-view-control-div button,
+.working-hours,
+.working-hours button,
+.back-to-the-top-btn, 
+.products-window,
+.buttons-container button,
+.bottom-btn-wrapper-div button{
+    border: solid 2px black;
+}
+
+.about-left-div button:hover,
+.item button:hover,
+.back-to-the-top-btn:hover,
+.bottom-btn-wrapper-div button:hover,
+.working-hours button:hover{
+    box-shadow: 3px 3px 0px black;
+}
+nav span p,
+.about-left-div button,
+.item button,
+.items-view-control-div button,
+.contact-button-wrapper button,
+.social-media-div img,
+.back-to-the-top-btn,
+.buttons-container button,
+.bottom-btn-wrapper-div button,
+.working-hours button{
+    cursor: pointer;
+}
+/*  */
+/*  */
+/*  */
+
 nav{
     background-color: white;
     position: fixed;
@@ -51,8 +139,6 @@ nav span h1{
 nav span p{
     font-size: 1.35rem;
     margin: 0.4rem 1.6rem 0 0 ;
-    cursor: pointer;
-    transition: 250ms;
     border-bottom: solid white 1px;
 
 }
@@ -74,14 +160,13 @@ nav span p:hover{
     position: absolute;
 }
 .opening-text{
-    border: solid rgba(255, 255, 0, 0) 1px;
+    border: solid 1px transparent;
 }
 .opening-texts-wrapper{
     box-shadow: inset 4px 4px 30px black;
     background-color: rgba(0, 0, 0, 0.7);
     padding-bottom: 0.5rem;
     width: 100vw;
-    margin: 0 auto;
     animation: falling 0.8s ease-in-out forwards
 }
 @keyframes falling{
@@ -146,7 +231,6 @@ nav span p:hover{
     text-align: justify;
 }
 .about-left-div hr{
-    border: solid 1px black;
     margin: 1rem auto auto auto;
     width: 90%
 }
@@ -156,13 +240,6 @@ nav span p:hover{
     font-size: 1.2rem;
     padding: 0.2rem 2rem;
     background-color: white;
-    border: solid 2px black;
-    cursor: pointer;
-    transition: 250ms;
-}
-.about-left-div button:hover{
-    box-shadow: 
-        3px 3px 0px black;
 }
 .about-right-div{
     padding-top: 1rem;
@@ -185,8 +262,7 @@ nav span p:hover{
 .products-and-services{
     width: 100%;
     height: 100vh;
-    margin:0;
-    border: solid 1px;
+    margin: 0;
     box-shadow: inset 5px 5px 30px rgba(0, 0, 0, 0.575);
 }
 .products-and-services h2{
@@ -196,12 +272,9 @@ nav span p:hover{
     padding: 0;
 }
 .products-and-services hr{
-    border: solid 1px black;
-    margin: 0 auto;
     width: 90%;
 }
 .items-container{
-    margin: 0 auto;
     width: 75%;
     display: flex;
     justify-content: center;
@@ -209,14 +282,12 @@ nav span p:hover{
     
 }
 .item{
-    border: solid rgb(0, 0, 0) 1px;
     box-shadow: 5px 5px 0px black;
     margin: 2rem 0.7rem;
     padding: 0.5rem 1rem;
     text-align: center;
     height: fit-content;
     width: 100%;
-    transition: 250ms;
 }
 .item:hover h3{
     border-bottom-color: black;
@@ -224,16 +295,13 @@ nav span p:hover{
 .item h3{
     font-size: 1.8rem;
     margin: 0.5rem 0;
-    transition: 250ms;
     border-bottom: solid rgba(255, 255, 255, 0) 1px;
 }
 .item img{
     width: 100%;
     height: 13rem;
     display: block;
-    margin: 0 auto;
     object-fit: cover;
-    border: black 1px solid
 }
 .item hr{
     margin: 0.3rem auto 0 auto;
@@ -249,15 +317,9 @@ nav span p:hover{
     font-size: 1rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
-    border: solid 2px black;
     width: 75%;
     margin-bottom: 0.5rem;
-    cursor: pointer;
-    transition: 250ms;
 
-}
-.item button:hover{
-    box-shadow: 3px 3px 0px black;
 }
 .items-control-div{
     display: grid;
@@ -271,10 +333,8 @@ nav span p:hover{
 .dot{
     width: 0.7rem;
     height: 0.7rem;
-    border: solid 2px rgb(0, 0, 0);
     border-radius: 50%;
     margin: 0 0.25rem;
-    transition: 500ms
 }
 .dot:nth-of-type(1),
 .dot:nth-of-type(2),
@@ -293,9 +353,6 @@ nav span p:hover{
     background-color: black;
     outline: none;
     padding: 0.2rem 0;
-    border: solid 2px black;
-    transition: 500ms;
-    cursor: pointer;
 }
 .items-view-control-div button:hover{
     box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.781);
@@ -303,12 +360,8 @@ nav span p:hover{
 .full-inventory-div-wrapper{
     width: 100%;
 }
-.full-inventory-div-wrapper div{
-    border: solid 1px black;
-}
 .full-inventory-div-wrapper button{
     display: block;
-    margin: 0 auto;
     width: 60%;
     background-color: white;
     color: black;
@@ -328,11 +381,8 @@ nav span p:hover{
 }
 /* contact section */
 .contact-section{
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 100vh;
-    border: solid 1px black;
     box-shadow: inset 3px 3px 20px rgba(0, 0, 0, 0.5);
 }
 .contact-section h2{
@@ -342,8 +392,6 @@ nav span p:hover{
     padding: 0;
 }
 .contact-section hr{
-    border: solid 1px black;
-    margin: 0 auto;
     width: 90%;
 }
 .contact-divs-wrapper{
@@ -378,8 +426,6 @@ nav span p:hover{
 }
 .text-info h3{
     font-size: 1.7rem;
-    margin: 0;
-    padding: 0;
     margin: 2rem 0 0.2rem 1.5rem;
 }
 .text-info span{
@@ -395,17 +441,12 @@ nav span p:hover{
     width: 75%;
 }
 .text-info p{
-    margin: 0;
-    padding: 0;
     font-size: 1.3rem;
 }
 .contact-right-div-bottom{
     display: flex;
     justify-content: space-between;
     width: 95%;
-}
-.contact-button-wrapper{
-    /* border: solid 1px yellow; */
 }
 .contact-button-wrapper button{
     font-size: 1rem;
@@ -414,20 +455,13 @@ nav span p:hover{
     color: white;
     border: solid 2px rgb(255, 255, 255);
     transform: translate(0%, 50%);
-    transition: 500ms;
-    cursor: pointer;
 }
 .contact-button-wrapper button:hover{
-    /* background-color: white; */
-    /* color: black; */
-    /* border-color: black; */
     transform: translate(0%, 25%);
 }
 .social-media-div{
     width: fit-content;
-    /* margin: 0rem  5% 0 auto; */
     text-align: right;
-    /* border: solid rgb(255, 0, 0) 1px; */
     border-bottom: solid rgb(255, 255, 255) 1px;
 }
 .social-media-div img{
@@ -435,8 +469,6 @@ nav span p:hover{
     height: 1.8rem;
     margin: 0.5rem 0 0.5rem 0.5rem;
     filter: invert(100%);
-    cursor: pointer;
-    transition: 250ms;
 }
 .social-media-div img:hover{
     filter: invert(80%);
@@ -452,7 +484,6 @@ nav span p:hover{
     box-shadow: 5px 0px 5px black;
 }
 .working-hours{
-    border: solid 2px black;
     position: fixed;
     transform: translate(-50%, 0%);
     top: 50%;
@@ -463,7 +494,6 @@ nav span p:hover{
     display: none;
     animation: work-hours-animation 0.3s ease-in-out forwards;
     opacity: 0;
-    transition: 250ms;
 }
 @keyframes work-hours-animation {
     /* 0%{
@@ -478,14 +508,11 @@ nav span p:hover{
     margin: 1.5rem 3rem 0.5rem 3rem;
     font-size: 2rem;
     font-weight: bolder;
-    /* margin: 0; */
 }
 .working-hours table{
     font-size: 1.3rem;
-    /* border: solid 1px black; */
     width: 80%;
     margin: 0.5rem auto;
-    /* text-align: center; */
 }
 .working-hours table td{
     padding: 0.4rem 0 0.2rem 0;
@@ -505,28 +532,20 @@ nav span p:hover{
     width: 50%;
     font-size: 1rem;
     outline: none;
-    border: solid 2px black;
 }
 /*  */
 .back-to-the-top-btn{
     font-size: 1rem;
     background-color: white;
     padding: 0.3rem 0;
-    border: solid black 2px;
     display: block;
     margin: 1rem auto 1rem auto;
     width: 15%;
-    transition: 250ms;
-    cursor: pointer;
-}
-.back-to-the-top-btn:hover{
-    box-shadow: 3px 3px 0px black;
 }
 footer{
     color: white;
     background-color: black;
     text-align: center;
-    border: solid 1px black;
     padding: 0;
 }
 footer p{
@@ -538,8 +557,6 @@ footer p{
 
 .item{
     opacity: 0;
-    /* display: none; */
-    /* transition: 250ms; */
 }
 .item-jumpers{
     animation: item-jumper 0.75s ease-out forwards; 
@@ -628,7 +645,6 @@ footer p{
 }
 /* product window styles */
 .products-window{
-    border: solid 3px black;
     position: fixed;
     transform: translate(-50%, -50%) scale(0);
     top: 50%;
@@ -664,17 +680,12 @@ footer p{
     width: 100%;
     background-color: black;
     color: white;
-    border: solid 2px black;
-    /* outline: none; */
     margin: 0 0.1rem;
     font-size: 1rem;
-    transition: 250ms;
-    cursor: pointer;
     padding-top: 0.4rem;
     padding-bottom: 0.2rem;
 }
 .buttons-container button:hover{
-    /* box-shadow: 2px 2px 0px rgba(0, 0, 0, 1); */
     transform: translate(0%, -25%);
 }
 .products-window h3{
@@ -693,7 +704,6 @@ footer p{
     overflow-y: auto;
 }
 .product-item{
-    border: solid 1px rgb(0, 0, 0);
     margin: 0.5rem 0.7rem;
     box-shadow: 5px 5px 0px black;
     text-align: center;
@@ -723,15 +733,12 @@ footer p{
     width: 85%;
     margin: 0.5rem auto;
     display: block;
-    border: solid 1px black;
     height: 10rem;
     object-fit: cover;
     /* border-bottom: solid 1px rgb(0, 0, 0); */
 }
 .product-item hr:first-of-type{
     width: 90%;
-    border: solid 1px black;
-    margin: 0 auto;
 }
 .product-item hr:nth-of-type(2){
     width: 50%;
@@ -739,27 +746,19 @@ footer p{
     margin: 0.5rem auto 0 auto;
 }
 .product-item-hr{
-    margin:0;
-    border: solid 1px black;
+    margin: 0;
 }
 .bottom-btn-wrapper-div{
-    /* border: solid 1px red; */
     display: flex;
     justify-content: space-evenly;
     margin-top: 1rem;
-    /* padding: 0 5rem; */
 }
 .bottom-btn-wrapper-div button{
     background-color: white;
     color: black;
-    border: solid 2px black;
     width: 15%;
     font-size: 1rem;
     padding: 0.2rem 0;
-    transition: 250ms;
-    cursor: pointer;
 }
-.bottom-btn-wrapper-div button:hover{
-    box-shadow: 3px 3px 0px black;
-}
+
 /* NO MEMDIA QUERIES FOR OVER 1100 / 650 */
