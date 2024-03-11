@@ -122,10 +122,14 @@ animationScrollTrigger(aboutLeftDiv, 'about-left-div-appearing')
 
 const viewProductsArray = document.querySelectorAll('.view-all-btn')
 const productsWindow = document.querySelector('.products-window')
+const productItemWrapper = document.querySelector('.product-item-wrapper')
 
 for(let i = 0; i < viewProductsArray.length; i++){
-  viewProductsArray[i].addEventListener('click', ()=>{productsWindow.style.display = 'block'})
-}
+  viewProductsArray[i].addEventListener('click', ()=>{
+  productsWindow.style.display = 'block' 
+  
+  productItemWrapper.scrollTop = 0;
+})}
 
 
 const productWindowCloseBtn = document.querySelector('.product-window-close-btn')
@@ -138,13 +142,24 @@ productWindowCloseBtn.addEventListener('click', ()=>{
 const viewScheduleBtn = document.querySelector('.view-schedule-btn')
 const workingHours = document.querySelector('.working-hours')
 const closeScheduleBtn = document.querySelector('.close-schedule-btn')
+
+const secondViewScheduleBtn = document.querySelector('.work-schedule-wrapper')
 viewScheduleBtn.addEventListener('click', ()=>{
-  workingHours.style.top = '50%'
-  workingHours.style.display = 'block'
+  // workingHours.style.top = '50%'
+  // workingHours.style.display = 'block'
+  // workingHours.style.opacity = '1'
+  secondViewScheduleBtn.style.display = 'block'
+  setTimeout(()=>{
+    secondViewScheduleBtn.style.height = '5rem'
+  }, 1)
+  
 })
 closeScheduleBtn.addEventListener('click', ()=>{
-  workingHours.style.top = '-100%'
-  // workingHours.style.display = 'none'
+  workingHours.style.top = '200%';
+  setTimeout(()=>{
+  workingHours.style.display = 'none'
+  }, 250)
+  
 })
 
 
