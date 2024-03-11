@@ -1,9 +1,21 @@
 :root{
     --bg-color: rgb(255, 255, 255);
-}
+    --pop-window-shadow-positive-value: 25px;
+    --pop-window-shadow-negative-value: -25px;
+    --pop-window-shadow-spread-value: 10px;
+    --pop-window-shadow-color: rgba(0, 0, 0, 0.589);
+
+    --pop-window-shadow: 
+        var(--pop-window-shadow-positive-value) var(--pop-window-shadow-positive-value) var(--pop-window-shadow-spread-value) var(--pop-window-shadow-color);
+        /* var(--pop-window-shadow-negative-value) var(--pop-window-shadow-negative-value) var(--pop-window-shadow-spread-value) var(--pop-window-shadow-color); */
+        /* var(--pop-window-shadow-negative-value) var(--pop-window-shadow-positive-value) var(--pop-window-shadow-spread-value) var(--pop-window-shadow-color), */
+        /* var(--pop-window-shadow-positive-value) var(--pop-window-shadow-negative-value) var(--pop-window-shadow-spread-value) var(--pop-window-shadow-color); */
+
+    }
 html{
     background-color: var(--bg-color);
     scroll-behavior: smooth;
+    /* scroll-behavior: ; */
     overflow-x: hidden;
 }
 html *{
@@ -58,7 +70,8 @@ main,
 section,
 .contact-section,
 .text-info h3,
-.text-info p{
+.text-info p,
+.work-schedule-wrapper{
     margin: 0;
     padding: 0;
 }
@@ -385,7 +398,7 @@ nav span p:hover{
 /* contact section */
 .contact-section{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     box-shadow: inset 3px 3px 20px rgba(0, 0, 0, 0.5);
 }
 .contact-section h2{
@@ -405,6 +418,7 @@ nav span p:hover{
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 1.5rem 0 2rem 0;
 }
 .contact-left-div{
     display: flex;
@@ -418,12 +432,14 @@ nav span p:hover{
     border: solid 5px white;
 }
 .contact-right-div{
-    background: linear-gradient(90deg, black 0% , black 15%, rgb(12, 12, 12),rgb(20, 20, 20), black);
+    height: 90%;
+    /* CHANGE THE OVERALL DIV LINEAR GRADIENT INSTEAD */
+    /* background: linear-gradient(90deg, black 0% , black 15%, rgb(12, 12, 12),rgb(20, 20, 20), black); */
 }
 .text-info{
     border-left: solid white 1px;
     border-right: solid white 1px;
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-right: 5%;
     height: auto;
 }
@@ -488,12 +504,13 @@ nav span p:hover{
 }
 .working-hours{
     position: fixed;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 100%);
     top: 50%;
     left: 50%; 
     background: white;
     color: black;
-    box-shadow: inset 3px 3px 30px rgba(0, 0, 0, 0.405);
+    box-shadow:
+    inset 3px 3px 30px rgba(0, 0, 0, 0.405),  var(--pop-window-shadow);
     display: none;
     animation: work-hours-animation 0.3s ease-in-out forwards;
     opacity: 0;
@@ -656,12 +673,11 @@ footer p{
     width: 70%;
     height: 90%;
     z-index: 20;
-    /* overflow-y: auto; */
     padding: 0 2rem;
-    box-shadow: inset 5px 5px 35px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 5px 5px 35px rgba(0, 0, 0, 0.3), 12px 12px 25px black;
     opacity: 0;
     animation: product-appearence 0.5s ease-in-out forwards;
-    /* display: none; */
+    display: none;
 }
 @keyframes product-appearence {
     80%{
@@ -705,6 +721,7 @@ footer p{
     grid-template-rows: 2;
     height: 65%;
     overflow-y: auto;
+    scroll-behavior: auto;
 }
 .general-product-listing{
     display: grid;
@@ -773,3 +790,12 @@ footer p{
 }
 
 /* NO MEMDIA QUERIES FOR OVER 1100 / 650 */
+
+.work-schedule-wrapper{
+    border: solid 1px red;
+    width: 100%;
+    height: 0rem;
+    background-color: rgb(168, 168, 168);
+    transition: 250ms;
+    display: none;
+}
