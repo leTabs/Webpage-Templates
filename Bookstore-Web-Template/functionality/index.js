@@ -146,3 +146,23 @@ closeScheduleBtn.addEventListener('click', ()=>{
   workingHours.style.top = '-100%'
   // workingHours.style.display = 'none'
 })
+
+
+
+// products window functionality
+
+// pens and stuff
+
+const pensDiv = document.querySelector('.pens')
+const pensBtn = document.querySelector('.pens-btn')
+
+pensBtn.addEventListener('click', ()=>{
+  pensDiv.scrollIntoView()
+})
+
+const pencilsDiv = document.querySelector('.pencils')
+const pencilsBtn = document.querySelector('.pencils-btn')
+
+pencilsBtn.addEventListener('click', ()=>{
+  pencilsDiv.scrollIntoView()
+})
