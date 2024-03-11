@@ -6,6 +6,9 @@ html{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+html *{
+    scroll-behavior: smooth;
+}
 html::-webkit-scrollbar, html * ::-webkit-scrollbar{
     background-color: rgb(61, 61, 61);
 }
@@ -485,9 +488,9 @@ nav span p:hover{
 }
 .working-hours{
     position: fixed;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
     top: 50%;
-    left: 50%;
+    left: 50%; 
     background: white;
     color: black;
     box-shadow: inset 3px 3px 30px rgba(0, 0, 0, 0.405);
@@ -658,7 +661,7 @@ footer p{
     box-shadow: inset 5px 5px 35px rgba(0, 0, 0, 0.3);
     opacity: 0;
     animation: product-appearence 0.5s ease-in-out forwards;
-    display: none;
+    /* display: none; */
 }
 @keyframes product-appearence {
     80%{
@@ -697,11 +700,19 @@ footer p{
     width: 50%;
 }
 .product-item-wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
     grid-template-rows: 2;
     height: 65%;
     overflow-y: auto;
+}
+.general-product-listing{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: solid 3px rgb(0, 0, 0);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 3px 15px black;
 }
 .product-item{
     margin: 0.5rem 0.7rem;
