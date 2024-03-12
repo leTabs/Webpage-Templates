@@ -33,7 +33,7 @@ function animationScrollTrigger(target, animation){
 const options = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.6
+  threshold: 0.2
 };
 
 // Define the callback function
@@ -140,28 +140,34 @@ productWindowCloseBtn.addEventListener('click', ()=>{
 
 // 
 const viewScheduleBtn = document.querySelector('.view-schedule-btn')
-const workingHours = document.querySelector('.working-hours')
-const closeScheduleBtn = document.querySelector('.close-schedule-btn')
-
-const secondViewScheduleBtn = document.querySelector('.work-schedule-wrapper')
+const workScheduleWrapper = document.querySelector('.work-schedule-wrapper')
+const workTable = document.querySelector('.work-table')
+const workScheduleCloseBtn = document.querySelector('.work-schedule-close-btn')
+// const
 viewScheduleBtn.addEventListener('click', ()=>{
-  // workingHours.style.top = '50%'
-  // workingHours.style.display = 'block'
-  // workingHours.style.opacity = '1'
-  secondViewScheduleBtn.style.display = 'block'
+  workScheduleWrapper.style.display = 'block'
   setTimeout(()=>{
-    secondViewScheduleBtn.style.height = '5rem'
+    workScheduleWrapper.style.height = '7rem'
+    setTimeout(()=>{
+      workScheduleWrapper.scrollIntoView()
+    }, 100)
   }, 1)
-  
-})
-closeScheduleBtn.addEventListener('click', ()=>{
-  workingHours.style.top = '200%';
-  setTimeout(()=>{
-  workingHours.style.display = 'none'
-  }, 250)
-  
 })
 
+workScheduleCloseBtn.addEventListener('click', ()=>{
+  workTable.style.display = 'none'
+  workScheduleCloseBtn.style.display = 'none'
+  workScheduleWrapper.style.height = '0px'
+  // setTimeout(()=>{
+  // sectionContact.scrollIntoView()
+  // }, 1)
+
+  setTimeout(()=>{
+    workScheduleCloseBtn.style.display = 'inline-block'
+    workTable.style.display = 'inline-block'
+    workScheduleWrapper.style.display = 'none'
+  }, 250)
+})
 
 
 // products window functionality
