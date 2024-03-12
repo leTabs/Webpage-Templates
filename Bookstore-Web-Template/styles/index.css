@@ -792,10 +792,56 @@ footer p{
 /* NO MEMDIA QUERIES FOR OVER 1100 / 650 */
 
 .work-schedule-wrapper{
-    border: solid 1px red;
+    /* border-bottom: solid 0.5rem black; */
     width: 100%;
     height: 0rem;
-    background-color: rgb(168, 168, 168);
+    /* background-color: rgb(207, 207, 207); */
     transition: 250ms;
     display: none;
+    text-align: center;
+    /* padding-top: 1rem; */
+    background: linear-gradient(90deg, black 0%, black 20%, rgb(0, 0, 0) 20%,rgb(0, 0, 0) 80%, black 80%, black 100%);
+}
+.work-schedule-wrapper table{
+    display: inline-block;
+    width: fit-content;
+    margin: 0 auto;
+    opacity: 0;
+    animation: table-appearing 200ms ease-in forwards;
+    color: white;
+    border: solid 2px white;
+    padding: 0.5rem 2rem 0 2rem;
+    text-align: left
+}
+.work-schedule-wrapper table tr td{
+    border-bottom: solid 1px black;
+    font-size: 1.1rem;
+}
+.work-schedule-wrapper table tr td:first-of-type{
+    padding-right: 2.5rem;
+}
+.work-schedule-wrapper button{
+    opacity: 0;
+    animation: table-appearing 200ms ease-in forwards;
+    font-size: 1.1rem;
+    transform: translate(50%, -150%);
+    background-color: white;
+    border: solid 1px black;
+    padding: 0.3rem 2rem 0.1rem 2rem;
+    margin: 0;
+    transition: 250ms;
+    cursor: pointer;
+}
+.work-schedule-wrapper button:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+@keyframes table-appearing{
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
