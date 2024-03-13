@@ -803,6 +803,12 @@ footer p{
 .mobile-nav{
     display: none;
 }
+.products-and-services-mobile{
+    display: none;
+}
+.contact-section-mobile{
+    display: none;
+}
 /* MEDIA QUERIES, OTHER SCREEN SIZES CSS HERE: */
 
 @media only screen and (max-width: 1025px) { /* and 650px on the y axis */ 
@@ -941,7 +947,7 @@ footer p{
         margin: 1rem auto;
         font-size: 1.2rem;
         background-color: white;
-        border: solid 1px black;
+        border: solid 2px black;
         width: 40%;
     }
     .item-mobile hr{
