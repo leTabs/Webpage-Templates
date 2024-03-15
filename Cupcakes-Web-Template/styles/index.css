@@ -103,22 +103,60 @@ nav p{
 .about-section{
     height: 100%;
     border: solid 1px pink;
-    border: solid 1px pink
-    /* background: linear-gradient(-180deg, pink 0%, pink 50%, white 50%, white 85%, pink 85%, pink 100%); */
+    border: solid 1px pink;
+    background: linear-gradient(-20deg, pink 0%, pink 20%, white 20%, white 45%, pink 45%, pink 100%);
 }
 .about-top-div, .about-bottom-div{
-    border: solid 3px rgb(0, 238, 255);
+    /* border: solid 3px rgb(170, 26, 50); */
     height: 35vh;
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
-    border-radius: 90px;
+    border-radius: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0
+    /* overflow: hidden; */
 }
 .about-top-div{
     margin-top: 5rem;
     margin-bottom: 3rem;
     transform: translate(10%, 0%);
+    /* box-shadow: 15px 5px 0px pink; */
 }
 .about-bottom-div{
     
     transform: translate(-10%, 0%);
+}
+.about-top-div div, .about-bottom-div div{
+    /* border: solid 1px red; */
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgb(201, 106, 122), rgb(196, 86, 104), rgb(189, 102, 116));
+
+    /* background-color: pink; */
+}
+.about-top-div div img, .about-bottom-div div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-top-div p, .about-bottom-div p{
+    font-size: 1.3rem;
+    width: 75%;
+    text-align: right;
+    color:whitesmoke;
+    border: solid 1px red;
+    margin: 0 auto 0 0
+} 
+.about-bottom-div p{
+    text-align: left;
+}
+.about-bottom-div div:first-of-type,
+.about-top-div div:first-of-type{
+    
+    border-radius: 100px 0 0 100px;
+}
+.about-bottom-div div:nth-of-type(2),
+.about-top-div div:nth-of-type(2){
+    border-radius:  0 100px 100px 0;
 }
