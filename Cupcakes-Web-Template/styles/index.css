@@ -53,7 +53,8 @@ nav p{
     background: linear-gradient(90deg, rgb(201, 106, 122), rgb(196, 86, 104), rgb(189, 102, 116));
     box-shadow: inset 5px 5px 10px rgb(141, 57, 71), inset -5px -5px 10px rgb(141, 57, 71);;
     border-radius: 40px;
-    padding: 0.3rem 5rem
+    padding: 0.3rem 5rem;
+    animation: falling 0.5s linear forwards;
 }
 .opening-section *{
     overflow: hidden;
@@ -84,17 +85,13 @@ nav p{
 .opening-img{
     height: 100%;
     width: 100%;
-    border-radius: 30px
+    border-radius: 30px;
+    opacity: 0;
+    animation: appearing 1s ease-in-out forwards;
 }
-
-.open
-
-.opening-img:first-of-type{
-
-}
-@keyframes slider {
+@keyframes appearing {
     100%{
-        transform: translate(0%, 0%);
+        opacity: 1
     }
 }
 
@@ -118,38 +115,42 @@ nav p{
     /* overflow: hidden; */
 }
 .about-top-div{
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-bottom: 3rem;
     transform: translate(10%, 0%);
-    /* box-shadow: 15px 5px 0px pink; */
+    box-shadow: 15px 5px 0px rgb(180, 31, 56);
 }
 .about-bottom-div{
-    
+    box-shadow: -15px -5px 0px rgb(180, 31, 56);
     transform: translate(-10%, 0%);
 }
 .about-top-div div, .about-bottom-div div{
     /* border: solid 1px red; */
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(90deg, rgb(201, 106, 122), rgb(196, 86, 104), rgb(189, 102, 116));
+    background: linear-gradient(90deg, rgb(218, 97, 117), rgb(214, 86, 107), rgb(230, 103, 124));
+    box-shadow: inset 10px 10px 30px rgb(180, 31, 56);
 
     /* background-color: pink; */
 }
+.about-bottom-div div{
+    box-shadow: inset -10px 10px 30px rgb(180, 31, 56);}
 .about-top-div div img, .about-bottom-div div img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 .about-top-div p, .about-bottom-div p{
-    font-size: 1.3rem;
-    width: 75%;
+    font-size: 1.4rem;
+    width: 90%;
     text-align: right;
     color:whitesmoke;
-    border: solid 1px red;
-    margin: 0 auto 0 0
+    /* border: solid 1px red; */
+    margin: 4rem 1rem 0 auto
 } 
 .about-bottom-div p{
     text-align: left;
+    margin: 4rem auto 0 1rem
 }
 .about-bottom-div div:first-of-type,
 .about-top-div div:first-of-type{
