@@ -27,6 +27,7 @@ nav{
     /* border: solid 5px rgb(255, 168, 194); */
     border-top: none;
     color: rgb(112, 0, 19);
+    z-index: 10;
 }
 nav p{
     font-size: 1.5rem;
