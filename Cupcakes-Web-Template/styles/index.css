@@ -5,6 +5,7 @@ html, body, main{
 html{
     overflow-x: hidden;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     width: 100vw;
