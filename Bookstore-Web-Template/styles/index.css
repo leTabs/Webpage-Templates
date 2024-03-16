@@ -161,9 +161,10 @@ nav span p:hover{
     color: white;
     height: 100vh;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7), -5px 5px 15px rgba(0, 0, 0, 0.7);
+    /* background-color: transparent; */
 }
 .opening-img{
-    z-index: -1;
+    z-index: 3;
     width: 100%;
     height: 100vh;
     object-fit: cover;
@@ -176,9 +177,13 @@ nav span p:hover{
     box-shadow: inset 4px 4px 30px black;
     background-color: rgba(0, 0, 0, 0.7);
     padding-bottom: 0.5rem;
-    width: 100vw;
-    animation: falling 0.8s ease-in-out forwards
+    width: 100%;
+    animation: falling 0.8s ease-in-out forwards;
+    position: absolute;
+    top: 55%;
+    z-index: 4;
 }
+
 @keyframes falling{
     0%{
         transform: translate(0%, -200%);
@@ -187,15 +192,8 @@ nav span p:hover{
         transform: translate(0%, 0%);
     }
 }
-/* .opening-main-text, .opening-secondary-text{
-    text-shadow: 
-        10px 10px 30px  black, 
-        10px -10px 30px  black,
-        -10px 10px 30px  black, 
-        -10px -10px 30px  black;;
-} */
 .opening-main-text{
-    margin-top: 20rem;
+    /* margin-top: 20rem; */
     font-size: 2.5rem;
     text-align: right;
     padding-right: 5rem;
@@ -270,7 +268,7 @@ nav span p:hover{
 
 /* products and services */
 .products-and-services{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     margin: 0;
     box-shadow: inset 5px 5px 30px rgba(0, 0, 0, 0.575);
@@ -1032,5 +1030,301 @@ footer p{
         padding: 0.1rem 3rem
     }
 }
-  
+@media only screen and (min-width: 450px) and (max-width: 1100px) and (min-height: 700px){
+    html::-webkit-scrollbar, html * ::-webkit-scrollbar{
+        display: none;
+    }
+    html{
+        overflow-x: hidden;
+    }
+    nav{
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7), -5px 5px 15px rgba(0, 0, 0, 0.7);
+            padding: 0.5rem 0 0.3rem 0;
+            z-index: 10;
+            display: none;
+    }
+    .mobile-nav{
+        display: block; 
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+        padding: 0.7rem 0 0.2rem 0.6rem
+    }
+    .mobile-nav img{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .mobile-nav h1{
+        display: inline-block;
+        font-size: 1.8rem;
+        margin: 0;
+        padding: 0;
+        transform: translate(0%, -20%);
+        margin-left: 0.5rem;
+    }
+    section{
+        border: solid 1px black
+    }
+    /* opening section */
+    .opening-section{
+        z-index: 2;
+    }
+    .opening-main-text{
+        margin-top: 30rem;
+        text-align: left;
+        padding-left: 2.5rem;
+        padding-right: 0;
+    }
+    .opening-main-text p{
+        margin-top: 0.5rem;
+        font-size: 2.2rem;
+    }
+    .opening-main-text h1{
+        padding-top: 1rem;
+        font-size: 3rem;
+    }
+    .opening-main-text p{
+        font-size: 1.2rem;
+    }
+    .opening-secondary-text{
+        text-align: right;
+        margin: 2rem 3rem 0.5rem auto;
+        padding-left: 0;
+        font-size: 1.3rem;
+    }
 
+    /* .about section */
+    .about-section{
+        display: block;
+        z-index: 2;
+        background: white;
+        box-shadow: inset 5px 5px 20px gray;
+        margin: 0;
+        overflow: hidden;
+        height: fit-content;
+        padding-bottom: 4rem;
+    }
+    .about-left-div h2, .about-left-div p{
+        padding: 0 2rem ;
+    }
+    .about-left-div h2{
+        padding-top: 3rem;
+        font-size: 2.8rem;
+        text-align: center;
+    }
+    .about-left-div p{
+        font-size: 1.6rem;
+        text-align: justify;
+        width: 75%;
+        margin: 0 auto;
+    }
+    .about-left-div hr{
+        margin: 1rem auto auto auto;
+        width: 90%
+    }
+    .about-left-div button{
+        display: block;
+        margin: 2rem auto 0 auto;
+        font-size: 1.2rem;
+        padding: 0.2rem 2rem;
+        background-color: white;
+    }
+    .about-right-div{
+        display: none;
+    }
+    
+    /* products and services */
+    .products-and-services{
+        display: none;
+    }
+    .products-and-services-mobile{
+        border: solid 1px black;
+        display: block;
+    }
+    .item-mobile{
+        margin-top: 3rem;
+    }
+    .item-mobile:first-of-type{
+        margin-top: 4rem;
+    }
+    .item-mobile:last-of-type{
+        margin-bottom: 3rem;
+    }
+    .item-mobile img{
+        width: 75%;
+        height: 40vh;
+        display: block;
+        margin: 1rem auto 0 auto;
+        object-fit: cover;
+        border: solid 5px white;
+        border: solid 5px rgb(255, 255, 255);
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.678);
+    }
+    .item-mobile p{
+        text-align: center;
+        font-size: 2rem;
+        margin: 0;
+        margin-top: 1rem;
+    }
+    .item-mobile button{
+        display: block;
+        margin: 1rem auto;
+        font-size: 1.2rem;
+        background-color: white;
+        border: solid 2px black;
+        width: 25%;
+    }
+    .item-mobile hr{
+        width: 75%;
+        border: solid 1px black;
+        margin: 0.5rem auto;
+    }
+    /* contact section */
+    .contact-section{
+        display: none;
+    }
+    .contact-section-mobile{
+        display: block;
+        background-color: rgb(20, 20, 20);
+        color: white;
+        /* min-height: 100vh; */
+        height: fit-content;
+        padding-bottom: 1rem
+        /* padding-top: 10rem; */
+    }
+    .contact-section-mobile h4{
+        font-size: 1.5rem;
+        margin: 1rem 0 0.5rem 1.5rem;
+    }
+    .contact-section-mobile ul{
+        /* padding-top: 4rem; */
+        margin-top: 3rem;
+        font-size: 1.7rem;
+        color: rgb(255, 0, 0);
+        font-weight: bolder;
+    }
+
+    .contact-section-mobile p{
+        font-size: 1.5rem;
+        margin: 0;
+        margin-left: 1.5rem;
+        margin-bottom: 2rem;
+    }    
+    .contact-section-mobile p:last-of-type{
+        margin-bottom: 1.3rem;
+    }
+    .contact-section-mobile img{
+        height: 2rem;
+        width: 2rem ;
+    }
+    .contact-section-mobile table{
+        border: solid 1px white;
+        width: 100%;
+        /* margin-top: 3rem; */
+    }
+    .contact-section-mobile table td:first-of-type{
+        /* width: 75%; */
+    }
+    .contact-section-mobile table td{
+        border-bottom: solid 1px white;
+        font-size: 1.2rem;
+        padding: 0.3rem 0;
+    }
+    .contact-section-mobile table tr td:first-of-type{
+        padding-left: 1rem;
+    }
+    .mobile-social-media-div{
+        width: fit-content;
+        margin-left: 2rem;
+        filter: invert(100%)
+    }
+    .mobile-social-media-div img{
+        margin-left: 1rem;
+    }
+    .contact-section-mobile button{
+        display: block;
+        margin: 2rem auto 1rem auto;
+        font-size: 1.2rem;
+        background-color: white;
+        border: solid 2px white;
+        padding: 0.1rem 3rem
+    }
+}
+
+/*  */
+body{
+    background: linear-gradient(100deg, rgb(37, 37, 37), rgb(14, 14, 14) ,rgb(2, 2, 2));
+}
+@media only screen and (min-width: 1100px) and (max-height: 800px){
+/* ignre for now */
+}
+
+@media only screen and (min-width: 1100px) and (min-height: 800px) {
+    .opening-main-text{
+        margin-top: 25rem;
+    }
+    .about-section, .contact-section, .products-and-services{
+        min-height: fit-content;
+        height: fit-content;
+    }
+    .about-section button, .items-control-div{
+        margin-bottom: 5rem;
+    }
+.back-to-the-top-btn{
+    margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media only screen and (min-width : 1450px){
+    main, .opening-img, nav, .opening-texts-wrapper{
+        width: 75%;
+    }
+
+    main{
+        margin: 0 auto; 
+        background-color: white;
+    }
+}
+
+@media only screen and (min-width : 1700px){
+    main, .opening-img, nav, .opening-texts-wrapper{
+        width: 60%;
+    }
+
+    main{
+        margin: 0 auto; 
+        background-color: white;
+    }
+}
+
+
+@media only screen and (min-width : 2050px){
+    main, .opening-img, nav, .opening-texts-wrapper{
+        width: 50%;
+    }
+
+    main{
+        margin: 0 auto; 
+        background-color: white;
+    }
+}
+
+@media only screen and (min-width : 2550px){
+    main, .opening-img, nav, .opening-texts-wrapper{
+        width: 40%;
+    }
+
+    main{
+        margin: 0 auto; 
+        background-color: white;
+    }
+}
