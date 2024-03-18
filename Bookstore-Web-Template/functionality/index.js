@@ -33,7 +33,7 @@ function animationScrollTrigger(target, animation){
 const options = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.2
+  threshold: 0.5
 };
 
 // Define the callback function
@@ -140,35 +140,45 @@ productWindowCloseBtn.addEventListener('click', ()=>{
 
 // 
 const viewScheduleBtn = document.querySelector('.view-schedule-btn')
-const workScheduleWrapper = document.querySelector('.work-schedule-wrapper')
-const workTable = document.querySelector('.work-table')
-const workScheduleCloseBtn = document.querySelector('.work-schedule-close-btn')
-// const
-viewScheduleBtn.addEventListener('click', ()=>{
-  workScheduleWrapper.style.display = 'block'
+
+let viewHideSwitch = false
+
+function workingTableHandler(){
+  if(viewHideSwitch == false){
+      workScheduleWrapper.style.display = 'block'
   setTimeout(()=>{
     workScheduleWrapper.style.height = '7rem'
     setTimeout(()=>{
       workScheduleWrapper.scrollIntoView()
     }, 100)
   }, 1)
+    
+
+    viewHideSwitch = true
+  }
+  else{
+    workTable.style.display = 'none'
+    workScheduleCloseBtn.style.display = 'none'
+    workScheduleWrapper.style.height = '0px'
+  
+    setTimeout(()=>{
+      workScheduleCloseBtn.style.display = 'inline-block'
+      workTable.style.display = 'inline-block'
+      workScheduleWrapper.style.display = 'none'
+    }, 250)
+
+    viewHideSwitch = false
+  }
+}
+viewScheduleBtn.addEventListener('click', ()=>{
+  workingTableHandler()
 })
 
-workScheduleCloseBtn.addEventListener('click', ()=>{
-  workTable.style.display = 'none'
-  workScheduleCloseBtn.style.display = 'none'
-  workScheduleWrapper.style.height = '0px'
-  // setTimeout(()=>{
-  // sectionContact.scrollIntoView()
-  // }, 1)
 
-  setTimeout(()=>{
-    workScheduleCloseBtn.style.display = 'inline-block'
-    workTable.style.display = 'inline-block'
-    workScheduleWrapper.style.display = 'none'
-  }, 250)
-})
 
+
+const workScheduleWrapper = document.querySelector('.work-schedule-wrapper')
+const workTable = document.querySelector('.work-table')
 
 // products window functionality
 
