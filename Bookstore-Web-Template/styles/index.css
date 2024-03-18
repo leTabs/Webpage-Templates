@@ -1,12 +1,7 @@
 :root{
     --bg-color: rgb(255, 255, 255);
-    --pop-window-shadow-positive-value: 25px;
-    --pop-window-shadow-negative-value: -25px;
-    --pop-window-shadow-spread-value: 10px;
-    --pop-window-shadow-color: rgba(0, 0, 0, 0.589);
 
-    --pop-window-shadow: 
-        var(--pop-window-shadow-positive-value) var(--pop-window-shadow-positive-value) var(--pop-window-shadow-spread-value) var(--pop-window-shadow-color);
+    --pop-window-shadow: 25px 25px 10px rgba(0, 0, 0, 0.589)
     }
 html{
     background-color: var(--bg-color);
@@ -26,8 +21,11 @@ html::-webkit-scrollbar-thumb, html * ::-webkit-scrollbar-thumb{
     background: linear-gradient(rgb(63, 63, 63), gray , rgb(66, 66, 66));
     border: solid 1px white;
 }
+body{
+    background: linear-gradient(100deg, rgb(37, 37, 37), rgb(14, 14, 14) ,rgb(2, 2, 2));
+}
 main{
-    background-color: white;
+    background-color: var(--bg-color);
 
 }
 /*  */
@@ -72,7 +70,7 @@ section,
     margin: 0;
     padding: 0;
 }
-
+.about-section,
 .about-left-div hr,
 .products-and-services,
 .products-and-services hr,
@@ -121,7 +119,7 @@ nav span p,
 /*  */
 
 nav{
-    background-color: white;
+    background-color: var(--bg-color);
     position: fixed;
     top: 0;
     width: 100%;
@@ -160,7 +158,6 @@ nav span p:hover{
     color: white;
     height: 100vh;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7), -5px 5px 15px rgba(0, 0, 0, 0.7);
-    /* background-color: transparent; */
 }
 .opening-img{
     z-index: 3;
@@ -192,12 +189,10 @@ nav span p:hover{
     }
 }
 .opening-main-text{
-    /* margin-top: 20rem; */
     font-size: 2.5rem;
     text-align: right;
     padding-right: 5rem;
     animation: falling 1s ease-in-out forwards;
-    /* animation-delay: 1s; */
 }
 .opening-main-text p, .opening-main-text h1, .opening-secondary-text p{
     animation: falling 1.2s ease-in-out forwards;
@@ -225,6 +220,7 @@ nav span p:hover{
 .about-left-div{
     opacity: 0;
     text-shadow: 3px 3px 25px black;
+    padding-top: 3rem;
 }
 .about-left-div h2, .about-left-div p{
     padding: 0 2rem ;
@@ -262,7 +258,6 @@ nav span p:hover{
     transform: translate(-50%, -50%);
     top: 52%;
     left: 50%;
-    /* animation: animate 2s linear forwards; */
 }
 
 /* products and services */
@@ -286,7 +281,6 @@ nav span p:hover{
     display: flex;
     justify-content: center;
     padding: 0 5%;
-    
 }
 .item{
     box-shadow: 5px 5px 0px black;
@@ -295,6 +289,7 @@ nav span p:hover{
     text-align: center;
     height: fit-content;
     width: 100%;
+    opacity: 0;
 }
 .item:hover h3{
     border-bottom-color: black;
@@ -326,7 +321,6 @@ nav span p:hover{
     padding-bottom: 0.2rem;
     width: 75%;
     margin-bottom: 0.5rem;
-
 }
 .items-control-div{
     display: grid;
@@ -386,6 +380,7 @@ nav span p:hover{
     border-left: solid 10px black;
     border-right: solid 10px black;
 }
+
 /* contact section */
 .contact-section{
     width: 100%;
@@ -424,8 +419,6 @@ nav span p:hover{
 }
 .contact-right-div{
     height: 90%;
-    /* CHANGE THE OVERALL DIV LINEAR GRADIENT INSTEAD */
-    /* background: linear-gradient(90deg, black 0% , black 15%, rgb(12, 12, 12),rgb(20, 20, 20), black); */
 }
 .text-info{
     border-left: solid white 1px;
@@ -494,15 +487,12 @@ nav span p:hover{
     box-shadow: 5px 0px 5px black;
 }
 @keyframes work-hours-animation {
-    /* 0%{
-
-    } */
     100%{
         transform: translate(-50%, -50%);
         opacity: 1;
     }
 }
-/*  */
+
 .back-to-the-top-btn{
     font-size: 1rem;
     background-color: white;
@@ -523,13 +513,8 @@ footer p{
 
 
 /* js triggered animations */
-
-.item{
-    opacity: 0;
-}
 .item-jumpers{
     animation: item-jumper 0.75s ease-out forwards; 
-    /* opacity: 0; */
 }
 .item-02{
     animation-delay: 0.1s;
@@ -559,7 +544,6 @@ footer p{
 .p-03{
     animation-delay: 0.2s;
 }
-/* probably remove that and the class from the html (text-info-p) */
 .text-info-p{
     opacity: 0;
 }
@@ -571,12 +555,10 @@ footer p{
     0%{
         transform: translate(50%, 0%);
         opacity: 0;
-        /* color: red; */
     }
     100%{
         transform: translate(0%, 0%);
         opacity: 1;
-        /* color: white; */
     }
 }
 .contact-img{
@@ -612,6 +594,7 @@ footer p{
         text-shadow: none;
     }
 }
+
 /* product window styles */
 .products-window{
     position: fixed;
@@ -665,8 +648,6 @@ footer p{
     width: 50%;
 }
 .product-item-wrapper{
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
     grid-template-rows: 2;
     height: 65%;
     overflow-y: auto;
@@ -687,7 +668,6 @@ footer p{
     background-color: rgb(245, 245, 245);
 }
 .product-item h4:first-of-type{
-    /* color: red; */
     margin: 0;
     font-size: 1.5rem;
     margin: 0.6rem 0 0 0
@@ -696,8 +676,6 @@ footer p{
     font-size: 1.1rem;
     margin: 0.5rem auto 0 auto;
     font-weight: normal;
-    /* border-bottom: solid 1px black; */
-    /* width: 75%; */
 }
 .product-item p{
     font-size: 1.1rem;
@@ -712,7 +690,6 @@ footer p{
     display: block;
     height: 10rem;
     object-fit: cover;
-    /* border-bottom: solid 1px rgb(0, 0, 0); */
 }
 .product-item hr:first-of-type{
     width: 90%;
@@ -738,17 +715,12 @@ footer p{
     padding: 0.2rem 0;
 }
 
-/* NO MEMDIA QUERIES FOR OVER 1100 / 650 */
-
 .work-schedule-wrapper{
-    /* border-bottom: solid 0.5rem black; */
     width: 100%;
     height: 0rem;
-    /* background-color: rgb(207, 207, 207); */
     transition: 100ms;
     display: none;
     text-align: center;
-    /* padding-top: 1rem; */
     background: linear-gradient(90deg, black 0%, black 20%, rgb(0, 0, 0) 20%,rgb(0, 0, 0) 80%, black 80%, black 100%);
 }
 .work-schedule-wrapper table{
@@ -806,11 +778,16 @@ footer p{
 .contact-section-mobile{
     display: none;
 }
+
+/* JAVASCRIPT ANIMATION TRIGGERS HERE */
+/* [...] */
+
+/* ALL ANIMATIONS HERE */
+/* [...] */
+
 /* MEDIA QUERIES, OTHER SCREEN SIZES CSS HERE: */
 
-/* last one: 1025 */
-
-@media only screen and (min-width: 320px) and (max-width: 450px) and (max-height: 1000px){ /* and 650px on the y axis */ 
+@media only screen and (max-width: 450px) and (max-height: 1000px){
     html::-webkit-scrollbar, html * ::-webkit-scrollbar{
         display: none;
     }
@@ -855,8 +832,8 @@ footer p{
         border: solid 1px black;
         overflow-x: hidden;
     }
-    /* opening section */
 
+    /* opening section */
     .opening-main-text{
         text-align: left;
         padding-left: 1rem;
@@ -879,10 +856,10 @@ footer p{
         font-size: 1.3rem;
     }
     .opening-texts-wrapper{
-        /* background-color: red; */
         width: 100%;
         top: 40%;
     }
+
     /* .about section */
     .about-section{
         display: block;
@@ -891,7 +868,9 @@ footer p{
         box-shadow: inset 5px 5px 20px gray;
         margin: 0;
         overflow: hidden;
-        height: fit-content
+    }
+    .about-left-div{
+        padding-top: 0;
     }
     .about-left-div h2, .about-left-div p{
         padding: 0 2rem ;
@@ -966,6 +945,7 @@ footer p{
         border: solid 1px black;
         margin: 0.5rem auto;
     }
+
     /* contact section */
     .contact-section{
         display: none;
@@ -974,16 +954,13 @@ footer p{
         display: block;
         background-color: rgb(20, 20, 20);
         color: white;
-        /* min-height: 100vh; */
         height: fit-content;
-        /* padding-top: 10rem; */
     }
     .contact-section-mobile h4{
         font-size: 1.4rem;
         margin: 1rem 0 0.5rem 1.5rem;
     }
     .contact-section-mobile ul{
-        /* padding-top: 4rem; */
         margin-top: 3rem;
         font-size: 1.5rem;
         color: rgb(255, 0, 0);
@@ -1005,11 +982,7 @@ footer p{
     }
     .contact-section-mobile table{
         border: solid 1px white;
-        width: 100%;
-        /* margin-top: 3rem; */
-    }
-    .contact-section-mobile table td:first-of-type{
-        /* width: 75%; */
+        width: 100%
     }
     .contact-section-mobile table td{
         border-bottom: solid 1px white;
@@ -1036,7 +1009,7 @@ footer p{
         padding: 0.1rem 3rem
     }
 }
-@media only screen and (min-width: 450px) and (max-width: 1100px) and (min-height: 700px){
+@media only screen and (min-width: 450px) and (max-width: 1100px){
     html::-webkit-scrollbar, html * ::-webkit-scrollbar{
         display: none;
     }
@@ -1080,6 +1053,7 @@ footer p{
     section{
         border: solid 1px black
     }
+
     /* opening section */
     .opening-section{
         z-index: 2;
@@ -1115,7 +1089,6 @@ footer p{
         box-shadow: inset 5px 5px 20px gray;
         margin: 0;
         overflow: hidden;
-        height: fit-content;
         padding-bottom: 4rem;
     }
     .about-left-div h2, .about-left-div p{
@@ -1201,17 +1174,14 @@ footer p{
         display: block;
         background-color: rgb(20, 20, 20);
         color: white;
-        /* min-height: 100vh; */
         height: fit-content;
         padding-bottom: 1rem
-        /* padding-top: 10rem; */
     }
     .contact-section-mobile h4{
         font-size: 1.5rem;
         margin: 1rem 0 0.5rem 1.5rem;
     }
     .contact-section-mobile ul{
-        /* padding-top: 4rem; */
         margin-top: 3rem;
         font-size: 1.7rem;
         color: rgb(255, 0, 0);
@@ -1234,10 +1204,6 @@ footer p{
     .contact-section-mobile table{
         border: solid 1px white;
         width: 100%;
-        /* margin-top: 3rem; */
-    }
-    .contact-section-mobile table td:first-of-type{
-        /* width: 75%; */
     }
     .contact-section-mobile table td{
         border-bottom: solid 1px white;
@@ -1265,15 +1231,9 @@ footer p{
     }
 }
 
-/*  */
-body{
-    background: linear-gradient(100deg, rgb(37, 37, 37), rgb(14, 14, 14) ,rgb(2, 2, 2));
-}
-@media only screen and (min-width: 1100px) and (max-height: 800px){
-/* ignre for now */
-}
 
-@media only screen and (min-width: 1100px) and (min-height: 800px) {
+
+@media only screen and (min-width: 1400px) {
     .about-section, .contact-section, .products-and-services{
         min-height: fit-content;
         height: fit-content;
