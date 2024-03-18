@@ -1,25 +1,30 @@
-const navDestinationsArray = document.querySelectorAll('.nav-destination')
+// DOM elements
 
+const navDestinationsArray = document.querySelectorAll('.nav-destination')
 const sectionOpening = document.querySelector('.opening-section')
 const sectionAbout = document.querySelector('.about-section')
 const sectionProductsServices = document.querySelector('.products-and-services')
 const sectionContact = document.querySelector('.contact-section')
-
-const sectionsArray = [sectionOpening, sectionAbout, sectionProductsServices, sectionContact]
-
 const continueBtn = document.querySelector('.continue-btn')
 const backToTheTopButton = document.querySelector('.back-to-the-top-btn')
+
+// mobile nav destinations 
+const mobNavHome = document.querySelector('.mob-nav-home')
+const mobNavAbout = document.querySelector('.mob-nav-about')
+const mobNavProducts = document.querySelector('.mob-nav-products')
+const mobNavContact = document.querySelector('.mob-nav-contact')
+// [...]
+const sectionsArray = [sectionOpening, sectionAbout, sectionProductsServices, sectionContact]
+
 
 for(let i = 0; i < navDestinationsArray.length; i++){
     navDestinationsArray[i].addEventListener('click', ()=>{
         sectionsArray[i].scrollIntoView()
     })
 }
-
 continueBtn.addEventListener('click', ()=>{
     sectionProductsServices.scrollIntoView()
 })
-
 backToTheTopButton.addEventListener('click', ()=>{
     sectionOpening.scrollIntoView();
 })
@@ -193,4 +198,25 @@ const pencilsBtn = document.querySelector('.pencils-btn')
 
 pencilsBtn.addEventListener('click', ()=>{
   pencilsDiv.scrollIntoView()
+})
+
+
+// mobile nav
+
+const mobileNavImg = document.querySelector('.mobile-nav-lines')
+const mobileNavContainer = document.querySelector('.mobile-nav-container')
+const mobileNavCloseBtn = document.querySelector('.mobile-nav-close-btn')
+
+mobileNavImg.addEventListener('click', ()=>{
+  mobileNavContainer.style.display = 'block'
+})
+
+mobileNavCloseBtn.addEventListener('click', ()=>{
+  mobileNavContainer.style.transform = 'translate(-150%, -50%)'
+  
+  setTimeout(()=>{
+    mobileNavContainer.style.display = 'none'
+    mobileNavContainer.style.transform = 'translate(-50%, -50%)'
+  }, 250)
+
 })
