@@ -153,28 +153,25 @@ function workingTableHandler(){
     }, 100)
   }, 1)
     
-
+    viewScheduleBtn.textContent = 'Hide schedule'
     viewHideSwitch = true
   }
   else{
     workTable.style.display = 'none'
-    workScheduleCloseBtn.style.display = 'none'
     workScheduleWrapper.style.height = '0px'
   
     setTimeout(()=>{
-      workScheduleCloseBtn.style.display = 'inline-block'
       workTable.style.display = 'inline-block'
       workScheduleWrapper.style.display = 'none'
     }, 250)
 
+    viewScheduleBtn.textContent = 'View schedule'
     viewHideSwitch = false
   }
 }
 viewScheduleBtn.addEventListener('click', ()=>{
   workingTableHandler()
 })
-
-
 
 
 const workScheduleWrapper = document.querySelector('.work-schedule-wrapper')
