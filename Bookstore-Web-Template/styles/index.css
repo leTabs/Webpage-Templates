@@ -741,23 +741,6 @@ footer p{
 .work-schedule-wrapper table tr td:first-of-type{
     padding-right: 2.5rem;
 }
-.work-schedule-wrapper button{
-    opacity: 0;
-    animation: table-appearing 200ms ease-in forwards;
-    font-size: 1.1rem;
-    transform: translate(50%, -150%);
-    background-color: white;
-    border: solid 1px black;
-    padding: 0.3rem 2rem 0.1rem 2rem;
-    margin: 0;
-    transition: 250ms;
-    cursor: pointer;
-}
-.work-schedule-wrapper button:hover{
-    background-color: black;
-    color: white;
-    border-color: white;
-}
 @keyframes table-appearing{
     50%{
         opacity: 0;
@@ -766,8 +749,6 @@ footer p{
         opacity: 1;
     }
 }
-
-
 
 .mobile-nav{
     display: none;
