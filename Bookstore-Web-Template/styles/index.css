@@ -779,7 +779,7 @@ footer p{
     top: 50%;
     /* left: calc(0% + 30vw); */
     z-index: 20;
-    width: 60vw;
+    width: 80vw;
     height: 102vh;
     text-align: center;
     box-shadow: 
@@ -790,10 +790,10 @@ footer p{
 }
 @keyframes mobile-slider {
     0%{
-        left:  calc(0% - 30vw);
+        left:  calc(0% - 40vw);
     }
     100%{
-        left: calc(0% + 30vw);
+        left: calc(0% + 40vw);
     }
 }
 .mobile-nav-container h1{
@@ -1120,12 +1120,13 @@ footer p{
         margin: 0;
         overflow: hidden;
         padding-bottom: 4rem;
+        height: fit-content;
     }
     .about-left-div h2, .about-left-div p{
         padding: 0 2rem ;
     }
     .about-left-div h2{
-        padding-top: 3rem;
+        padding-top: 0;
         font-size: 2.8rem;
         text-align: center;
     }
