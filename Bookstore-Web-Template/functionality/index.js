@@ -9,6 +9,7 @@ const continueBtn = document.querySelector('.continue-btn')
 const backToTheTopButton = document.querySelector('.back-to-the-top-btn')
 
 // mobile nav destinations 
+const mobileNav = document.querySelector('.mobile-nav')
 const mobNavHome = document.querySelector('.mob-nav-home')
 const mobNavAbout = document.querySelector('.mob-nav-about')
 const mobNavProducts = document.querySelector('.mob-nav-products')
@@ -206,12 +207,27 @@ pencilsBtn.addEventListener('click', ()=>{
 const mobileNavImg = document.querySelector('.mobile-nav-lines')
 const mobileNavContainer = document.querySelector('.mobile-nav-container')
 const mobileNavCloseBtn = document.querySelector('.mobile-nav-close-btn')
+const sectionMobProductsServices = document.querySelector('.products-and-services-mobile')
+const sectionMobContact = document.querySelector('.contact-section-mobile')
+const mobBackTop = document.querySelector('.mob-back-to-top')
 
-mobileNavImg.addEventListener('click', ()=>{
-  mobileNavContainer.style.display = 'block'
-})
+let lastScrollTop = 0;
 
-mobileNavCloseBtn.addEventListener('click', ()=>{
+window.addEventListener('scroll', function() {
+  let currentPosition = window.scrollY;
+
+  let scrollDirection = currentPosition > lastScrollTop ? 'down' : 'up';
+  
+  lastScrollTop = currentPosition <= 0 ? 0 : currentPosition;
+
+  if (scrollDirection === 'down') {
+    mobileNav.style.top = '-50%'
+  } else {
+    mobileNav.style.top = '0%'
+  }
+});
+
+function mobileNavClosing(){
   mobileNavContainer.style.transform = 'translate(-150%, -50%)'
   
   setTimeout(()=>{
@@ -219,4 +235,33 @@ mobileNavCloseBtn.addEventListener('click', ()=>{
     mobileNavContainer.style.transform = 'translate(-50%, -50%)'
   }, 250)
 
+}
+
+
+
+mobileNavImg.addEventListener('click', ()=>{
+  mobileNavContainer.style.display = 'block'
+})
+
+mobileNavCloseBtn.addEventListener('click', ()=>{
+  mobileNavClosing()
+})
+mobNavHome.addEventListener('click', ()=>{
+  mobileNavClosing()
+  sectionOpening.scrollIntoView()
+})
+mobNavAbout.addEventListener('click', ()=>{
+  mobileNavClosing()
+  sectionAbout.scrollIntoView()
+})
+mobNavProducts.addEventListener('click', ()=>{
+  mobileNavClosing()
+  sectionMobProductsServices.scrollIntoView()
+})
+mobNavContact.addEventListener('click', ()=>{
+  mobileNavClosing()
+  sectionMobContact.scrollIntoView()
+})
+mobBackTop.addEventListener('click', ()=>{
+  sectionOpening.scrollIntoView()
 })
