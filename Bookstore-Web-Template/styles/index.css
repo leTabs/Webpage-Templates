@@ -751,7 +751,10 @@ footer p{
 }
 
 .mobile-nav{
+    transition: 500ms;
+    border-bottom: solid 2px black;
     display: none;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5), -10px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .products-and-services-mobile{
     display: none;
