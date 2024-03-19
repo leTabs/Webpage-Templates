@@ -9,41 +9,38 @@ const continueBtn = document.querySelector('.continue-btn')
 const backToTheTopButton = document.querySelector('.back-to-the-top-btn')
 
 
-const item01 = document.querySelector('.item-01')
-const item02 = document.querySelector('.item-02')
-const item03 = document.querySelector('.item-03')
-
-const prevBtn = document.querySelector('.prev-btn')
-const nextBtn = document.querySelector('.next-btn')
-
-const p01 = document.querySelector('.p-01')
-const p02 = document.querySelector('.p-02')
-const p03 = document.querySelector('.p-03')
-
-const allItems = document.querySelectorAll('.item')
-const allDots = document.querySelectorAll('.dot')
-
-
-const workScheduleWrapper = document.querySelector('.work-schedule-wrapper')
-const workTable = document.querySelector('.work-table')
-
-
+// About section DOM elements
 const aboutLeftDiv = document.querySelector('.about-left-div')
 
 
 
+// Products section DOM elements
+const item01 = document.querySelector('.item-01')
+const item02 = document.querySelector('.item-02')
+const item03 = document.querySelector('.item-03')
+const prevBtn = document.querySelector('.prev-btn')
+const nextBtn = document.querySelector('.next-btn')
+const allItems = document.querySelectorAll('.item')
+const allDots = document.querySelectorAll('.dot')
+//  [...]
 const viewProductsArray = document.querySelectorAll('.view-all-btn')
 const productsWindow = document.querySelector('.products-window')
 const productItemWrapper = document.querySelector('.product-item-wrapper')
-
 const productWindowCloseBtn = document.querySelector('.product-window-close-btn')
-
-const viewScheduleBtn = document.querySelector('.view-schedule-btn')
-
 const pensDiv = document.querySelector('.pens')
 const pensBtn = document.querySelector('.pens-btn')
 const pencilsDiv = document.querySelector('.pencils')
 const pencilsBtn = document.querySelector('.pencils-btn')
+
+// Contact section DOM elements
+const p01 = document.querySelector('.p-01')
+const p02 = document.querySelector('.p-02')
+const p03 = document.querySelector('.p-03')
+const workScheduleWrapper = document.querySelector('.work-schedule-wrapper')
+const workTable = document.querySelector('.work-table')
+const viewScheduleBtn = document.querySelector('.view-schedule-btn')
+
+
 
 // mobile nav destinations 
 
@@ -64,7 +61,7 @@ const mobNavContact = document.querySelector('.mob-nav-contact')
 
 
 const sectionsArray = [sectionOpening, sectionAbout, sectionProductsServices, sectionContact]
-
+const mobNavClosingListedElements = [sectionOpening, sectionAbout, sectionMobProductsServices, sectionMobContact]
 
 for(let i = 0; i < navDestinationsArray.length; i++){
     navDestinationsArray[i].addEventListener('click', ()=>{
@@ -79,8 +76,8 @@ backToTheTopButton.addEventListener('click', ()=>{
 })
 
 // MOBILE END SECTIONS ARE NOT INCLUDED (FIX THE BUG)
-for(let i = 0; i < sectionsArray.length; i++){
-  sectionsArray[i].addEventListener('click', ()=>{
+for(let i = 0; i < mobNavClosingListedElements.length; i++){
+  mobNavClosingListedElements[i].addEventListener('click', ()=>{
     mobileNavClosing()
   })
 }
