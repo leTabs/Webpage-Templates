@@ -8,13 +8,61 @@ const sectionContact = document.querySelector('.contact-section')
 const continueBtn = document.querySelector('.continue-btn')
 const backToTheTopButton = document.querySelector('.back-to-the-top-btn')
 
+
+const item01 = document.querySelector('.item-01')
+const item02 = document.querySelector('.item-02')
+const item03 = document.querySelector('.item-03')
+
+const prevBtn = document.querySelector('.prev-btn')
+const nextBtn = document.querySelector('.next-btn')
+
+const p01 = document.querySelector('.p-01')
+const p02 = document.querySelector('.p-02')
+const p03 = document.querySelector('.p-03')
+
+const allItems = document.querySelectorAll('.item')
+const allDots = document.querySelectorAll('.dot')
+
+
+const workScheduleWrapper = document.querySelector('.work-schedule-wrapper')
+const workTable = document.querySelector('.work-table')
+
+
+const aboutLeftDiv = document.querySelector('.about-left-div')
+
+
+
+const viewProductsArray = document.querySelectorAll('.view-all-btn')
+const productsWindow = document.querySelector('.products-window')
+const productItemWrapper = document.querySelector('.product-item-wrapper')
+
+const productWindowCloseBtn = document.querySelector('.product-window-close-btn')
+
+const viewScheduleBtn = document.querySelector('.view-schedule-btn')
+
+const pensDiv = document.querySelector('.pens')
+const pensBtn = document.querySelector('.pens-btn')
+const pencilsDiv = document.querySelector('.pencils')
+const pencilsBtn = document.querySelector('.pencils-btn')
+
 // mobile nav destinations 
+
+const mobileNavImg = document.querySelector('.mobile-nav-lines')
+const mobileNavContainer = document.querySelector('.mobile-nav-container')
+const mobileNavCloseBtn = document.querySelector('.mobile-nav-close-btn')
+const sectionMobProductsServices = document.querySelector('.products-and-services-mobile')
+const sectionMobContact = document.querySelector('.contact-section-mobile')
+const mobBackTop = document.querySelector('.mob-back-to-top')
+
+
 const mobileNav = document.querySelector('.mobile-nav')
 const mobNavHome = document.querySelector('.mob-nav-home')
 const mobNavAbout = document.querySelector('.mob-nav-about')
 const mobNavProducts = document.querySelector('.mob-nav-products')
 const mobNavContact = document.querySelector('.mob-nav-contact')
 // [...]
+
+
 const sectionsArray = [sectionOpening, sectionAbout, sectionProductsServices, sectionContact]
 
 
@@ -30,7 +78,12 @@ backToTheTopButton.addEventListener('click', ()=>{
     sectionOpening.scrollIntoView();
 })
 
-
+// MOBILE END SECTIONS ARE NOT INCLUDED (FIX THE BUG)
+for(let i = 0; i < sectionsArray.length; i++){
+  sectionsArray[i].addEventListener('click', ()=>{
+    mobileNavClosing()
+  })
+}
 
 
 //
@@ -54,38 +107,21 @@ const callback = (entries, observer) => {
 
 const observer = new IntersectionObserver(callback, options);
 
-observer.observe(target)};
-
-const item01 = document.querySelector('.item-01')
-const item02 = document.querySelector('.item-02')
-const item03 = document.querySelector('.item-03')
-
-
-// const item04 = document.querySelector('.item-04')
-// const item05 = document.querySelector('.item-05')
-// const item06 = document.querySelector('.item-06')
+observer.observe(target)}
 
 
 animationScrollTrigger(item01, 'item-jumpers')
 animationScrollTrigger(item02, 'item-jumpers')
 animationScrollTrigger(item03, 'item-jumpers')
 
-const x2 = document.querySelector('.p-01')
-const y2 = document.querySelector('.p-02')
-const z2 = document.querySelector('.p-03')
-animationScrollTrigger(x2, 'text-info-animator')
-animationScrollTrigger(y2, 'text-info-animator')
-animationScrollTrigger(z2, 'text-info-animator')
+animationScrollTrigger(p01, 'text-info-animator')
+animationScrollTrigger(p02, 'text-info-animator')
+animationScrollTrigger(p03, 'text-info-animator')
 
 animationScrollTrigger(document.querySelector('.contact-img'), 'contact-img-animation')
 
 
-const prevBtn = document.querySelector('.prev-btn')
-const nextBtn = document.querySelector('.next-btn')
 
-
-const allItems = document.querySelectorAll('.item')
-const allDots = document.querySelectorAll('.dot')
 
 let itemCounter = 0;
 
@@ -119,16 +155,12 @@ function prevItem(itemIndex){
 prevBtn.addEventListener('click', ()=>{prevItem(itemCounter)})
 nextBtn.addEventListener('click', ()=>{nextItem(itemCounter)})
 
-const aboutLeftDiv = document.querySelector('.about-left-div')
 animationScrollTrigger(aboutLeftDiv, 'about-left-div-appearing')
 
 
 
 // view products
 
-const viewProductsArray = document.querySelectorAll('.view-all-btn')
-const productsWindow = document.querySelector('.products-window')
-const productItemWrapper = document.querySelector('.product-item-wrapper')
 
 for(let i = 0; i < viewProductsArray.length; i++){
   viewProductsArray[i].addEventListener('click', ()=>{
@@ -138,14 +170,12 @@ for(let i = 0; i < viewProductsArray.length; i++){
 })}
 
 
-const productWindowCloseBtn = document.querySelector('.product-window-close-btn')
 
 productWindowCloseBtn.addEventListener('click', ()=>{
   productsWindow.style.display = 'none'
 })
 
 // 
-const viewScheduleBtn = document.querySelector('.view-schedule-btn')
 
 let viewHideSwitch = false
 
@@ -180,22 +210,19 @@ viewScheduleBtn.addEventListener('click', ()=>{
 })
 
 
-const workScheduleWrapper = document.querySelector('.work-schedule-wrapper')
-const workTable = document.querySelector('.work-table')
+
 
 // products window functionality
 
 // pens and stuff
 
-const pensDiv = document.querySelector('.pens')
-const pensBtn = document.querySelector('.pens-btn')
+
 
 pensBtn.addEventListener('click', ()=>{
   pensDiv.scrollIntoView()
 })
 
-const pencilsDiv = document.querySelector('.pencils')
-const pencilsBtn = document.querySelector('.pencils-btn')
+
 
 pencilsBtn.addEventListener('click', ()=>{
   pencilsDiv.scrollIntoView()
@@ -204,12 +231,6 @@ pencilsBtn.addEventListener('click', ()=>{
 
 // mobile nav
 
-const mobileNavImg = document.querySelector('.mobile-nav-lines')
-const mobileNavContainer = document.querySelector('.mobile-nav-container')
-const mobileNavCloseBtn = document.querySelector('.mobile-nav-close-btn')
-const sectionMobProductsServices = document.querySelector('.products-and-services-mobile')
-const sectionMobContact = document.querySelector('.contact-section-mobile')
-const mobBackTop = document.querySelector('.mob-back-to-top')
 
 let lastScrollTop = 0;
 
@@ -265,3 +286,6 @@ mobNavContact.addEventListener('click', ()=>{
 mobBackTop.addEventListener('click', ()=>{
   sectionOpening.scrollIntoView()
 })
+
+// mobile outer event listener 
+
