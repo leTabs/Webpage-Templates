@@ -220,7 +220,7 @@ nav span p:hover{
 .about-left-div{
     opacity: 0;
     text-shadow: 3px 3px 25px black;
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
 }
 .about-left-div h2, .about-left-div p{
     padding: 0 2rem ;
@@ -228,6 +228,7 @@ nav span p:hover{
 .about-left-div h2{
     padding-top: 3rem;
     font-size: 3rem;
+    margin-top: 2rem;
 }
 .about-left-div p{
     font-size: 1.5rem;
@@ -239,7 +240,7 @@ nav span p:hover{
 }
 .continue-btn{
     display: block;
-    margin: 2rem auto 0 auto;
+    margin: 2rem auto 1.5rem auto;
     font-size: 1.2rem;
     padding: 0.2rem 2rem;
     background-color: white;
@@ -992,6 +993,7 @@ footer p{
         background-color: white;
         border: solid 2px black;
         width: 40%;
+        -webkit-text-fill-color: black;
     }
     .item-mobile hr{
         width: 75%;
@@ -1310,6 +1312,10 @@ footer p{
     margin-top: 2.5rem;
         margin-bottom: 2.5rem;
     }
+    .products-window{
+        width: 65%;
+        height: 75%;
+    }
 }
 
 @media only screen and (min-width : 1450px){
@@ -1319,6 +1325,10 @@ footer p{
 
     main{
         margin: 0 auto; 
+    }    
+    .products-window{
+        width: 65%;
+        height: 75%;
     }
 }
 
@@ -1330,6 +1340,10 @@ footer p{
     main{
         margin: 0 auto; 
         background-color: white;
+    }    
+    .products-window{
+        width: 50%;
+        height: 65%;
     }
 }
 
@@ -1343,6 +1357,10 @@ footer p{
         margin: 0 auto; 
         background-color: white;
     }
+    .products-window{
+        width: 45%;
+        height: 55%;
+    }
 }
 
 @media only screen and (min-width : 2550px){
@@ -1353,5 +1371,9 @@ footer p{
     main{
         margin: 0 auto; 
         background-color: white;
+    }
+    .products-window{
+        width: 35%;
+        height: 50%;
     }
 }
