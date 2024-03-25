@@ -96,14 +96,20 @@ nav p:hover{
     background-color: rgb(3, 146, 146);
 }
 /* exercises */
-.section-exercises hr{
+.first-hr{
     border: solid 3px rgb(3, 146, 146);
     margin: 0;
 }
-.section-exercises hr:nth-of-type(2){
+.sec-hr{
     border: solid 1px rgb(3, 146, 146);
-    margin: 2rem auto 0 auto;
+    margin: 1rem auto 1rem auto;
     width: 25%
+}
+
+.mid-hr{
+    margin: 0.5rem auto;
+    width: 75%;
+    border-color: rgb(49, 48, 48);
 }
 .exercises-text-wrapper-top{
     background-color: rgb(3, 146, 146);
@@ -119,7 +125,7 @@ nav p:hover{
 .exercises-container{
     border-top: solid 2px rgb(0, 0, 0);
     border-bottom: solid 2px rgb(0, 0, 0);
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     display: grid;
     grid-template-columns: 1.25fr 0.75fr;
     overflow: hidden;
@@ -143,3 +149,118 @@ nav p:hover{
 .text-container p{
     margin: 0;
 }
+.view-more-ex{
+    background-color: rgb(0, 112, 112);
+    text-align: center;
+    margin: 0;
+}
+.view-more-ex p{
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    color: white;
+    margin: 0;
+}
+/* my vision section */
+.section-my-vision{
+    width: 100%;
+    height: 80vh;
+    margin: 0;
+}
+.section-my-vision img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.my-vision-text-container{
+    z-index: 2;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 50%;
+    background: linear-gradient(90deg,transparent, transparent,rgb(153, 136, 136), rgba(0, 0, 0, 0.514), rgb(153, 151, 151), transparent,transparent);
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 1.8rem 0 1.2rem 0; 
+}
+.my-vision-text-container h3{
+    font-size: 3.8rem;
+    margin: 0;
+}
+.my-vision-text-container p{
+    margin: 0.8rem 0 1.2rem 0;
+    font-size: 1.6rem;
+}
+.my-vision-text-container button{
+    padding: 0.4rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: white;
+    border: solid 3px white;
+    border-radius: 25px;
+    transition: 250ms;
+    cursor: pointer;
+}
+.my-vision-text-container button:hover{
+    background-color: transparent;
+    color: white;
+}
+/* contact form section */
+
+
+.section-communication{
+    padding-top: 10rem;
+    background-color: white;
+    /* height: 100vw; */
+    text-align: center;
+  }
+  .section-communication h2{
+    font-size: 2rem;
+  }
+  .communication-main-wrapper{
+    margin: 2rem 5rem;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: rgb(0, 0, 0);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem ;
+  }
+  .form{
+    display: grid;
+    grid-template-rows: 2;
+  }
+  
+  .form-wrapper-01{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .form-wrapper-01 input,
+  .form-wrapper-02 textarea{
+    width: 100%;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    border: none;
+    outline: none;
+  }
+  .form-wrapper-02 textarea{
+    margin-top: 1rem;
+    width: 50%;
+  }
+  .form-wrapper-02 button{
+    display: block;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    width: 30%;
+    background-color: rgb(0, 0, 0);
+    border: solid black 2px;
+    color: white;
+  }
+  .form-wrapper-02 button:hover{
+     background-color: transparent;
+     color: black;
+     cursor: pointer;
+  }
