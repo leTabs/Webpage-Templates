@@ -43,9 +43,9 @@
         </div>
         </section>
         <section class="section-exercises">
-            <hr />
+            <hr class="first-hr"/>
             <div class="exercises-text-wrapper-top">Populat exercises</div>
-            <hr />
+            <hr class="sec-hr"/>
             <div class="popular-excerises-wrapper">
                 <div class="exercises-container"> 
                     <img src="images/pexels-burst-373946.jpg" alt="" class="">
@@ -54,6 +54,7 @@
                         <p>Small description</p>
                     </div>
                 </div>
+                <hr class="mid-hr"/>
                 <div class="exercises-container"> 
                     <div class="text-container">
                         <h2>Title</h2>
@@ -61,6 +62,7 @@
                     </div>
                     <img src="images/pexels-burst-373946.jpg" alt="" class="">
                 </div>
+                <hr class="mid-hr"/>
                 <div class="exercises-container"> 
                     <img src="images/pexels-burst-373946.jpg" alt="" class="">
                     <div class="text-container">
@@ -68,10 +70,47 @@
                         <p>Small description</p>
                     </div>
                 </div>
+                <hr class="mid-hr" />
             </div>
         </section>
-        <section class="section-my-vision"></section>
-        <section class="section-communication"></section>
+        <div class="view-more-ex"><p>View more exercises <a href="">here</a>.</p></div>
+        <section class="section-my-vision">
+            <img src="images/InstructorImg.jpg" />
+            <div class="my-vision-text-container">
+                <h3>My Vision</h3>
+                <p>To move from compulsiveness to consciousness,<br />
+                    and help all others do the same.</p>
+                    <button>More About Me</button>
+            </div>
+        </section>
+        <section class="section-communication">
+
+            <div className="communication-main-wrapper">
+                <h2>Contact Form</h2>
+                <p>Talk to us directly to get the lates new etc etc</p>
+                <form className="form">
+                    <div className="form-wrapper-01">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" placeholder="First Name"></input>
+
+
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" placeholder="Last Name"></input>
+
+
+                        <label for="mail">Email Address:</label>
+                        <input type="email" id="mail" placeholder="Email Address"></input>
+                    </div>
+                    <div className="form-wrapper-02">
+                        <label for="message">Message:</label>
+                        <textarea id="message" cols="60" rows="3" placeholder="Message"></textarea>
+
+                        
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 </body>
 <script src="funtionality/index.js"></script>
