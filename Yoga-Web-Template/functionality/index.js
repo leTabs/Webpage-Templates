@@ -1,4 +1,6 @@
 const navBar = document.querySelector('.nav-bar')
+const moveToExercisesBtn = document.querySelector('.move-to-exercises-btn')
+const sectionExercises = document.querySelector('.section-exercises')
 
 
 let lastScrollTop = 0;
@@ -13,3 +15,10 @@ window.addEventListener('scroll', function() {
       navBar.style.top = '0%'
     }
   });
+
+
+
+
+moveToExercisesBtn.addEventListener('click', ()=>{
+  sectionExercises.scrollIntoView()
+})
