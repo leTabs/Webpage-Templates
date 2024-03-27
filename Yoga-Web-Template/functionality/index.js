@@ -17,19 +17,33 @@ const moveToExercisesBtn = document.querySelector('.move-to-exercises-btn')
 const navAnchorsArray = [navHome, navAbout, navExercises, navMyVision, navCommunication]
 const sectionsArray = [sectionHome, sectionAbout, sectionExercises, sectionMyVision, sectionCommunication]
 
+// nav-small-window
+const navSmallWindow = document.querySelector('.nav-small-window')
+
+
 let lastScrollTop = 0;
 
-window.addEventListener('scroll', function() {
-    let currentPosition = window.scrollY;
-    let scrollDirection = currentPosition > lastScrollTop ? 'down' : 'up';
-    lastScrollTop = currentPosition <= 0 ? 0 : currentPosition;
-    if (scrollDirection === 'down') {
-      navBar.style.top = '-50%'
-    } else {
-      navBar.style.top = '0%'
-    }
-  });
+function navHandlerFunc(){
+  let currentPosition = window.scrollY;
+  let scrollDirection = currentPosition > lastScrollTop ? 'down' : 'up';
+  lastScrollTop = currentPosition <= 0 ? 0 : currentPosition;
+  if (scrollDirection === 'down') {
+    navBar.style.top = '-50%'
+    navSmallWindow.style.display = 'block'
+  } else {
+    navBar.style.top = '0%'
+    navSmallWindow.style.display = 'none'
+  }
+}
 
+
+
+window.addEventListener('scroll', ()=>{
+  navHandlerFunc()
+});
+navSmallWindow.addEventListener('click', ()=>{
+  navHandlerFunc()
+})
 
 
 // scroll into view events clause 
