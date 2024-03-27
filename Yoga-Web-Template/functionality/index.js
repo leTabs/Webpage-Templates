@@ -13,6 +13,10 @@ const navMyVision = document.querySelector('.nav-my-vision')
 const navCommunication = document.querySelector('.nav-communication')
 const moveToExercisesBtn = document.querySelector('.move-to-exercises-btn')
 
+const moreAboutMe = document.querySelector('.more-about-me')
+const facebookIconEl = document.querySelector('.facebook-icon-el')
+const instagramIconEl = document.querySelector('.instagram-icon-el')
+const twitterIconEl = document.querySelector('.twitter-icon-el')
 
 const navAnchorsArray = [navHome, navAbout, navExercises, navMyVision, navCommunication]
 const sectionsArray = [sectionHome, sectionAbout, sectionExercises, sectionMyVision, sectionCommunication]
@@ -43,6 +47,20 @@ window.addEventListener('scroll', ()=>{
 });
 navSmallWindow.addEventListener('click', ()=>{
   navHandlerFunc()
+})
+
+moreAboutMe.addEventListener('click', ()=>{
+  alert('Coming soon')
+})
+
+facebookIconEl.addEventListener('click', ()=>{
+  alert('Facebook anchor (empty)')
+})
+instagramIconEl.addEventListener('click', ()=>{
+  alert('Instagram anchor (empty)')
+})
+twitterIconEl.addEventListener('click', ()=>{
+  alert('Twitter anchor (empty)')
 })
 
 
