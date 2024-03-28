@@ -14,6 +14,8 @@ const navCommunication = document.querySelector('.nav-communication')
 const moveToExercisesBtn = document.querySelector('.move-to-exercises-btn')
 // mob
 const mobNavIcon = document.querySelector('.mob-nav-icon')
+const mobNavContainer = document.querySelector('.mob-nav-container')
+const monNavCloseBtn = document.querySelector('.mob-nav-close-nav')
 
 const moreAboutMe = document.querySelector('.more-about-me')
 const facebookIconEl = document.querySelector('.facebook-icon-el')
@@ -65,9 +67,14 @@ twitterIconEl.addEventListener('click', ()=>{
   alert('Twitter anchor (empty)')
 })
 mobNavIcon.addEventListener('click', ()=>{
-  alert('a nav div should appear')
+  mobNavContainer.style.display = 'block'
 })
-
+monNavCloseBtn.addEventListener('click', ()=>{
+  mobNavContainer.style.transform = 'translate(-200%, -50%)' 
+  setTimeout(()=>{
+  mobNavContainer.style.transform = 'translate(-50%, -50%)'
+  mobNavContainer.style.display = 'none'}, 250) 
+})
 // scroll into view events clause 
 moveToExercisesBtn.addEventListener('click', ()=>{
   sectionExercises.scrollIntoView()
