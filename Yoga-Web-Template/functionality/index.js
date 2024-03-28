@@ -12,6 +12,8 @@ const navExercises = document.querySelector('.nav-exercises')
 const navMyVision = document.querySelector('.nav-my-vision')
 const navCommunication = document.querySelector('.nav-communication')
 const moveToExercisesBtn = document.querySelector('.move-to-exercises-btn')
+// mob
+const mobNavIcon = document.querySelector('.mob-nav-icon')
 
 const moreAboutMe = document.querySelector('.more-about-me')
 const facebookIconEl = document.querySelector('.facebook-icon-el')
@@ -62,7 +64,9 @@ instagramIconEl.addEventListener('click', ()=>{
 twitterIconEl.addEventListener('click', ()=>{
   alert('Twitter anchor (empty)')
 })
-
+mobNavIcon.addEventListener('click', ()=>{
+  alert('a nav div should appear')
+})
 
 // scroll into view events clause 
 moveToExercisesBtn.addEventListener('click', ()=>{
