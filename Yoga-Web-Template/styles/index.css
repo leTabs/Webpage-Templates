@@ -345,3 +345,153 @@ nav p:hover{
   footer a{
     color: rgb(55, 128, 117)
   }
+  .mobile-nav-div{
+    display: none;
+    font-size: 1.7rem;
+    background-color: white;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 2rem;
+    height: 4rem;
+    left: 50%;
+    z-index: 120;
+    width: 100vw;
+    border-bottom: solid 2px black;
+    justify-content: space-between;
+  }
+  .mobile-nav-div h3{
+    margin: 1.2rem 0 0 2rem ;
+  }
+  .mobile-nav-div img{
+    width: 3rem;
+    height: 3rem;
+    margin: 0.7rem 2rem 0 0 ;
+  }
+@media only screen and (max-width: 450px) {
+nav{
+    display: none;
+}
+.section-home img{
+    object-fit: cover;
+}
+.home-text-wrapper{
+    top: 70%;}
+.home-text-wrapper p{
+    font-size: 3rem;
+}
+.home-text-wrapper p:last-of-type{
+    font-size: 3.5rem;
+}
+.mobile-nav-div{
+    display: flex;
+}
+/*  */
+.section-about{
+    width: 100vw;
+    padding: 3.5rem 0 3rem 0;
+    /* height: 50vh; */
+}
+.about-text-wrapper{
+    display: block;
+}
+.about-right-div{
+    font-size: 1.35rem;
+    padding: 0 2rem;
+}
+.about-left-div{
+    padding: 0 2rem;
+}
+.about-left-div p{
+    font-size: 1.5rem;
+}
+.about-right-div button{
+    display: none;
+}
+/* exercises */
+.exercises-container{
+    display: none;
+}
+/* my vision section */
+.section-my-vision{
+    width: 100%;
+    height: 80vh;
+    margin: 0;
+}
+.section-my-vision img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.my-vision-text-container{
+    background: linear-gradient(90deg, gray, black, gray);
+}
+.my-vision-text-container h3{
+    font-size: 3.4rem;
+}
+.my-vision-text-container p{
+    font-size: 1.2rem;
+}
+.my-vision-text-container button{}
+
+
+/* contact form section */
+
+.section-communication{
+    padding-top: 10rem;
+    background-color: white;
+    text-align: center;
+  }
+  .section-communication h2{
+    font-size: 2.7rem;
+  }
+  .section-communication p{
+    font-size: 1.5rem;
+    width: 75%;
+    margin: 0.5rem auto 1rem auto;
+  }
+  .communication-main-wrapper{
+    margin: 0 1rem 1.5rem 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0;
+    padding-right: 0 ;
+  }
+  form{
+    display: grid;
+    grid-template-rows: 2; 
+  }
+  .form-wrapper-01{
+    display: block;
+  }
+  .form-wrapper-01 input,
+  .form-wrapper-02 textarea{
+    display: block;
+    width: 75%;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.3rem;
+    margin: 0.5rem auto;
+    transition: 250ms;
+  }
+  .form-wrapper-02 textarea{
+    margin-top: 1.5rem;
+  }
+  .form-wrapper-01 input:focus,
+  .form-wrapper-02 textarea:focus{
+    width: 80%;
+  }
+  .form-wrapper-02 button{
+    width: 50%;
+  }
+  footer{
+    display: block;
+  }
+  footer p{
+    font-size: 1.4rem;
+    margin: 0.3rem 0 0.3rem 1rem;
+  }
+  footer p:first-of-type{
+    font-size: 1.75rem;
+  }
+}
