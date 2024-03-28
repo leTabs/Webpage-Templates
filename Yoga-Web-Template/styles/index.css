@@ -357,7 +357,7 @@ nav p:hover{
     z-index: 120;
     width: 100vw;
     border-bottom: solid 2px black;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
   .mobile-nav-div h3{
     margin: 1.2rem 0 0 2rem ;
@@ -365,7 +365,10 @@ nav p:hover{
   .mobile-nav-div img{
     width: 3rem;
     height: 3rem;
-    margin: 0.7rem 2rem 0 0 ;
+    margin: 0.7rem 0 0 1.5rem;
+  }
+  .mob-nav-container{
+    display: none;
   }
 @media only screen and (max-width: 450px) {
 nav{
@@ -385,6 +388,68 @@ nav{
 .mobile-nav-div{
     display: flex;
 }
+
+.mob-nav-container{
+    position: fixed;
+    z-index: 10000;
+    border-right: solid 2px rgb(0, 0, 0);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: -40vw;
+    /* opacity: 0; */
+    width: 80vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    box-shadow: 3px 3px 25px black;
+    animation: slider 150ms ease-in-out forwards;
+    transition: 250ms;
+}
+@keyframes slider {
+    100%{
+        left: 40vw;
+        /* opacity: 1; */
+    }
+}
+.mob-nav-container h3{
+    font-size: 2.5rem;
+    margin: 0;
+    margin-top: 4.5rem;
+    padding-bottom: 0;
+}
+.mob-nav-container p{
+    font-size: 1.7rem;
+    margin: 0.75rem 0;
+}
+.mob-nav-container hr:first-of-type, .mob-nav-container hr:nth-of-type(2){
+    margin: 1rem auto 1.5rem auto;
+    width: 75%;
+    border: solid 1px black;
+}
+.mob-nav-container hr:nth-of-type(2){
+    margin: 1.5em auto 0 auto;
+}
+.mob-nav-container button{
+    margin: 1rem 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    border: solid 1px black;
+    padding: 0.2rem 1.5rem;
+}
+.mob-nav-social{
+    border-bottom: solid 1px rgb(0, 0, 0);
+    width: 50%;
+    margin: 3rem auto 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1.5rem;
+}
+.mob-nav-container img{
+    width: 2rem;
+    height: 2rem;
+}
+
 /*  */
 .section-about{
     width: 100vw;
