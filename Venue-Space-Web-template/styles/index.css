@@ -85,20 +85,9 @@ nav span p:hover{
     display: inline-block;
     word-spacing: normal;
     margin-top: 3rem;
-    /* border-bottom: solid 1px white; */
 }
-/* .home-text-div button{
-    font-size: 1.1rem;
-    border: solid 1px rgb(255, 255, 255);
-    color: white;
-    margin: 0;
-    outline: none;
-    padding: 0.3rem 3rem;
-    margin-top: 2rem;
-    background-color: rgb(126, 15, 15);
-} */
-/* about section */
 
+/* about section */
 .section-about{
     width: 100%;
     height: 100%;
@@ -108,11 +97,8 @@ nav span p:hover{
     align-items: center;
 }
 .about-wrapper{
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr; */
     display: flex;
     justify-content: space-between;
-    /* border: solid 1px red; */
     width: 85%;
     height: 70%;
 }
@@ -121,32 +107,32 @@ nav span p:hover{
     object-fit: cover;
     height: 100%;
 }
-.about-text-container{
+.about-text-container, .services-caption{
     width: 30%;
     color: white;
     background-color: brown;
     text-align: center;
 }
-.about-text-container h2{
+.about-text-container h2, .services-caption h2{
     font-size: 2.4rem;
     letter-spacing: 0.3rem;
     word-spacing: 1.2rem;
     font-weight: normal;
     margin: 5rem 0 1rem 0;
 }
-.about-text-container hr{
+.about-text-container hr, .services-caption hr{
     border: solid 2px rgb(255, 255, 255);
     width: 1rem;
     margin: 0.2rem auto;
 }
-.about-text-container p{
+.about-text-container p, .services-caption p{
     font-size: 1.3rem;
     width: 75%;
     margin: 2.5rem auto 0 auto;
     word-spacing: 0.3rem;
     line-height: 2.5rem;
 }
-.about-text-container button{
+.about-text-container button, .services-caption button{
     font-size: 1.2rem;
     margin-top: 3.5rem;
     color: white;
@@ -155,22 +141,46 @@ nav span p:hover{
     border: solid 1px white;
     transition: 250ms;
 }
-.about-text-container button:hover{
+.about-text-container button:hover, .services-caption button:hover{
     background-color: rgb(255, 255, 255);
     color: brown;
     cursor: pointer;
 }
-/* services */
+/*  */
 .section-services{
     width: 100%;
-    height: 100%;
-    background-color: red;
+    height: 90%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    padding: 0rem 6rem 0 6rem;
 }
-.section-services p{
-    margin: 0;
+.services-caption{
+    width: 85%;
+    border: solid 1px brown;
+    height: calc(100vh - 13rem);
 }
-
-.section-services img{
-    width: 3rem;
-    height: 3rem;
+.services-caption, .current-service{
+    margin-top: 5.5rem;
+}
+/*  */
+.current-service{
+    width: calc(100% - 13rem);
+    height: calc(100vh - 13rem);
+    margin-left: 1rem;
+}
+.current-service img{
+    width: 100%;
+    height: calc(100vh - 13rem);
+    /* position: absolute; */
+    z-index: 1;
+    object-fit: cover;
+}
+/* contact */
+.section-contact{
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
 }
