@@ -1,5 +1,6 @@
 html{
     overflow-x: hidden;
+    width: 100vh;
     scroll-behavior: smooth;
 }
 html, body, main{
@@ -107,32 +108,32 @@ nav span p:hover{
     object-fit: cover;
     height: 100%;
 }
-.about-text-container, .services-caption{
+.about-text-container, .services-caption, .contact-text-container{
     width: 30%;
     color: white;
     background-color: brown;
     text-align: center;
 }
-.about-text-container h2, .services-caption h2{
+.about-text-container h2, .services-caption h2, .contact-text-container h2{
     font-size: 2.4rem;
     letter-spacing: 0.3rem;
     word-spacing: 1.2rem;
     font-weight: normal;
     margin: 5rem 0 1rem 0;
 }
-.about-text-container hr, .services-caption hr{
+.about-text-container hr, .services-caption hr, .contact-text-container hr{
     border: solid 2px rgb(255, 255, 255);
     width: 1rem;
     margin: 0.2rem auto;
 }
-.about-text-container p, .services-caption p{
+.about-text-container p, .services-caption p, .contact-text-container p{
     font-size: 1.3rem;
     width: 75%;
     margin: 2.5rem auto 0 auto;
     word-spacing: 0.3rem;
     line-height: 2.5rem;
 }
-.about-text-container button, .services-caption button{
+.about-text-container button, .services-caption button, .contact-text-container button{
     font-size: 1.2rem;
     margin-top: 3.5rem;
     color: white;
@@ -141,7 +142,7 @@ nav span p:hover{
     border: solid 1px white;
     transition: 250ms;
 }
-.about-text-container button:hover, .services-caption button:hover{
+.about-text-container button:hover, .services-caption button:hover, .contact-text-container button:hover{
     background-color: rgb(255, 255, 255);
     color: brown;
     cursor: pointer;
@@ -161,7 +162,7 @@ nav span p:hover{
     height: calc(100vh - 13rem);
 }
 .services-caption, .current-service{
-    margin-top: 5.5rem;
+    margin-top: 7.5rem;
 }
 /*  */
 .current-service{
@@ -178,9 +179,135 @@ nav span p:hover{
 }
 /* contact */
 .section-contact{
-    width: 100%;
-    height: 90%;
+    width: 100vw;
+    height: 100%;
     background-color: white;
     display: grid;
     grid-template-columns: 0.5fr 1fr;
 }
+.contact-container{
+    /* border: solid 1px red; */
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+}
+.contact-text-container{
+    width: 85%;
+    border: solid 1px brown;
+    height: calc(100vh - 13rem);
+}
+.contact-form{
+    padding: 2rem 4rem;
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgb(245, 245, 245);
+    /* box-shadow: -5px -5px 0px brown; */
+    border-bottom: solid 1px brown;
+}
+.contact-text-container{
+    margin-top: 7.5rem;
+    height: calc(100vh - 13rem);
+}
+.contact-form{
+    margin-top: 7.5rem;
+    height: fit-content;
+}
+.contact-form h2{
+    text-align: center;
+    font-weight: 100;
+    color: brown;
+    font-size: 2.5rem;
+    letter-spacing: 0.13rem;
+    word-spacing: 0.4rem;
+}
+.contact-form input{
+    border: none;
+    border-bottom: solid 1px brown;
+    text-align: left;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.4rem;
+    display: block;
+    margin: 0.8rem auto;
+    width: 75%;
+    padding: 0.5rem 1rem;
+}
+.contact-form textarea{
+    display: block;
+    width: 75%;
+    margin: 2.5rem auto 0 auto;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px brown;
+
+    /* background-color: white; */
+}
+.contact-form button{
+    display: block;
+    margin: 1rem auto 0 auto;
+    font-size: 1.1rem;
+    padding: 0.3rem  1.5rem;
+    color: brown;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    transition: 250ms;
+    cursor: pointer;
+}
+.contact-form button:hover{
+    background-color: brown;
+    color: white
+}
+.inputs-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2;
+}
+footer{
+    color: white;
+    background-color: brown;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* text-align: center; */
+    padding: 2rem 0 1rem 0
+  }
+  footer p{
+    font-size: 1rem;
+    margin: 0.3rem 0 0.3rem 1rem
+  }
+  footer p:first-of-type{
+    color: rgb(228, 228, 228);
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  .footer-inner{
+    border-left: solid 1px rgb(255, 255, 255);
+    width: fit-content;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+  }
+  .social-icons{
+    margin-top: 1rem;
+  }
+  .social-icons img{
+    width: 1.7rem;
+    height: 1.7rem;
+    filter: invert(100%);
+    margin-right: 0.8rem;
+    transition: 200ms;
+    cursor: pointer;
+  }
+  .social-icons img:hover{
+    filter: invert(65%);
+    transform: translate(0%, -20%);
+  }
+  .social-icons img:last-of-type{
+    margin-right: 0;
+  }
+  footer a{
+    color: rgb(161, 238, 252)
+  }
