@@ -8,6 +8,8 @@ const navContact = document.querySelector('.nav-contact')
 // sections elements
 const sectionHome = document.querySelector('.section-home')
 const sectionAbout = document.querySelector('.section-about')
+const sectionServices = document.querySelector('.section-services')
+const sectionContact = document.querySelector('.section-contact')
 // other elements
 const findOutMoreBtn = document.querySelector('.find-out-more-btn')
 
@@ -19,13 +21,13 @@ navAbout.addEventListener('click', ()=>{
     sectionAbout.scrollIntoView()
 })
 navServices.addEventListener('click', ()=>{
-    alert('Services')
+    sectionServices.scrollIntoView()
 })
 navGallaery.addEventListener('click', ()=>{
     alert('gallery')
 })
 navContact.addEventListener('click', ()=>{
-    alert('contact')
+    sectionContact.scrollIntoView()
 })
 
 // 
