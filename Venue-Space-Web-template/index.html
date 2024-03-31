@@ -70,10 +70,14 @@
                 <div class="contact-form">
                     <h2>Get in touch with us</h2>
                     <form action="">
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="email" />
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <div class="inputs-wrapper">
+                            <input type="text" placeholder="First Name"/>
+                            <input type="text" placeholder="Last Name"/>
+                            <input type="number" placeholder="Phone Number"/>
+                            <input type="email" placeholder="Email"/>
+                        </div>
+                        <textarea name="" id="" cols="30" rows="3" placeholder="Write your message here"></textarea>
+                        <button type="submit">Submit</button>
                     </form>
                 </div>
                 <div class="contact-text-container">
@@ -83,10 +87,39 @@
                         Communicate your concerns.<br />
                         We will be with you shortly!
                     </p>
-                    <button class="find-out-more-btn">AVAILABLE DATES</button>
+                    <button class="available-dates-btn">AVAILABLE DATES</button>
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="footer-div">
+                <div class="footer-inner">
+                    <p>Communication</p>
+                    <p>000 000 0000</p>
+                    <p>example@gmail.com</p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="footer-div">
+                <div class="footer-inner">
+                    <p>Location address</p>
+                    <p>Random address 90 street 4</p>
+                    <p>Find as on the map <a href="">here</a>.</p>
+                </div>
+            </div>
+            <!--  -->
+            <div class="footer-div">
+                <div class="footer-inner">
+                    <p>Created by <a href="">leTabs</a></p>
+                    <div class="social-icons">
+                        <img src="images/facebook.svg" alt="" class="facebook-icon-el">
+                        <img src="images/instagram.svg" alt="" class="instagram-icon-el">
+                        <img src="images/twitter.svg" alt="" class="twitter-icon-el">
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+        </footer>
     </main>
 </body>
 <script src="functionality/index.js"></script>
