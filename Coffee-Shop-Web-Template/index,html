@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag and Drop Game</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<nav>
+    <div class="nav-top">
+        <span class="nav-left">
+            <img src="images/mug-hot-solid.svg" alt="">
+            <h2>Coffee Shop</h2>
+        </span>
+        <span class="nav-right">
+            <p class="nav">Home</p>
+            <p class="nav">Our coffee</p>
+            <p class="nav">History</p>
+            <p class="nav">Info</p>
+        </span>
+    </div>
+    <div class="nav-bottom">
+
+    </div>
+</nav>
+<main>
+    <section class="section-home">
+        <img src="images/homeCoffee.jpg" alt="">
+        <div class="home-div">
+            <h1>Awesome Coffee Shop</h1>
+            <p>Find your comform, with a cup of coffe. </p>
+            <p>At stree stree, address city 00</p>
+            <img src="images/homeMug.jpg" alt="">
+        </div>
+    </section>
+</main>
+</body>
+<script src="index.js"></script>
+</html>
