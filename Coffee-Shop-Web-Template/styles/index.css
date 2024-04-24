@@ -3,6 +3,10 @@ html, body, nav, section, main{
     margin: 0;
     padding: 0;
 }
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 
 main{
     width: 100vw;
@@ -63,24 +67,24 @@ nav img{
 }
 
 /*  */
-.section-home{
+.bg-img{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+}
+.section-home, .section-our-coffee, .section-history{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.section-home img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    z-index: -1;
-}
+
 .home-div{
     margin-top: 7rem;
     width: 80%;
-    /* height: 65% ; */
     height: fit-content;
     max-height: 70%;
     background-color: rgb(255, 240, 221);
@@ -88,8 +92,8 @@ nav img{
     box-shadow: 3px 3px 15px black, inset 10px 10px 45px rgb(255, 199, 131);
     text-align: center;
     padding: 2rem 0 0 0;
-    
 }
+
 .home-div h1{
     font-size: 2.75rem;
     letter-spacing: 0.15rem;
@@ -127,5 +131,85 @@ nav img{
     z-index: 2;
     filter: saturate(90%);
     border-radius: 10px;
+    object-fit: cover;
+}
 
+/* our coffee */
+
+.our-coffee-div{
+    margin-top: 7rem;
+    width: 90%;
+    height: fit-content;
+    max-height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.our-coffee-left-div,
+.our-coffee-right-div{
+    background-color: rgb(255, 240, 221);
+    box-shadow: inset 10px 10px 45px rgb(250, 212, 166);
+    height: 60vh;
+    border-radius: 35px;
+}
+.our-coffee-left-div{
+    width: 37.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.our-coffee-left-div img{
+    width: 75%;
+    height: 75%;
+    border-radius: 15px;
+}
+.our-coffee-right-div{
+    width: 60%;
+}
+.our-coffee-right-div h2{
+    text-align: center;
+    font-size: 2.2rem;
+    color: rgb(134, 32, 32);
+    margin: 3rem 0 1rem 0;
+    letter-spacing: 0.15rem;
+    word-spacing: 0.75rem;
+}
+.our-coffee-right-div p{
+    color: brown;
+    margin: 0 5rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.3rem;
+    text-align: justify;
+}
+/* history */
+
+.history-div{
+    margin-top: 7rem;
+    width: 75%;
+    height: fit-content;
+    max-height: 70%;
+    background-color: rgb(255, 240, 221);
+    border-radius: 45px;
+    box-shadow: 3px 3px 15px black, inset 10px 10px 45px rgb(255, 199, 131);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+}
+.text-wrapper{
+    color: brown;
+    margin: 0 5rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.3rem;
+    text-align: justify;
+}
+.section-info{
+    width: 100%;
+    background-color: rgb(255, 227, 204);
+}
+.section-info img{
+    width: 4rem;
+    height: 4rem;
 }
