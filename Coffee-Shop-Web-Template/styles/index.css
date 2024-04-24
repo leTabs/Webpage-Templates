@@ -67,17 +67,52 @@ nav img{
 .home-div{
     margin-top: 7rem;
     width: 80%;
-    height: 65% ;
-    background-color: rgb(255, 255, 255);
+    /* height: 65% ; */
+    height: fit-content;
+    background-color: rgb(255, 240, 221);
     border-radius: 45px;
-    box-shadow: 3px 3px 15px black;
+    box-shadow: 3px 3px 15px black, inset 10px 10px 45px rgb(255, 199, 131);
     text-align: center;
+    padding: 2rem 0 0 0;
+    /* display: flex; */
+    /* justify-content: initial; */
+    /* align-items: center; */
+}
+.home-div h1{
+    font-size: 2.75rem;
+    letter-spacing: 0.15rem;
+    word-spacing: 0.5rem;
+    color: rgb(134, 32, 32);
+    margin: 0;
+    margin-top: 2rem;
+}
+.home-div hr{
+    margin: 2rem auto 0.5rem auto;
+    border: solid 2px brown;
+    width: 3rem;
+    border-radius: 15px;
+}
+.home-div p:first-of-type{
+    font-size: 1.4rem;
+    margin: 0;
+    margin: 1rem 0;
+    color: brown;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.75rem;
+}
+.home-div p:nth-of-type(2){
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: brown
 }
 .home-div img{
     position: static;
     display: block;
-    margin: 0 auto;
-    width: 75%;
-    height: 30%;
-    z-index: 2
+    margin: 1rem auto;
+    width: 80%;
+    height: 30vh;
+    z-index: 2;
+    filter: saturate(90%);
+    border-radius: 10px;
+
 }
