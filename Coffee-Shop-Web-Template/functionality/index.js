@@ -28,9 +28,16 @@ for(let i = 0; i < navElementsArray.length; i++){
 
 navMenu.addEventListener('click', ()=>{
     menuWindowWrapper.style.display = 'block'
+    menuWindowWrapper.scrollTop = 0;
     document.querySelector('html').style.overflowY = 'hidden'
 })
 menuCloseBtn.addEventListener('click', ()=>{
     menuWindowWrapper.style.display = 'none'
     document.querySelector('html').style.overflowY = 'auto'
 })
+document.addEventListener('keydown', function(event){
+    if (event.key === 'Escape') {
+        menuWindowWrapper.style.display = 'none'
+        document.querySelector('html').style.overflowY = 'auto'
+
+}})
