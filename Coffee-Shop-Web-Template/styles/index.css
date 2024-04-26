@@ -1,4 +1,10 @@
 /* add normalizer */
+:root{
+    --bg-color: rgb(255, 227, 204);
+    --header-txt-color: rgb(134, 32, 32);
+    --normal-txt-color: brown;
+    --shadow-inset-color: rgb(255, 199, 131);
+}
 html, body, nav, section, main{
     margin: 0;
     padding: 0;
@@ -111,7 +117,7 @@ nav img{
     margin-top: 2rem;
     text-shadow: 1px 1px 0px rgb(255, 0, 0);
 }
-.home-div hr{
+.home-div hr, .menu-window .menu-top-hr{
     margin: 2rem auto 0.5rem auto;
     border: solid 2px brown;
     width: 3rem;
@@ -283,4 +289,109 @@ footer p{
     color: white;
     font-size: 1.1rem;
     padding: 0.5rem 0;
+}
+/*  */
+.menu-window-wrapper{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(15px);
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0.429);
+    display: none;
+    animation: appearing 0.25s linear forwards;
+}
+@keyframes appearing {
+    0%{opacity: 0;}
+    100%{
+        opacity: 1;
+    }
+}
+.menu-window{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: var(--bg-color);
+    width: 45%;
+    height: 85%;
+    border-radius: 30px;
+}
+.menu-window h3{
+    font-size: 2.3rem;
+    color: var(--header-txt-color);
+    text-align: center;
+    margin: 3rem 0 0 0;
+}
+.menu-window .menu-top-hr{
+    margin: 1rem auto;
+}
+.menu-window h4{
+    font-size: 1.7rem;
+    color: rgb(136, 31, 31);
+    font-weight: bolder;
+    margin:0 0 0 6%;
+}
+.menu-prodcuts-wrapper{
+    height: 65%;
+    width: 95%;
+    margin: 0 auto;
+    overflow: auto;
+    /* border-top: solid 1px brown; */
+}
+.menu-products{
+    background-color: rgb(255, 241, 223);
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 20px;
+    padding: 1rem;
+}
+.menu-products span{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px rgb(0, 0, 0);
+    width: 90%;
+    margin: 0.75rem auto;
+}
+.menu-products span p{
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.menu-products span p:nth-of-type(2){
+    font-size: 1.1rem;
+    color: rgb(66, 66, 66)
+}
+.menu-close-btn{
+    font-size: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: solid 1px transparent;
+    color: var(--normal-txt-color);
+    display: block;
+    margin: 1.5rem auto;
+    cursor: pointer;
+    transition: 250ms
+}
+.menu-close-btn:hover{
+    color: rgb(223, 124, 124);
+    border-bottom-color: rgb(223, 124, 124);
+}
+.menu-window ::-webkit-scrollbar{
+    background-color: rgb(194, 92, 92);
+    width: 0.75rem;
+    border-radius: 35px;
+}
+.menu-window ::-webkit-scrollbar-button{
+    display: none;
+}
+.menu-window ::-webkit-scrollbar-thumb{
+    background-color: brown;
+    border-radius: 35px;
+}
+.menu-window ::-webkit-scrollbar-thumb:active{
+    background-color: rgba(182, 10, 10, 0.828);
 }
