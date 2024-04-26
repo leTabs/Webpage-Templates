@@ -15,6 +15,10 @@ const sectionInfo = document.querySelector('.section-info')
 
 const sectionElementsArray = [sectionHome, sectionOurCoffee, sectionHistory, sectionInfo]
 
+// 
+const menuWindowWrapper = document.querySelector('.menu-window-wrapper');
+const menuCloseBtn = document.querySelector('.menu-close-btn')
+// const menuWindow = document.querySelector('.menu-window')
 
 for(let i = 0; i < navElementsArray.length; i++){
     navElementsArray[i].addEventListener('click', ()=>{
@@ -23,5 +27,10 @@ for(let i = 0; i < navElementsArray.length; i++){
 }
 
 navMenu.addEventListener('click', ()=>{
-    alert('Menu panel')
+    menuWindowWrapper.style.display = 'block'
+    document.querySelector('html').style.overflowY = 'hidden'
+})
+menuCloseBtn.addEventListener('click', ()=>{
+    menuWindowWrapper.style.display = 'none'
+    document.querySelector('html').style.overflowY = 'auto'
 })
