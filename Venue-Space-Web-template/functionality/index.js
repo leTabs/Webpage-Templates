@@ -17,6 +17,8 @@ const availableDatesBtn = document.querySelector('.available-dates-btn')
 const facebookIcon = document.querySelector('.facebook-icon-el')
 const instagramIcon = document.querySelector('.instagram-icon-el')
 const twitter = document.querySelector('.twitter-icon-el')
+const aboutWrapperContainer = document.querySelector('.about-wrapper-container')
+const aboutWindowClose = document.querySelector('.about-window-close')
 
 // 
 navHome.addEventListener('click', ()=>{
@@ -37,10 +39,13 @@ navContact.addEventListener('click', ()=>{
 
 // 
 findOutMoreBtn.addEventListener('click', ()=>{
-    alert('Comming soon')
+    aboutWrapperContainer.style.display = 'flex'
+})
+aboutWindowClose.addEventListener('click', ()=>{
+    aboutWrapperContainer.style.display = 'none'
 })
 fullServiceListBtn.addEventListener('click', ()=>{
-    alert('Comming soon')
+    window.location = 'venue-services.html'
 })
 availableDatesBtn.addEventListener('click', ()=>{
     alert('Comming soon')
