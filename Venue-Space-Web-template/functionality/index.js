@@ -19,6 +19,9 @@ const instagramIcon = document.querySelector('.instagram-icon-el')
 const twitter = document.querySelector('.twitter-icon-el')
 const aboutWrapperContainer = document.querySelector('.about-wrapper-container')
 const aboutWindowClose = document.querySelector('.about-window-close')
+const datesWrapperContainer = document.querySelector('.dates-wrapper-container')
+const datesWindowClose = document.querySelector('.dates-window-close')
+
 
 // 
 navHome.addEventListener('click', ()=>{
@@ -48,7 +51,10 @@ fullServiceListBtn.addEventListener('click', ()=>{
     window.location = 'venue-services.html'
 })
 availableDatesBtn.addEventListener('click', ()=>{
-    alert('Comming soon')
+    datesWrapperContainer.style.display = 'flex'
+})
+datesWindowClose.addEventListener('click', ()=>{
+    datesWrapperContainer.style.display = 'none'
 })
 facebookIcon.addEventListener('click', ()=>{
     alert('Comming soon')
