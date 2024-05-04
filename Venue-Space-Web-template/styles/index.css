@@ -8,16 +8,16 @@ html, body, main{
     margin: 0;
 }
 ::-webkit-scrollbar{
-    background-color: rgb(191, 85, 85);
+    background-color: rgb(165, 165, 165);
 }
 ::-webkit-scrollbar-thumb{
-    background-color: brown;
+    background-color: gray;
 }
 ::-webkit-scrollbar-thumb:hover{
-    background-color: rgb(124, 30, 30)
+    background-color: rgb(108, 108, 108);
 }
 ::-webkit-scrollbar-thumb:active{
-    background-color: rgb(118, 26, 26)
+    background-color: rgb(120, 120, 120)
 }
 ::-webkit-scrollbar-button{
     display: none;
@@ -332,8 +332,8 @@ footer{
     z-index: 100;
 }
 .about-wrapper-container, .dates-wrapper-container{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: none;
     justify-content: center;
     align-items: center;
@@ -356,8 +356,9 @@ footer{
     border-bottom: solid 0.75rem rgb(129, 33, 33);
     box-shadow: inset 0px 5px 10px rgb(129, 33, 33), inset 0px 5px 10px rgb(129, 33, 33);
     z-index: 102;
-    max-height: 90vh;
+    height: 100vh;
     overflow: auto;
+    width: 100vw
 }
 @keyframes appearing {
     0%{
@@ -496,6 +497,7 @@ footer{
     text-align: center;
     font-size: 2.5rem;
     letter-spacing: 0.75rem;
+    word-spacing: 1rem;
     font-weight: 100;
     color: brown;
     margin: 4rem 0 3.5rem 0;
@@ -505,4 +507,201 @@ footer{
     margin: 3.5rem auto;
     width: 5rem;
     border-radius: 0 0 35px 35px;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+@media only screen and (max-width: 1024px){
+    nav{
+        display: none;
+    }
+    /*  */
+    /* home section */
+    .home-text-div{
+        top: 65%;
+        font-size: 2.8rem;
+    }
+    .home-text-div p{
+        line-height: 4rem;
+    }
+    .home-text-div span{
+        color: rgb(243, 145, 145)
+    }
+    
+    /* about section */
+    .section-about{
+        height: 100%;
+    }
+    .section-about img{
+        display: none;
+    }
+    .about-text-container, .contact-text-container{
+        width: 100%;
+    }
+    .about-text-container h2, .services-caption h2, .contact-text-container h2{
+        font-size: 2.6rem;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-text-container p, .services-caption p, .contact-text-container p{
+        font-size: 1.5rem;
+    }
+    .about-text-container button, .services-caption button, .contact-text-container button{
+        font-size: 1.2rem;
+    }
+    /*  */
+    
+    .section-services{
+        height: fit-content;
+        display: block;
+        padding: 0 0 0 0;
+    }
+    .services-caption-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .services-caption{
+        height: calc(100vh - 10rem);
+        /* height: auto; */
+    }
+    .services-caption{
+        margin-top: 7.5rem;
+        /* check it out later */
+    }
+    /*  */
+    .current-service{
+        display: none;
+    }
+    /* contact */
+    .section-contact{
+        height: fit-content;
+        display: block;
+        border-top: solid 1px white;
+        border-bottom: solid 1px white;
+    }
+    .contact-container{
+        display: block;
+    }
+    .contact-text-container{
+        /* width: 85%; */
+        margin-top: 7.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+        height: calc(100vh - 10rem);
+        padding-bottom: 2rem;
+    }
+    .contact-form{
+        padding: 2rem;
+        width: calc(100vw - 4rem);
+        height: fit-content;
+    }
+    .contact-form h2{
+        font-size: 2.75rem;
+    }
+    .contact-form input{
+        font-size: 1.7rem;
+        width: 85%;
+    }
+    .contact-form textarea{
+        width: 90%;
+        margin: 2.5rem auto 2rem auto;
+    }
+    .contact-form button{
+        font-size: 1.3rem;
+    }
+    .inputs-wrapper{
+        display: block;
+    }
+    footer{
+        background-color: brown;
+        width: 100%;
+        display: block;
+      }
+      footer p{
+        font-size: 1.3rem;
+        margin: 0.3rem 0 0.3rem 1rem
+      }
+      footer p:first-of-type{
+        color: rgb(228, 228, 228);
+        font-size: 1.5rem;
+        margin: 0;
+      }
+      .footer-inner{
+        width: 100%;
+      }
+      .social-icons{
+        margin-top: 1rem;
+      }
+      .social-icons img{
+        width: 2rem;
+        height: 2rem;
+      }
+      .social-icons img:last-of-type{
+        margin-right: 0;
+      }
+
+      /* about wrapper container */
+
+    .about-wrapper-container, .dates-wrapper-container{
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .dates-wrapper-container{
+        display: none;
+    }
+    .about-window-text, .dates-window-frame{
+        height: 100%;
+        width: 100%
+    }
+    .about-window-text p, .dates-window-frame{
+        font-size: 1.4rem;
+        margin:4rem 2.5rem 2.5rem 2.5rem;
+    }
+    .dates-window-frame{
+        margin: 0;
+    }
+    .about-window-text p:last-of-type, .dates-window-close{
+        padding:0.5rem 2rem;
+        margin: 2rem auto 0 auto;
+        border-top: solid 1px white;
+        border-bottom: solid 1px rgba(255, 255, 255, 0);
+        width: fit-content;
+        cursor: pointer;
+        color: rgb(255, 187, 187);
+        transition: 250ms;
+        font-size: 1.3rem;
+    }
+
+    .dates-grid-div{
+        display: block;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+    .dates-grid-div table{
+        border-bottom: solid 1px white;
+        margin: 0 auto;
+        padding: 0.25rem
+    }
+    .dates-grid-div table tr td{
+        /* margin: 0.6rem 0; */
+        padding: 0.2rem;
+    }
+    .dates-grid-div table tr td:first-of-type{
+        padding: 0 0.25rem;
+    }
+    .dates-title{
+        line-height: 2.5rem;
+    }
+    .t-month,
+    .t-days,
+    .t-hours{
+        padding:  0.2rem
+    }
 }
