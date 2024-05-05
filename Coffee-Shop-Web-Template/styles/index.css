@@ -325,6 +325,9 @@ footer p{
     font-size: 1.1rem;
     padding: 0.5rem 0;
 }
+footer p a{
+    color: rgb(243, 158, 141);
+}
 /*  */
 .menu-window-wrapper{
     position: fixed;
