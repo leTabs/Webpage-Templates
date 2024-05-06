@@ -447,3 +447,196 @@ footer p a{
 .menu-window ::-webkit-scrollbar-thumb:active{
     background-color: rgba(182, 10, 10, 0.828);
 }
+
+/*  */
+.mob-nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    background-color: white;
+    width: 100vw;
+    color: white;
+    background-color: rgb(106, 59, 51);
+    align-items: center;
+    height: 5rem;
+}
+.mob-nav img{
+    width: 2rem;
+    height: 2rem;
+    filter: invert(100%);
+    margin: 0 1rem;
+}
+.mob-nav h2{
+    font-size: 1.5rem;
+}
+.mob-nav-container{
+    width: 85vw;
+    height: 100vh;
+    background-color: rgb(255, 242, 213);
+    z-index: 30000;
+    border: solid 1px brown;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: -42.5vw;
+    text-align: center;
+    display: none;
+    transition: 250ms;
+}
+.mob-nav-container h3{
+    width: 70%;
+    margin: 6.5rem auto 0 auto;
+    font-size: 2.5rem;
+    color: brown
+}
+.mob-nav-anchors{
+    margin-top: 3rem;
+}
+.mob-nav-container p{
+    font-size: 1.7rem;
+    width: 75%;
+    margin: 0.3rem auto;
+    padding: 0.3rem;
+    background-color: rgb(226, 144, 122);
+    color: white;
+    border-radius: 25px;
+}
+.mob-social-media-wrapper{
+    margin-top: 2rem;
+}
+.mob-social-media-wrapper img{
+    width: 2rem;
+    height: 2rem;
+    filter: invert(40%);
+    margin: 0 0.5rem;
+}
+.mob-working-hours{
+    margin: 0;
+    text-align: center;
+    color: brown;
+    font-size: 1.3rem;
+    padding-bottom: 1.5rem;
+    display: none;
+}
+@media only screen and (max-width: 1025px){
+    nav{
+        display: none;
+    }
+    .mob-nav{
+        display: flex;
+    }
+    /*  */
+    .section-home, .section-our-coffee, .section-history{
+        width: 100%;
+        /* height: calc(100% - 5rem); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .home-div{
+        margin-top: 5rem;
+        width: 90%;
+        max-height: 90%;
+    }
+    
+    .home-div h1{
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+    }
+    .home-div hr, .menu-window .menu-top-hr{
+        margin: 1rem auto 0.5rem auto;
+    }
+    .home-div p:first-of-type{
+        width: 75%;
+        margin: 1rem auto 1rem auto;
+    }
+    .home-div p:nth-of-type(2){
+        width: 75%;
+        margin: 1rem auto 1rem auto;
+    }
+    .home-div img{
+        height: 20vh;
+    }
+    
+    /* our coffee */
+    
+    .our-coffee-div{
+        width: 90%;
+        height: fit-content;
+        max-height: fit-content;
+    }
+    .our-coffee-left-div,
+    .our-coffee-right-div{
+        height: fit-content;
+    }
+    .our-coffee-left-div{
+        display: none;
+    }
+    .our-coffee-right-div{
+        margin-top: 5rem;
+        width: 100%;
+    }
+    .our-coffee-right-div h2{
+        font-size: 2.2rem;
+        margin: 3rem 0 1rem 0;
+    }
+    .our-coffee-right-div p{
+        margin: 1rem 2rem;
+        text-align: center;
+    }
+    /* history */
+    
+    .history-div{
+        margin-top: 15rem;
+        width: 90%;
+        max-height: fit-content;
+        padding: 3rem 0 1rem 0;
+    }
+    .text-wrapper{
+        margin: 0 2rem;
+        text-align: center;
+    }
+    .section-info{
+        display: block;
+        margin-top: 15rem;
+    }
+    .info-left-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+        text-align: left;
+    }
+
+    .info-left-div h3{
+        font-size: 2rem;
+        margin: 4rem 0 1rem 1.5rem;
+        color: rgb(134, 32, 32);
+        letter-spacing: 0.1rem;
+        word-spacing: 0.4rem;
+        margin-bottom: 1rem;
+    }
+    .info-left-div p{
+        margin: 1rem 0 0 3.5rem;
+    }
+    .info-left-div p:first-of-type{
+        margin-top: 1.5rem;
+    }
+
+    .info-right-div{
+        display: none;
+    }
+    .info-middle-div,
+    .info-left-div img{
+        margin: 0 0.75rem;
+    }
+    .info-left-div img:first-of-type{
+        margin-left: 3.5rem;
+    }
+    .mob-working-hours{
+        display: block;
+    }
+    /*  */
+}
